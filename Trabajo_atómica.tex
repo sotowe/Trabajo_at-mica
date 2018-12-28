@@ -1,0 +1,115 @@
+\documentclass[a4paper]{report}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{biblatex}
+\usepackage{enumerate}
+\usepackage{csquotes}
+\addbibresource{bibliografia.bib}
+
+\title{Modos rotacionales y vibracionales en moléculas}
+\author{José Soto García}
+\begin{document}
+\maketitle
+\section{La molécula como un sólido rígido: hamiltoniano asociado a la rotación de la misma en torno a su centro de masas.}
+Un sólido rígido se define como una colección de partículas, cuyas distancias relativas se mantienen fijas \cite{marion2013}. El momento de inercia $I_i$ de un sólido rígido con $n$ partículas sobre un eje $i$ se define como:
+\begin{equation}
+I_i= \sum_{j=1}^n=m_jr_j^2
+\end{equation}
+con $r_j$ la distancia desde la partícula de masa $m_j$ al eje $i$.
+
+\subsection{El rotor rígido diatómico}
+El rotor rígido de dos partículas consiste en dos masas $m_1$ y $m_2$ unidas a una barra sin masa con una distancia fija $d$. Dado que la distancia es fija, la energía potencial no varía con la rotación del rotor, luego $V=0$. \cite{levine1980} El momento de inercia de una molécula diatómica puede escribirse como:
+\begin{equation}
+I=\mu R^2
+\end{equation}
+Podemos determinar los niveles de energía de este sistema resolviendo la ecuación de Schrödinger. Suponiendo que el radio entre los dos átomos no varía, la ecuación de Schrödinger queda:
+\begin{equation}
+- \frac{\hbar^2}{2I}\left[\frac{1}{sin\theta}\frac{\partial}{\partial \theta}\left(sin\theta \frac{\partial}{\partial \theta} \right) + \frac{1}{sin^2\theta}\frac{\partial^2}{\partial \phi^2}\right]Y^m_l \left(\theta,\phi \right) = E_lY^m_l \left(\theta,\phi \right)
+\end{equation}
+Con
+$$E_l= \frac{\hbar^2}{2I}l(l+1)$$
+La energía está $2l+1$ veces degenerada debido a que para un $l$ fijo, distintos valores de $m$ tienen la misma energía.
+\subsection{El rotor rígido poliatómico}
+Se define el tensor de inercia $\tilde{I}$ como:
+\begin{equation}
+\tilde{I}=\left( \begin{array}{ccc}
+\sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,2}+x^2_{\alpha,3}\right) & -\sum_{\alpha}m_{\alpha}x_{\alpha,1}x_{\alpha,2} & -\sum_{\alpha}m_{\alpha}x_{\alpha,1}x_{\alpha,3} \\\\
+-\sum_{\alpha}m_{\alpha}x_{\alpha,2}x_{\alpha,1} & \sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,1}+x^2_{\alpha,3}\right) &-\sum_{\alpha}m_{\alpha}x_{\alpha,2}x_{\alpha,3} \\\\
+-\sum_{\alpha}m_{\alpha}x_{\alpha,3}x_{\alpha,1} & -\sum_{\alpha}m_{\alpha}x_{\alpha,3}x_{\alpha,2} & \sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,1}+x^2_{\alpha,2}\right) \end{array} \right)
+\end{equation}
+Clásicamente, la energía cinética rotacional del sistema se obtiene como:
+\begin{equation}
+T_{rot}=\frac{1}{2}\sum_{i,j}I_{i,j}\omega_i\omega_j
+\end{equation}
+Una clara simplificación se encuentra si diagonalizamos el tensor de inercia. Los vectores que diagonalizan la matriz de inercia son los denominados ejes principales de inercia. La energía cinética rotacional clásica del sistema queda por tanto \cite{marion2013}:
+\begin{equation}
+T_{rot}=\frac{1}{2}\left(I_a\omega^2_a + I_b\omega^2_b + I_c\omega^2_c\right) 
+\end{equation}
+con $I_a$, $I_b$, e $I_c$ los autovalores del momento de inercia.\\
+Para formar el hamiltoniano del sistema, necesitamos la energía en función del momento angular $P$, con $P_i=I_i\omega_i$.
+La energía cinética queda entonces como:
+\begin{equation}
+T_{rot}=\frac{P_a^2}{2I_a}+\frac{P_b^2}{2I_b}+\frac{P_c^2}{2I_c}
+\end{equation}
+El nuevo sistema de referencia $\left\lbrace a,b,c \right\rbrace$ se consigue mediante tres rotaciones  $\left\lbrace \theta,\phi,\chi \right\rbrace$ a través del centro de masas $O$. Son los llamados ángulos de Euler (figura \ref{euler}).
+De la figura \ref{euler} podemos ver que:
+\begin{equation}
+\hat P_{\phi}=\frac{\partial P}{\partial \phi},\,\ \hat P_{N}=\frac{\partial P}{\partial N},\,\ \hat P_{\chi}=\frac{\partial P}{\partial \chi}
+\end{equation}
+
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{Angulos_Euler.png}
+\caption{EXPLICAR}
+\label{euler}
+\end{figure}
+
+Teniendo en cuenta que 
+
+$$ P_N=  P_a sin\chi + P_b cos\chi$$  
+$$ P_Z= -P_a sin\theta cos\chi + P_b sin\theta sin\chi + P_c cos\theta $$
+
+Obtenemos que:
+
+\begin{equation}
+\hat P_a = i\hbar \left[cos\chi csc\theta \frac{\partial}{\partial \phi} - cos\chi cot\theta \frac{\partial}{\partial \chi} - sin\chi \frac{\partial}{\partial \theta} \right]
+\end{equation}
+\begin{equation}
+\hat P_b = i\hbar \left[-sin\chi csc\theta \frac{\partial}{\partial \phi} + sin\chi cot\theta \frac{\partial}{\partial \chi} - cos\chi \frac{\partial}{\partial \theta} \right]
+\end{equation}
+\begin{equation}
+\hat P_a = -i\hbar \frac{\partial}{\partial\chi}
+\end{equation}
+O también:
+
+\begin{equation}
+\hat P_X = i\hbar \left[cos\phi cot\theta \frac{\partial}{\partial \phi} - cos\phi csc\theta \frac{\partial}{\partial \chi} + sin\phi \frac{\partial}{\partial \theta} \right]
+\end{equation}
+\begin{equation}
+\hat P_Y = i\hbar \left[sin\phi cot\theta \frac{\partial}{\partial \phi} - sin\phi csc\theta \frac{\partial}{\partial \chi} - cos\phi \frac{\partial}{\partial \theta} \right]
+\end{equation}
+\begin{equation}
+\hat P_Z = -i\hbar\frac{\partial}{\partial\phi} 
+\end{equation}
+
+Sabemos que el hamiltoniano rotacional es
+\begin{equation}
+H_{rot}=\frac{P_a^2}{2I_a}+\frac{P_b^2}{2I_b}+\frac{P_c^2}{2I_c}
+\end{equation}
+Una forma de obtener los autovalores de Energía sería sustituir los valores de P y resolver la ecuación de Schrödinger. Sin embargo, estos autovalores se pueden obtener mediante relaciones de conmutación.
+Las relaciones de conmutación que necesitaremos son las siguientes:
+\begin{equation}
+\left[\hat P_i,\hat P_j\right]=-i\hbar\delta_{i,j}\hat P_k
+\end{equation}
+\begin{equation}
+\left[\hat P_I,\hat P_J\right]=i\hbar\delta_{I,J}\hat P_K
+\end{equation}
+\begin{equation}
+\left[\hat P^2,\hat P_j\right]=\left[\hat P^2,\hat P_J\right]=0
+\end{equation}
+\begin{equation}
+\left[\hat P_J,\hat P_j\right]=0 \,,\ \forall_{J,j}
+\end{equation}
+\printbibliography
+\end{document}
+

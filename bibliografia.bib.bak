@@ -1,0 +1,17 @@
+% Encoding: UTF-8
+
+@Book{haken2013,
+  title     = {Molecular physics and elements of quantum chemistry: introduction to experiments and theory},
+  publisher = {Springer Science \& Business Media},
+  year      = {2013},
+  author    = {Haken, Hermann and Wolf, Hans Christoph},
+}
+
+@Book{levine1980,
+  title     = {Espectroscopía molecular},
+  publisher = {AC},
+  year      = {1980},
+  author    = {Levine, Ira N and Ortigosa, Antonio Fuster and Rodríguez, Alberto Requena},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

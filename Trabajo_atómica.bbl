@@ -1,0 +1,83 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{levine1980}{book}{}
+      \name{author}{3}{}{%
+        {{hash=4c857c5e20918f1dadc296f12a14a37e}{%
+           family={Levine},
+           familyi={L\bibinitperiod},
+           given={Ira\bibnamedelima N},
+           giveni={I\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=238080a713d735dc5d111c2f8ddfd7ae}{%
+           family={Ortigosa},
+           familyi={O\bibinitperiod},
+           given={Antonio\bibnamedelima Fuster},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=bf3d4ca8f5c74dcde39838dc4a5b7f1e}{%
+           family={Rodríguez},
+           familyi={R\bibinitperiod},
+           given={Alberto\bibnamedelima Requena},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {AC}%
+      }
+      \strng{namehash}{549634787fabb15f15a1265e6e7fa275}
+      \strng{fullhash}{549634787fabb15f15a1265e6e7fa275}
+      \strng{bibnamehash}{549634787fabb15f15a1265e6e7fa275}
+      \strng{authorbibnamehash}{549634787fabb15f15a1265e6e7fa275}
+      \strng{authornamehash}{549634787fabb15f15a1265e6e7fa275}
+      \strng{authorfullhash}{549634787fabb15f15a1265e6e7fa275}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Espectroscopía molecular}
+      \field{year}{1980}
+    \endentry
+    \entry{marion2013}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f4eb33c0485741a5a97cca0407e1b921}{%
+           family={Marion},
+           familyi={M\bibinitperiod},
+           given={Jerry\bibnamedelima B},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{f4eb33c0485741a5a97cca0407e1b921}
+      \strng{fullhash}{f4eb33c0485741a5a97cca0407e1b921}
+      \strng{bibnamehash}{f4eb33c0485741a5a97cca0407e1b921}
+      \strng{authorbibnamehash}{f4eb33c0485741a5a97cca0407e1b921}
+      \strng{authornamehash}{f4eb33c0485741a5a97cca0407e1b921}
+      \strng{authorfullhash}{f4eb33c0485741a5a97cca0407e1b921}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Classical dynamics of particles and systems}
+      \field{year}{2013}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
