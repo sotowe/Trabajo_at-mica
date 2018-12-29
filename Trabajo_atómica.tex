@@ -1,4 +1,4 @@
-\documentclass[a4paper]{report}
+\documentclass[a4paper]{article}
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
@@ -139,6 +139,7 @@ Los autovalores de energía dependerán de las simetrías de rotación que prese
 Rotor esférico $I_a=I_b=I_c= I$ \\
 Rotor simétrico $I_a=I_b \neq I_c$ \\
 Rotor asimétrico $I_a \neq I_b \neq I_c$
+\section{Rotor rígido cuántico: Estados propios y autovalores.}
 \subsection{El rotor esférico}
 El rotor esférico se caracteriza porque los tres momentos principales de inercia son iguales: $$I_a=I_b=I_c= I$$
 El hamiltoniano del sistema queda por tanto como:
@@ -159,6 +160,21 @@ En este caso, tenemos además que
 \end{equation}
 con $$\hat P_c \psi = K\hbar\psi, \qquad K = 0, \pm 1,..., \pm J$$
 Luego la energía está $(2J+1)^2$ veces degenerada.
+\subsection{El rotor simétrico}
+El rotor simétrico se caracteriza porque dos de sus momentos principales de inercia son iguales $I_a=I_b\neq I_c$. Su estructura es similar a un balón de rugby.
+El hamiltoniano del sistema es:
+\begin{equation}
+\hat H=\frac{\hat P_a^2+\hat P_b^2}{2I_b}+\frac{\hat P_c^2}{2I_c}=\frac{\hat P^2- \hat P_c^2}{2I_b}+\frac{\hat P_c^2}{2I_c}
+\end{equation}
+Como $\hat P_c$ conmuta con $\hat P^2$ y con $\hat P_c^2$, el hamiltoniano conmuta con $\hat P_c$, y las autofunciones del hamiltoniano se pueden elegir como autofunciones de $\hat P_c$.
+Las energías se obtienen como: $$\left(\frac{\hat P^2- \hat P_c^2}{2I_b}+\frac{\hat P_c^2}{2I_c}\right)\psi=E\psi$$
+ $$\left(\frac{\hbar^2J(J+1)- \hbar^2K^2}{2I_b}+\frac{\hbar^2K^2}{2I_c}\right)\psi=E\psi$$
+ Luego:
+ \begin{equation}
+ E=\frac{\hbar^2J(J+1)}{2I_b}+\hbar^2K^2\left(\frac{1}{2I_c}-\frac{1}{2I_b}\right)
+ \end{equation}
+La energía depende de $J$ y $K^2$. Hay una degeneración $(2J+1)$ asociada a $M$. Además, para $K\neq 0$ hay una degeneración doble debida a los valores de $\pm K$, luego para $K\neq 0$ la degeneración de la energía es $4J+2$.
+\subsection{El rotor asimétrico}
 
 \printbibliography
 \end{document}

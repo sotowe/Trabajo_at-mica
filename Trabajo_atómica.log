@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.18)  29 DEC 2018 12:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.18)  29 DEC 2018 13:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,20 +6,19 @@ entering extended mode
 (./Trabajo_atómica.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
-Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
-\c@chapter=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
@@ -35,14 +34,14 @@ Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2018/02/14 3.18 Babel common definitions
-\babel@savecnt=\count88
+\babel@savecnt=\count87
 \U@D=\dimen103
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count89
+\bbl@dirlevel=\count88
 )
 \es@quottoks=\toks14
-\es@quotdepth=\count90
+\es@quotdepth=\count89
 Package babel Info: Making " an active character on input line 561.
 Package babel Info: Making . an active character on input line 662.
 Package babel Info: Making < an active character on input line 707.
@@ -417,7 +416,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count91
+\etb@tempcnta=\count90
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
@@ -434,7 +433,7 @@ Package etexcmds Info: Could not find \expanded.
 )))
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count92
+\lrq@indent=\count91
 
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -449,49 +448,49 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write3
-\integerpart=\count93
-\decimalpart=\count94
+\integerpart=\count92
+\decimalpart=\count93
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\c@tabx@nest=\count95
-\c@listtotal=\count96
-\c@listcount=\count97
-\c@liststart=\count98
-\c@liststop=\count99
-\c@citecount=\count100
-\c@citetotal=\count101
-\c@multicitecount=\count102
-\c@multicitetotal=\count103
-\c@instcount=\count104
-\c@maxnames=\count105
-\c@minnames=\count106
-\c@maxitems=\count107
-\c@minitems=\count108
-\c@citecounter=\count109
-\c@savedcitecounter=\count110
-\c@uniquelist=\count111
-\c@uniquename=\count112
-\c@refsection=\count113
-\c@refsegment=\count114
-\c@maxextratitle=\count115
-\c@maxextratitleyear=\count116
-\c@maxextradate=\count117
-\c@maxextraalpha=\count118
-\c@abbrvpenalty=\count119
-\c@highnamepenalty=\count120
-\c@lownamepenalty=\count121
-\c@maxparens=\count122
-\c@parenlevel=\count123
-\blx@tempcnta=\count124
-\blx@tempcntb=\count125
-\blx@tempcntc=\count126
-\blx@maxsection=\count127
-\blx@maxsegment@0=\count128
-\blx@notetype=\count129
-\blx@parenlevel@text=\count130
-\blx@parenlevel@foot=\count131
-\blx@sectionciteorder@0=\count132
+\c@tabx@nest=\count94
+\c@listtotal=\count95
+\c@listcount=\count96
+\c@liststart=\count97
+\c@liststop=\count98
+\c@citecount=\count99
+\c@citetotal=\count100
+\c@multicitecount=\count101
+\c@multicitetotal=\count102
+\c@instcount=\count103
+\c@maxnames=\count104
+\c@minnames=\count105
+\c@maxitems=\count106
+\c@minitems=\count107
+\c@citecounter=\count108
+\c@savedcitecounter=\count109
+\c@uniquelist=\count110
+\c@uniquename=\count111
+\c@refsection=\count112
+\c@refsegment=\count113
+\c@maxextratitle=\count114
+\c@maxextratitleyear=\count115
+\c@maxextradate=\count116
+\c@maxextraalpha=\count117
+\c@abbrvpenalty=\count118
+\c@highnamepenalty=\count119
+\c@lownamepenalty=\count120
+\c@maxparens=\count121
+\c@parenlevel=\count122
+\blx@tempcnta=\count123
+\blx@tempcntb=\count124
+\blx@tempcntc=\count125
+\blx@maxsection=\count126
+\blx@maxsegment@0=\count127
+\blx@notetype=\count128
+\blx@parenlevel@text=\count129
+\blx@parenlevel@foot=\count130
+\blx@sectionciteorder@0=\count131
 \labelnumberwidth=\skip43
 \labelalphawidth=\skip44
 \biblabelsep=\skip45
@@ -502,83 +501,83 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 \bibhang=\skip50
 \blx@bcfin=\read1
 \blx@bcfout=\write4
-\c@mincomprange=\count133
-\c@maxcomprange=\count134
-\c@mincompwidth=\count135
+\c@mincomprange=\count132
+\c@maxcomprange=\count133
+\c@mincompwidth=\count134
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def)
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count136
-\c@savedafterword=\count137
-\c@annotator=\count138
-\c@savedannotator=\count139
-\c@author=\count140
-\c@savedauthor=\count141
-\c@bookauthor=\count142
-\c@savedbookauthor=\count143
-\c@commentator=\count144
-\c@savedcommentator=\count145
-\c@editor=\count146
-\c@savededitor=\count147
-\c@editora=\count148
-\c@savededitora=\count149
-\c@editorb=\count150
-\c@savededitorb=\count151
-\c@editorc=\count152
-\c@savededitorc=\count153
-\c@foreword=\count154
-\c@savedforeword=\count155
-\c@holder=\count156
-\c@savedholder=\count157
-\c@introduction=\count158
-\c@savedintroduction=\count159
-\c@namea=\count160
-\c@savednamea=\count161
-\c@nameb=\count162
-\c@savednameb=\count163
-\c@namec=\count164
-\c@savednamec=\count165
-\c@translator=\count166
-\c@savedtranslator=\count167
-\c@shortauthor=\count168
-\c@savedshortauthor=\count169
-\c@shorteditor=\count170
-\c@savedshorteditor=\count171
-\c@labelname=\count172
-\c@savedlabelname=\count173
-\c@institution=\count174
-\c@savedinstitution=\count175
-\c@lista=\count176
-\c@savedlista=\count177
-\c@listb=\count178
-\c@savedlistb=\count179
-\c@listc=\count180
-\c@savedlistc=\count181
-\c@listd=\count182
-\c@savedlistd=\count183
-\c@liste=\count184
-\c@savedliste=\count185
-\c@listf=\count186
-\c@savedlistf=\count187
-\c@location=\count188
-\c@savedlocation=\count189
-\c@organization=\count190
-\c@savedorganization=\count191
-\c@origlocation=\count192
-\c@savedoriglocation=\count193
-\c@origpublisher=\count194
-\c@savedorigpublisher=\count195
-\c@publisher=\count196
-\c@savedpublisher=\count197
-\c@language=\count198
-\c@savedlanguage=\count199
-\c@origlanguage=\count266
-\c@savedoriglanguage=\count267
-\c@pageref=\count268
-\c@savedpageref=\count269
+\c@afterword=\count135
+\c@savedafterword=\count136
+\c@annotator=\count137
+\c@savedannotator=\count138
+\c@author=\count139
+\c@savedauthor=\count140
+\c@bookauthor=\count141
+\c@savedbookauthor=\count142
+\c@commentator=\count143
+\c@savedcommentator=\count144
+\c@editor=\count145
+\c@savededitor=\count146
+\c@editora=\count147
+\c@savededitora=\count148
+\c@editorb=\count149
+\c@savededitorb=\count150
+\c@editorc=\count151
+\c@savededitorc=\count152
+\c@foreword=\count153
+\c@savedforeword=\count154
+\c@holder=\count155
+\c@savedholder=\count156
+\c@introduction=\count157
+\c@savedintroduction=\count158
+\c@namea=\count159
+\c@savednamea=\count160
+\c@nameb=\count161
+\c@savednameb=\count162
+\c@namec=\count163
+\c@savednamec=\count164
+\c@translator=\count165
+\c@savedtranslator=\count166
+\c@shortauthor=\count167
+\c@savedshortauthor=\count168
+\c@shorteditor=\count169
+\c@savedshorteditor=\count170
+\c@labelname=\count171
+\c@savedlabelname=\count172
+\c@institution=\count173
+\c@savedinstitution=\count174
+\c@lista=\count175
+\c@savedlista=\count176
+\c@listb=\count177
+\c@savedlistb=\count178
+\c@listc=\count179
+\c@savedlistc=\count180
+\c@listd=\count181
+\c@savedlistd=\count182
+\c@liste=\count183
+\c@savedliste=\count184
+\c@listf=\count185
+\c@savedlistf=\count186
+\c@location=\count187
+\c@savedlocation=\count188
+\c@organization=\count189
+\c@savedorganization=\count190
+\c@origlocation=\count191
+\c@savedoriglocation=\count192
+\c@origpublisher=\count193
+\c@savedorigpublisher=\count194
+\c@publisher=\count195
+\c@savedpublisher=\count196
+\c@language=\count197
+\c@savedlanguage=\count198
+\c@origlanguage=\count199
+\c@savedoriglanguage=\count266
+\c@pageref=\count267
+\c@savedpageref=\count268
 \shorthandwidth=\skip51
 \shortjournalwidth=\skip52
 \shortserieswidth=\skip53
@@ -596,13 +595,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
-\c@textcitecount=\count270
-\c@textcitetotal=\count271
-\c@textcitemaxnames=\count272
-\c@biburlnumpenalty=\count273
-\c@biburlucpenalty=\count274
-\c@biburllcpenalty=\count275
-\c@smartand=\count276
+\c@textcitecount=\count269
+\c@textcitetotal=\count270
+\c@textcitemaxnames=\count271
+\c@biburlnumpenalty=\count272
+\c@biburlucpenalty=\count273
+\c@biburllcpenalty=\count274
+\c@smartand=\count275
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -614,8 +613,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2017/12/19 v3.10 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count277
-\c@bbx:relatedtotal=\count278
+\c@bbx:relatedcount=\count276
+\c@bbx:relatedtotal=\count277
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -646,12 +645,12 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2018/02/11 v5.2c context-sensitive quotations (JAW)
-\csq@reset=\count279
-\csq@gtype=\count280
-\csq@glevel=\count281
-\csq@qlevel=\count282
-\csq@maxlvl=\count283
-\csq@tshold=\count284
+\csq@reset=\count278
+\csq@gtype=\count279
+\csq@glevel=\count280
+\csq@qlevel=\count281
+\csq@maxlvl=\count282
+\csq@tshold=\count283
 \csq@ltx@everypar=\toks19
 
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
@@ -675,9 +674,9 @@ Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
 
 (./Trabajo_atómica.aux
-LaTeX Info: Redefining \sptext on input line 10.
-LaTeX Info: Redefining \. on input line 10.
-LaTeX Info: Redefining \% on input line 10.
+LaTeX Info: Redefining \sptext on input line 14.
+LaTeX Info: Redefining \. on input line 14.
+LaTeX Info: Redefining \% on input line 14.
 )
 \openout1 = `Trabajo_atómica.aux'.
 
@@ -699,16 +698,16 @@ LaTeX Info: Redefining \% on input line 12.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count285
+\scratchcounter=\count284
 \scratchdimen=\dimen106
 \scratchbox=\box26
-\nofMPsegments=\count286
-\nofMParguments=\count287
+\nofMPsegments=\count285
+\nofMParguments=\count286
 \everyMPshowfont=\toks20
-\MPscratchCnt=\count288
+\MPscratchCnt=\count287
 \MPscratchDim=\dimen107
-\MPnumerator=\count289
-\makeMPintoPDFobject=\count290
+\MPnumerator=\count288
+\makeMPintoPDFobject=\count289
 \everyMPtoPDFconversion=\toks21
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -747,36 +746,33 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 13.
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 15.
-[1]
-<Angulos_Euler.png, id=18, 579.16376pt x 482.80376pt>
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<Angulos_Euler.png, id=15, 579.16376pt x 482.80376pt>
 File: Angulos_Euler.png Graphic file (type png)
 <use Angulos_Euler.png>
 Package pdftex.def Info: Angulos_Euler.png  used on input line 62.
 (pdftex.def)             Requested size: 276.00105pt x 230.07823pt.
- [2 <./Angulos_Euler.png>] [3] [4] [5
-
-] (./Trabajo_atómica.aux
-LaTeX Info: Redefining \sptext on input line 10.
-LaTeX Info: Redefining \. on input line 10.
-LaTeX Info: Redefining \% on input line 10.
+[2] [3 <./Angulos_Euler.png>] [4] [5] (./Trabajo_atómica.aux
+LaTeX Info: Redefining \sptext on input line 14.
+LaTeX Info: Redefining \. on input line 14.
+LaTeX Info: Redefining \% on input line 14.
 )
 Package logreq Info: Writing requests to 'Trabajo_atómica.run.xml'.
 \openout1 = `Trabajo_atómica.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9785 strings out of 492982
- 165109 string characters out of 6134895
- 588234 words of memory out of 5000000
- 13257 multiletter control sequences out of 15000+600000
- 8539 words of font info for 30 fonts, out of 8000000 for 9000
+ 9767 strings out of 492982
+ 164909 string characters out of 6134895
+ 587875 words of memory out of 5000000
+ 13239 multiletter control sequences out of 15000+600000
+ 7933 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,45p,827b,1635s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
@@ -789,10 +785,10 @@ type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti10.pfb>
-Output written on Trabajo_atómica.pdf (6 pages, 141125 bytes).
+Output written on Trabajo_atómica.pdf (5 pages, 143094 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 61 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
