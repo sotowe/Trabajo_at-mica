@@ -96,6 +96,10 @@ Sabemos que el hamiltoniano rotacional es
 \begin{equation}
 H_{rot}=\frac{P_a^2}{2I_a}+\frac{P_b^2}{2I_b}+\frac{P_c^2}{2I_c}
 \end{equation}
+y el operador momento angular total es:
+\begin{equation}
+\hat P^2 = \hat P_a^2+  \hat P_b^2+  \hat P_c^2 = \hat P_X^2+  \hat P_Y^2+  \hat P_Z^2
+\end{equation}
 Una forma de obtener los autovalores de Energía sería sustituir los valores de P y resolver la ecuación de Schrödinger. Sin embargo, estos autovalores se pueden obtener mediante relaciones de conmutación.
 Las relaciones de conmutación que necesitaremos son las siguientes:
 \begin{equation}
@@ -110,6 +114,52 @@ Las relaciones de conmutación que necesitaremos son las siguientes:
 \begin{equation}
 \left[\hat P_J,\hat P_j\right]=0 \,,\ \forall_{J,j}
 \end{equation}
+con $J = \left\lbrace X,Y,Z \right\rbrace$ y $j= \left\lbrace a,b,c \right\rbrace$ \\
+Con estas relaciones de conmutación es fácil comprobar que:
+\begin{equation}
+\left[H_{rot}, \hat P^2 \right] = 0
+\end{equation}
+\begin{equation}
+\left[H_{rot}, \hat P_J \right] = 0
+\end{equation}
+\begin{equation}
+\left[H_{rot}, \hat P_c \right] = i\hbar \left(\frac{1}{2I_a}-\frac{1}{2I_b}\right)\left(\hat{P_a}\hat{P_b}+\hat{P_b}\hat{P_a}\right)
+\end{equation}
+Puesto que $H_{rot}$ conmuta con $\hat{P^2}$ y con $\hat P_Z$,  se pueden elegir las autofunciones $\psi$ del hamiltoniano rotacional como autofunciones de ambos operadores. Además, como los operadores $\hat P_X, \,\ \hat P_Y \,\ y \,\ \hat P_Z$ cumplen las relaciones generales de conmutación del momento angular, obtenemos las siguientes relaciones:
+\begin{equation}
+\hat H\psi = E\psi
+\end{equation}
+\begin{equation}
+\hat H\psi = J(J+1)\hbar \psi, \qquad J=0,1,2...
+\end{equation}
+\begin{equation}
+\hat P_Z\psi = M\hbar\psi, \qquad M = 0,\pm 1,...,\pm J
+\end{equation}
+Los autovalores de energía dependerán de las simetrías de rotación que presente la molécula, estas son:\\
+Rotor esférico $I_a=I_b=I_c= I$ \\
+Rotor simétrico $I_a=I_b \neq I_c$ \\
+Rotor asimétrico $I_a \neq I_b \neq I_c$
+\subsection{El rotor esférico}
+El rotor esférico se caracteriza porque los tres momentos principales de inercia son iguales: $$I_a=I_b=I_c= I$$
+El hamiltoniano del sistema queda por tanto como:
+\begin{equation}
+\hat H = \frac{\hat P^2}{2I}
+\end{equation}
+La ecuación de Schödinger es:
+\begin{equation}
+\frac{1}{2I}\hat P^2 \psi = E\psi
+\end{equation}
+Resolviendo la ecuación obtenemos que:$$\frac{1}{2I}J(J+1)\hbar^2\psi=E\psi$$
+\begin{equation}
+E=\frac{J(J+1)\hbar^2}{2I}, \qquad J=0,1,2...
+\end{equation}
+En este caso, tenemos además que
+\begin{equation}
+\left[\hat H,\hat P_c \right]
+\end{equation}
+con $$\hat P_c \psi = K\hbar\psi, \qquad K = 0, \pm 1,..., \pm J$$
+Luego la energía está $(2J+1)^2$ veces degenerada.
+
 \printbibliography
 \end{document}
 
