@@ -5,6 +5,7 @@
 \usepackage{biblatex}
 \usepackage{enumerate}
 \usepackage{csquotes}
+\usepackage{braket}
 \addbibresource{bibliografia.bib}
 
 \title{Modos rotacionales y vibracionales en moléculas}
@@ -55,7 +56,7 @@ T_{rot}=\frac{P_a^2}{2I_a}+\frac{P_b^2}{2I_b}+\frac{P_c^2}{2I_c}
 El nuevo sistema de referencia $\left\lbrace a,b,c \right\rbrace$ se consigue mediante tres rotaciones  $\left\lbrace \theta,\phi,\chi \right\rbrace$ a través del centro de masas $O$. Son los llamados ángulos de Euler (figura \ref{euler}).
 De la figura \ref{euler} podemos ver que:
 \begin{equation}
-\hat P_{\phi}=\frac{\partial P}{\partial \phi},\,\ \hat P_{N}=\frac{\partial P}{\partial N},\,\ \hat P_{\chi}=\frac{\partial P}{\partial \chi}
+\hat P_{\phi}=\frac{\partial}{\partial \phi},\,\ \hat P_{N}=\frac{\partial}{\partial N},\,\ \hat P_{\chi}=\frac{\partial}{\partial \chi}
 \end{equation}
 
 \begin{figure}
@@ -78,7 +79,7 @@ Obtenemos que:
 \hat P_b = i\hbar \left[-sin\chi csc\theta \frac{\partial}{\partial \phi} + sin\chi cot\theta \frac{\partial}{\partial \chi} - cos\chi \frac{\partial}{\partial \theta} \right]
 \end{equation}
 \begin{equation}
-\hat P_a = -i\hbar \frac{\partial}{\partial\chi}
+\hat P_c = -i\hbar \frac{\partial}{\partial\chi}
 \end{equation}
 O también:
 
@@ -94,7 +95,7 @@ O también:
 
 Sabemos que el hamiltoniano rotacional es
 \begin{equation}
-H_{rot}=\frac{P_a^2}{2I_a}+\frac{P_b^2}{2I_b}+\frac{P_c^2}{2I_c}
+\hat H_{rot}=\frac{\hat P_a^2}{2I_a}+\frac{\hat P_b^2}{2I_b}+\frac{\hat P_c^2}{2I_c}
 \end{equation}
 y el operador momento angular total es:
 \begin{equation}
@@ -137,8 +138,9 @@ Puesto que $H_{rot}$ conmuta con $\hat{P^2}$ y con $\hat P_Z$,  se pueden elegir
 \end{equation}
 Los autovalores de energía dependerán de las simetrías de rotación que presente la molécula, estas son:\\
 Rotor esférico $I_a=I_b=I_c= I$ \\
-Rotor simétrico $I_a=I_b \neq I_c$ \\
-Rotor asimétrico $I_a \neq I_b \neq I_c$
+Rotor simétrico $I_a=I_b \neq I_c$ o $I_a\neq I_b=I_c$\\
+Rotor asimétrico $I_a \neq I_b \neq I_c$\\
+Tomaremos siempre los ejes principales de inercia de manera que $I_a\leq I_b\leq I_c$.
 \section{Rotor rígido cuántico: Estados propios y autovalores.}
 \subsection{El rotor esférico}
 El rotor esférico se caracteriza porque los tres momentos principales de inercia son iguales: $$I_a=I_b=I_c= I$$
@@ -161,7 +163,7 @@ En este caso, tenemos además que
 con $$\hat P_c \psi = K\hbar\psi, \qquad K = 0, \pm 1,..., \pm J$$
 Luego la energía está $(2J+1)^2$ veces degenerada.
 \subsection{El rotor simétrico}
-El rotor simétrico se caracteriza porque dos de sus momentos principales de inercia son iguales $I_a=I_b\neq I_c$. Su estructura es similar a un balón de rugby.
+El rotor simétrico se caracteriza porque dos de sus momentos principales de inercia son iguales $I_a=I_b\neq I_c$ (caso achatado) o $I_a\neq I_b=I_c$ (caso alargado). Realizaremos el desarrollo del caso $I_a=I_b\neq I_c$ y luego lo adaptaremos al segundo. 
 El hamiltoniano del sistema es:
 \begin{equation}
 \hat H=\frac{\hat P_a^2+\hat P_b^2}{2I_b}+\frac{\hat P_c^2}{2I_c}=\frac{\hat P^2- \hat P_c^2}{2I_b}+\frac{\hat P_c^2}{2I_c}
@@ -173,9 +175,56 @@ Las energías se obtienen como: $$\left(\frac{\hat P^2- \hat P_c^2}{2I_b}+\frac{
  \begin{equation}
  E=\frac{\hbar^2J(J+1)}{2I_b}+\hbar^2K^2\left(\frac{1}{2I_c}-\frac{1}{2I_b}\right)
  \end{equation}
+ Se definen las constantes rotacionales como:
+ \begin{equation}
+ A \equiv \frac{h}{8\pi^2I_a}\geq B\equiv \frac{h}{8\pi^2I_b}\geq C\equiv \frac{h}{8\pi^2I_c}
+ \end{equation}
+ Teniendo entonces que las energías son
+ \begin{equation}
+ E/h=BJ\left(J+1\right)+\left(C-B\right)K^2 \qquad (achatado)
+ \end{equation}
+ \begin{equation}
+ E/h=BJ\left(J+1\right)+\left(A-B\right)K^2 \qquad (alargado)
+ \end{equation}
 La energía depende de $J$ y $K^2$. Hay una degeneración $(2J+1)$ asociada a $M$. Además, para $K\neq 0$ hay una degeneración doble debida a los valores de $\pm K$, luego para $K\neq 0$ la degeneración de la energía es $4J+2$.
 \subsection{El rotor asimétrico}
+En el rotor asimétrico $I_a\neq I_b\neq I_c$
+En este caso, como $\left[\hat H,\hat P_c\right]\neq 0$ no podemos elegir las autofunciones de $\hat P_c$; además el hamiltoniano no es separable y necesitaremos otro método para resolver la ecuación de Schrödinger.\\
+Podemos  encontrar los autovalores de $\hat H$ expandiendo las autofunciones desconocidas $\psi_i$ en términos de algún conjunto completo ortonormal conocido $\phi_i$ y resolviendo la ecuación de autovalores:
+\begin{equation}
+det \left[ \bra{\phi_n}\hat H\ket{\phi_m} - E_i\delta_{nm} \right]=0
+\end{equation}
+Un conjunto completo ortonormal que podemos usar son las autofunciones del rotor simétrico, ya que son funciones de las mismas coordenadas (los ángulos de Euler) y satisfacen las mismas condiciones de contorno:
+\begin{equation}
+\psi_i = \sum_{J'}\sum_{M'}\sum_{K'}c_{i,J'M'K'}\phi_{J'M'K'}
+\end{equation}
+Como $\psi_i$ es autofunción de $\hat P^2$ con autovalor $\hbar^2J(J+1)$ y de $\hat P_z$ con autovalor $\hbar M$ sólo necesitamos incluir fuciones $\phi_i$ con el mismo valor de $J$ y $M$ que $\psi_i$. La suma infinita sobre $J'$, $M'$ y $K'$ se reduce ahora a una suma finita sobre los $2J+1$ posibles valores de $K'$
+\begin{equation}
+\psi_i = \sum_{K'=-J}^Jc_{i,JMK'}\phi_{JMK'}
+\end{equation}
+Luego, la ecuación de autovalores queda:
+\begin{equation}
+det\left(H_{K'K''}-E_i\delta_{K'K''}\right)=0
+\end{equation}
+con
+\begin{equation}
+H_{K'K''}\equiv\int\phi^*_{JMK'}\hat H\phi_{JMK''}d\tau
+\end{equation}
+Cuyo resultado es calculable con los datos que tenemos y vale:
+$$
+H_{K'K''}=\delta_{K''K'}\frac{1}{2}h\left[\left(2C-A-B\right)\left(K'\right)^2+\left(A+B\right)J\left(J+1\right)\right]$$$$+\delta_{K''K'+2}\frac{1}{4}h\left(B-A\right)\left[J\left(J+1\right)-K'\left(K'+1\right)\right]^\frac{1}{2}$$$$\cdot\left[J\left(J+1\right)-\left(K'+1\right)\left(K'+2\right)\right]^\frac{1}{2}$$$$+\delta_{K''K'-2}\frac{1}{4}h\left(B-A\right)\left[J\left(J+1\right)-K'\left(K'-1\right)\right]^\frac{1}{2}$$
+\begin{equation}
+\cdot\left[J\left(J+1\right)-\left(K'-1\right)\left(K'-2\right)\right]^\frac{1}{2}
+\end{equation}
+Siendo
+$$
+A \equiv \frac{h}{8\pi^2I_a}\geq B\equiv \frac{h}{8\pi^2I_b}\geq C\equiv \frac{h}{8\pi^2I_c}
+$$
+Podemos ver que los autovalores del hamiltoniano no dependen de $M$, por tanto, la degeneración de la energía será $2J+1$, correspondientes a los posibles valores de $M$ para un $J$ dado.
+Cada función de onda del rotor asimétrico $\psi_i$ es una combinación lineal de las $2J+1$ funciones de onda de del rotor simétrico con los mismos valores de $J$ y $M$ que $\psi_i$.
 
+\section{Estructura del espectro rotacional.}
+\newpage
 \printbibliography
 \end{document}
 
