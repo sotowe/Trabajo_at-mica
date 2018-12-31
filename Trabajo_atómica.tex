@@ -30,6 +30,11 @@ Podemos determinar los niveles de energía de este sistema resolviendo la ecuaci
 \end{equation}
 Con
 $$E_l= \frac{\hbar^2}{2I}l(l+1)$$
+Si llamamos $$B\equiv \frac{h}{8\pi^2I}$$
+obtenemos que:
+\begin{equation}
+E/h=BJ(J+1)
+\end{equation}
 La energía está $2l+1$ veces degenerada debido a que para un $l$ fijo, distintos valores de $m$ tienen la misma energía.
 \subsection{El rotor rígido poliatómico}
 Se define el tensor de inercia $\tilde{I}$ como:
@@ -224,6 +229,79 @@ Podemos ver que los autovalores del hamiltoniano no dependen de $M$, por tanto, 
 Cada función de onda del rotor asimétrico $\psi_i$ es una combinación lineal de las $2J+1$ funciones de onda de del rotor simétrico con los mismos valores de $J$ y $M$ que $\psi_i$.
 
 \section{Estructura del espectro rotacional.}
+El espectro rotacional de las moléculas se observa casi exclusívamente como espectro de absorción, ya que la emisión espontánea es muy poco probable dada las bajas energías de transición. El espectro rotacional cae en la región de las microondas, por lo que se requieren espectrómetros del infrarojo lejano o espectrómetros de microondas para observarlos.\cite{haken2013}\\
+
+Sólo las moléculas con momento dipolar eléctrico permanente permiten la observación de su espectro rotacional.  Esto es debido a que este tipo de moléculas, cuando está rotando, parece tener un momento dipolar dependiente del tiempo para un observador estacionario. La rotación de este tipo de moléculas lleva absorción de radiación electromagnética cuando las frecuencia electromagnética irradiada encaja con la frecuencia de rotación del dipolo. Por tanto, moléculas homonucleares diatómicas como el $H_2$, el $N_2$ o el $O_2$ no presentan espectro rotacional. Lo mismo ocurre con moléculas más grandes como el $CCl_4$, a menos que la rotación induzca un momento dipolar o la molécula presente algún tipo de vibración asimétrica que le induzca un momento \cite{haken2013}.\\
+ 
+Los elementos diagonales del operador $\hat D$ dados por:
+\begin{equation}
+D_{\alpha\alpha}=\bra{\psi_\alpha}\hat D\ket{\psi_\alpha},\qquad \alpha \equiv \left(s,v,J,M,K\right),
+\end{equation}
+determinan el momento dipolar eléctrico permanente de la molécula en el estado $\psi_\alpha$.\\
+
+Las reglas de selección que aparecen asociadas a las transiciones electromagnéticas en moléculas son las habituales para una transición dipolar eléctrica, esto es, son las que corresponden al valor esperado de un tensor esférico de primer orden entre estados de momento angular definido.
+Para el rotor simétrico tenemos como reglas de selección
+\begin{equation}
+\Delta J = 0,\pm 1, \qquad\Delta K =0, \Delta M = 0, \pm 1
+\end{equation}
+Teniendo que cuando $\Delta J = 0$ con $\Delta M \neq 0$ no hay absorción o emisión de radiación.\\
+
+Para el caso más simple, esto es una molécula heteronuclear diatómica, tenemos que 
+\begin{equation}
+h\nu = E_{J+1}-E{J}
+\end{equation}
+Luego
+\begin{equation}
+\nu_{J \rightarrow J+1} = 2B(J+1)
+\end{equation}
+De esta ecuación podemos observar que moléculas más pesadas, las cuales tendrán un $I$ mayor y por tanto una constante rotacional $B$ menor, tendrán un espaciado menor entre sus líneas de absorción (figura \ref{niveles1}).
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{niveles1.png}
+\caption{EXPLICAR}
+\label{niveles1}
+\end{figure}
+\section{Momentos de inercia de distintas moléculas respecto de sus ejes principales en sus estados fundamentales: H 2 , CO, OH 2 , CH 4 ...}
+\subsection{$H_2$}
+\section{Aproximación de los estados vibracionales de una molécula admitiendo que los núcleos del átomo vibran armónicamente en torno a sus posiciones de equilibrio.}
+Supongamos un conjunto de N masas puntuales (los núcleos), cada uno de los cuales vibra en torno a una posición de equilibrio. Sean $a_\alpha$, $b_\alpha$ y $c_\alpha$ las cordenadas cartesianas de un núcleo $\alpha$ en los ejes principales del sistema, y sean $a_{\alpha ,e}$, $b_{\alpha ,e}$ y $c_{\alpha ,e}$ los puntos de equilibrio en esas mismas coordenadas. Definimos los desplazamientos como:
+\begin{equation}
+x_\alpha = a_\alpha - a_{\alpha, e}, \qquad y_\alpha = b_\alpha - b_{\alpha, e}, \qquad z_\alpha = c_\alpha - c_{\alpha, e}
+\end{equation}
+
+Ya que hay sólo $3N-6$ grados de libertad vibracionales, estas coordenadas no son independientes. Están conectadas por seis relaciones, las cuales especifican que los ejes abc se transladan y rotan con la molécula.\\
+
+La energía cinética clásica de vibración en torno a las posiciones de equilibrio es:
+\begin{equation}
+T= \frac{1}{2}\sum_{\alpha = 1}^Nm_\alpha\left[\left(\frac{dx_\alpha}{dt}\right)^2+\left(\frac{dy_\alpha}{dt}\right)^2+\left(\frac{dz_\alpha}{dt}\right)^2\right]
+\end{equation}
+Simplificando la notación y llamando $q_i=m_i^{1/2}x_i^j$ con $j=1,2,3$ y $i=1,...,N$, la energía cinética se convierte en:
+\begin{equation}
+T=\frac{1}{2}\sum_{i=1}^{3N}\dot q_i^2
+\end{equation}
+Para una molécula, la energía potencial vibracional viene dad por la función U, la suma de las energías electrónicas y las repulsiones nucleares:
+\begin{equation}
+V=U(q_1,...,q_{3N})
+\end{equation}
+Expandiendo la energía potencial en serie de Taylor y teniendo en cuenta que en el equilibrio
+\begin{equation}
+\left(\frac{\partial U}{\partial q_i}\right)_e=0, \qquad i= 1,...,3N
+\end{equation}
+Tenemos que
+\begin{equation}
+U = U_e + \frac{1}{2}\sum_{i=1}^{3N}\sum_{k=1}^{3N}u_{ik}q_iq_k
+\end{equation}
+\begin{equation}
+u_{ik} \equiv \left(\frac{\partial^2U}{\partial q_i \partial q_k}\right)_e
+\end{equation}
+Aplicamos ahora la segunda ley de Newton:
+\begin{equation}
+F_{x,\alpha}=-\frac{\partial V}{\partial x_\alpha}=m_\alpha\frac{d^2x_\alpha}{dt^2}
+\end{equation}
+que escribiéndolo en coordenadas normales nos da:
+\begin{equation}
+\frac{d^2q_j}{dt^2}+\frac{\partial V}{\partial q_j}= 0, \qquad j=1,...,3N
+\end{equation}
+V contiene una doble sumatoria sobre todas las $q's$. Para obtener un conjunto de ecuaciones diferenciales más simple realizaremos un cambio de variables haciendo que $U$ sea diagonal.
 \newpage
 \printbibliography
 \end{document}
