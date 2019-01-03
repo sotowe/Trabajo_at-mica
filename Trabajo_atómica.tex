@@ -461,7 +461,8 @@ con
 \begin{equation}
 B_e \equiv	\frac{h}{8\pi^2I_e}, \qquad I_e\equiv \mu R_e^2
 \end{equation}
-$U_e$ es la energía electrónica de la molécuula, cuyo valor es
+La vibración molecular es mucho más rápida que la rotación molecular, por lo que podemos usar la separación internuclear media $R_e$ para el cálculo del momento rotacional de inercia.
+$U_e$ es la energía electrónica de la molécula, cuyo valor es
 \begin{equation}
 U_e \equiv	U(R_e)=E_{el} +\frac{Z_aZ_be^2}{R_e}
 \end{equation}
@@ -475,6 +476,19 @@ La aproximación de Born-Oppenheimer permite separar la función de onda molecul
 \begin{equation}
 \psi=\psi_{el}\psi_{vib}\psi_{rot}\psi_{trans}
 \end{equation}
+Mientras que para moléculas diatómicas la interacción vibración-rotación añade sólamente pequeñas correcciones a la energía, para muchas moléculas poliatómicas la interacción vibración-rotación trae correcciones relativamente grandes. Lo mismo ocurre para la aproximación de Born-Oppenheimer.\\
+
+El acoplamiento de los movimientos rotacional y vibracional en una molécula se puede entender en términos de física clásica. Sin embargo, podemos ignorar este acoplamiento y considerar la excitación de una molécula diatómica en la primera aproximación como simplemente la suma de la excitación del oscilador armónico y del rotor rígido. En ese caso obtenemos los niveles energéticos:
+\begin{equation}
+E(v,J)=\hbar\nu(v+\frac{1}{2})+ BhJ(J+1)
+\end{equation}
+Donde  las transiciones púramente rotacionales $(\Delta v = 0, \,\ \delta J = \pm 1)$ están permitidas, pero las transiciones púramente vibracionales $(\Delta v = \pm 1, \,\ \Delta J = 0)$ no están permitidas. Esto se puede entender desde un punto de vista clásico, ya que una transición vibracional lleva consigo un cambio en la longitud del enlace, lo que conlleva un cambio en la velocidad de rotación. La regla de selección $\Delta J$ solo es válida cuando el momento angular de la molécula es paralelo al eje de su cilindro.
+En la figura (\ref{transiciones}) se observan las líneas típicas para un potencial de morse.
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{niv_rot_vib_elect.png}
+\caption{EXPLICAR}
+\label{transiciones}
+\end{figure}
 \newpage
 \printbibliography
 \end{document}
