@@ -297,11 +297,184 @@ Aplicamos ahora la segunda ley de Newton:
 \begin{equation}
 F_{x,\alpha}=-\frac{\partial V}{\partial x_\alpha}=m_\alpha\frac{d^2x_\alpha}{dt^2}
 \end{equation}
-que escribiéndolo en coordenadas normales nos da:
+que escribiéndolo en las coordenadas ponderadas $q_i$:
 \begin{equation}
 \frac{d^2q_j}{dt^2}+\frac{\partial V}{\partial q_j}= 0, \qquad j=1,...,3N
 \end{equation}
 V contiene una doble sumatoria sobre todas las $q's$. Para obtener un conjunto de ecuaciones diferenciales más simple realizaremos un cambio de variables haciendo que $U$ sea diagonal.
+En nuestra nueva base de vectores obtenemos que:
+\begin{equation}
+U=U_e + \frac{1}{2}\sum_{k=1}^{3N-6}\lambda_kQ_k^2
+\end{equation}
+Con $Q_k$ siendo las coordenadas normales, tales que
+\begin{equation}
+Q_i=\sum_{k=1}^{3N}l_{ki}q_k, \qquad i=1,...,3N
+\end{equation}
+ y $\lambda_k$ son los autovalores obtenidos en las nuevas coordenadas.
+La energía cinética en estas nuevas coordenadas queda como:
+\begin{equation}
+T=\frac{1}{2}\sum_{k=1}^{3N-6}\dot Q_k^2
+\end{equation}
+Y finalmente, la ecuación del movimiento en coordenadas normales queda:
+\begin{equation}
+\frac{d^2Q}{dt^2}=\lambda_kQ_k=0, \qquad k=1,...,3N
+\end{equation}
+Añadiendo la energía cinética y la energía potencial y cambiando las cantidades clásicas por operadores obtenemos el Hamiltoniano vibracional cuántico aproximado para una molécula poliatómica.
+\begin{equation}
+\hat H= \frac{1}{2}\sum_{k=1}^{3N-6} \hat{\dot Q_k^2} + \frac{1}{2} \sum_{k=1}^{3N-6} \lambda_k \hat Q_k^2 + U_e
+\end{equation}
+Teniendo en cuenta que $p_x=m\dot x$ llegamos a que
+$$\hat{\dot{x}}=\frac{\hbar}{im}\frac{\partial}{\partial x}$$
+Y por tanto
+\begin{equation}
+\hat{\dot{Q_k}}=\frac{\hbar}{i}\frac{\partial}{\partial Q_k}
+\end{equation}
+Con lo que el Hamiltoniano queda:
+\begin{equation}
+\hat H= -\frac{\hbar^2}{2}\sum_{k=1}^{3N-6} \frac{\partial^2}{\partial Q^2_k} + \frac{1}{2} \sum_{k=1}^{3N-6} \lambda_k \hat Q_k^2 + U_e
+\end{equation}
+La energía electrónica $U_e$ es una constante, por lo que no afecta a las autofunciones, simplemente disminuye en $U_e$ los autovalores del Hamiltoniano y podemos eliminarlo de la ecuación. Podemos separar el Hamiltoniano vibracional en $3N-6$ Hamiltonianos monoparticulares de la forma:
+\begin{equation}
+\hat H_k = -\frac{\hbar^2}{2}\frac{\partial^2}{\partial Q^2}+\frac{1}{2}\lambda_kQ_k^2
+\end{equation}
+que tienen la estructura del oscilador armónico, cuyas soluciones ya conocemos:
+\begin{equation}
+\psi_k(Q_k)\frac{1}{\left(2^{v_k}v_k!\right)^{1/2}}\left(\frac{\alpha_k}{\pi}\right)^{1/4}e^{-\alpha_kQ^2_k/2}H_{v_k}(\alpha_k^{1/2}Q_k)
+\end{equation}
+\begin{equation}
+E_k=\left(v_k+\frac{1}{2}\right)h\nu_k,	\qquad v_k=0,1,2,...
+\end{equation}
+\begin{equation}
+\alpha_k=\frac{2\pi\nu_k}{\hbar}=\frac{\lambda_k^{1/2}}{\hbar}
+\end{equation}
+Y finalmente, la energía vibracional de la molécula es
+\begin{equation}
+E_{vib}=\sum_{k=1}^{3N-6}\left(v_k+\frac{1}{2}\right)h\nu_k
+\end{equation}
+\section{Obtención de los autoestados y autovalores en general.}
+En general, para una molécula poliatómica el Hamiltoniano estará constituido por la energía cinética del movimiento de los núcleos atómicos, la energía cinética de los electrones de cada átomo, y la interacción electrostática entre electrones y núcleos. El Hamiltoniano del sistema en el sistema centro de masas será:
+$$
+\hat H = -\frac{\hbar^2}{2}\sum_{\alpha=1}\frac{\nabla_\alpha^2}{m_\alpha}-\frac{\hbar^2}{2m}\sum_{i}\nabla_i^2+\sum_\alpha\sum_{\beta >\alpha}\frac{Z_\alpha Z_\beta e^2}{r_{\alpha \beta}}
+$$
+\begin{equation}
+-\sum_\alpha\sum_i\frac{Z_\alpha e^2}{r_{i\alpha}}+\sum_j\sum_{i>j}\frac{e^2}{r_{ij}}
+\end{equation}
+donde $m_\alpha$ es la masa del núcleo, $Z_\alpha$ su número atómico, $r_{\alpha\beta}$ es la distancia entre el núcleo $\alpha$ y $\beta$, $r_{i\alpha}$ es la distancia entre el electrón $i$ y el núcleo $\alpha$, $m$ la masa del electrón y $r_{ij}$ es la distancia entre los electrones $i$ y $j$. 
+Una buena aproximación es tratar el movimiento electrónico separado del movimiento de los núcleos. Esta es la llamada aproximación de Born-Oppenheimer. Dado que los electrones se mueven mucho más rápidamente que los núcleos, para ellos los núcleos estarán en una posición concreta. 
+\begin{equation}
+\hat H_{el} = -\frac{\hbar^2}{2m}\sum_{i}\nabla_i^2-\sum_\alpha\sum_i\frac{Z_\alpha e^2}{r_{i\alpha}}+\sum_j\sum_{i>j}\frac{e^2}{r_{ij}}
+\end{equation}
+Resolviendo la ecuación:
+\begin{equation}
+\hat H_{el}\psi_{el}=E_{el}\psi_{el}
+\end{equation}
+obtenemos la energía electrónica para una configuración nuclear dada.
+
+Sea $V_{NN}$ a la energía potencial de repulsión entre los núcleos atómicos. Para una configuración nuclear concreta, esta energía de repulsión es constante , y podemos escribir 
+\begin{equation}
+U=E_{el}+V{NN}
+\end{equation}
+Tras resolver la ecuación de Schrödinger nos queda 
+\begin{equation}
+\psi_{el}=\psi{el,n}(q_i;q_\alpha)\,\ \,\ y \,\ \,\ U=U_n(q_\alpha)
+\end{equation}
+donde n representa los números cuánticos electrónicos.
+Una vez tenemos las energías y las funciones de onda eléctricas podemos resolver la ecuación de Schrödinger para el movimiento de los núcleos:
+\begin{equation}
+\hat H_N\psi_N=E\psi_N
+\end{equation}
+\begin{equation}
+\hat H_N=-\frac{\hbar^2}{2}\sum_\alpha \frac{\nabla^2_\alpha}{m_\alpha}+U(q_\alpha)
+\end{equation}
+Con $E$ la energía total del sistema, puesto que la energía electrónica va incluida dentro del potencial $U$. Cada estado electrónico tendrá una energía $U(q_\alpha)$ diferente y portanto, deberemos resolver la ecuación diferencial nuclear de Schrödinger para cada estado electrónico de la molécula.
+La función de onda molecular completa será:
+\begin{equation}
+\psi(q_i,q_\alpha )=\psi_{el}(q_i;q_\alpha )\psi_N(q_\alpha )
+\end{equation}
+Los términos despreciados en esta aproximación son poco significativos y disminuyen en importancia a medida que aumenta la masa de los núcleos.
+En moléculas diatómicas la separación de los modos que se obtiene con la aproximación de Born-Oppenheimer es especialmente clara, por lo que realizaremos el ejemplo para moléculas diatómicas y a partir de aquí extrapolaremos los resultados a moléculas poliatómicas. Nos restringiremos además a moléculas en estados electrónicos $^1\Sigma$, ya que la presencia de espín electrónico o momentos angulares orbitales complica las cosas.
+La ecuación de Schrödinger para el movimiento nuclear de una molécula diatómica queda
+\begin{equation}
+\left[-\frac{\hbar^2}{2m_a}\nabla^2_a-\frac{\hbar^2}{2m_b}\nabla^2_b+U(R)\right]\psi_N=E\psi_N
+\end{equation}
+Podemos cambiar las coordenadas a coordenadas en el centro de masas y eliminar la energía cinética de translación de la molécula, quedando la ecuación como
+\begin{equation}
+\left[-\frac{\hbar^2}{2\mu}\nabla^2+U(R)\right]\psi_N=E\psi_N
+\end{equation}
+Donde $\mu$ es la masa reducida del núcleo y $E$ es la energía total de la molécula (núcleo y electrones), excluyendo la energía tranlacional.\\
+
+Dado que la energía potencial sólo depende de R tenemos un problema de fuerzas centrales, cuyo resultado es de la forma
+\begin{equation}
+\psi_N=F(R)Y^M_J(\theta_N,\phi_N)
+\end{equation}
+Donde $Y^M_J$ es un armónico esférico y F es una función de R.
+Escribiendo el laplaciano en coordenadas esféricas y llamando $G(R)\equiv RF(R)$ tenemos que:
+\begin{equation}
+-\frac{\hbar^2}{2\mu}G''(R)+\left[\frac{J(J+1)\hbar^2}{2\mu R^2}+U(R)-E\right]G(R)=0
+\end{equation}
+Para continuar necesitamos una expresión para la energía potencial U(R). Este potencial se encuentra resolviendo la ecuación molecular electrónica de Schrödinger, el cuál es diferente para cada estado electrónico de cada molécula. Nosotros buscamos una aproximación que represente razonablemente bien este potencial para la mayoría de las moléculas diatómicas. Para estados electrónicos enlazados esperamos que el núcleo vibre alrededor de un mínimo de potencial de energía, por tanto, podemos expandir U en una serie de Taylor en torno a la separación internuclear de equilibrio $R_e$. Sabiendo que $U'(R_e)=0$ y obviando las potencias de orden superior a 3 tenemos que
+\begin{equation}
+U(R) \approx U(R_e)+\frac{1}{2}U''(R_e)(R-R_e)^2
+\end{equation}
+En la figura \ref{potencial} se puede observar en trazado contínuo la curva de potencial típica para moléculas diatómicas y en trazado discontínuo la aproximación de segundo orden a la curva. Vemos como esta aproximación sólamente es válida para desplazamientos pequeños respecto a la posición de equilibrio.
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{curva_potencial.png}
+\caption{EXPLICAR}
+\label{potencial}
+\end{figure}
+Realizamos ahora el cambio de variable 
+\begin{equation}
+q \equiv R-R_e
+\end{equation}
+Y definimos 
+\begin{equation}
+k_e \equiv	U''(R_e)
+\end{equation}
+El potencial queda como
+\begin{equation}
+U \approx U(R_e)+\frac{1}{2}k_eq^2
+\end{equation}
+y la ecuación de Schrödinger
+\begin{equation}
+-\frac{\hbar^2}{2\mu}G''(q)+\left[\frac{J(J+1)\hbar^2}{2\mu (q+R)^2}+U(R_e)+\frac{1}{2}k_eq^2-E\right]G(q)=0
+\end{equation}
+Escribimos ahora
+\begin{equation}
+\frac{J(J+1)\hbar^2}{2\mu (q+R)^2}=\frac{J(J+1)\hbar^2}{2\mu R_e^2}\left[1-2\frac{q}{R_e}+3\frac{q^2}{R_e^2}-...\right]
+\end{equation}
+despreciando los términos entre paréntesis y llamando 
+\begin{equation}
+W \equiv	E-U(R_e)-\frac{J(J+1)\hbar^2}{2\mu R_e^2}
+\end{equation}
+llegamos a la ecuación
+\begin{equation}
+-\frac{\hbar^2}{2\mu}G''(q)\left[\frac{1}{2}k_eq^2-W\right] G(q)=0
+\end{equation}
+que es la ecuación de Schrödinger para un oscilador armónico en una dimensión. Por tanto
+\begin{equation}
+W=\left(v+\frac{1}{2}\right)h\nu_e
+\end{equation}
+\begin{equation}
+E=U(R_e)+\left(v+\frac{1}{2}\right)h\nu_e+J(J+1)hB_e
+\end{equation}
+con
+\begin{equation}
+B_e \equiv	\frac{h}{8\pi^2I_e}, \qquad I_e\equiv \mu R_e^2
+\end{equation}
+$U_e$ es la energía electrónica de la molécuula, cuyo valor es
+\begin{equation}
+U_e \equiv	U(R_e)=E_{el} +\frac{Z_aZ_be^2}{R_e}
+\end{equation}
+Por tanto, vemos que podemos separar las energías de la molécula
+\begin{equation}
+E_{tot} = U_e+E_{vib}+E_{rot}+E_{trans}
+\end{equation}
+La separación entre niveles energéticos electrónicos es mucho mayor que la separación entre niveles vibracionales, la cual a su vez son mucho mayor que la separación entre niveles rotacionales.\\
+
+La aproximación de Born-Oppenheimer permite separar la función de onda molecular en un producto de la función de onda enectrónica por la función de onda nuclear. En el tratamiento que hemos hecho de la ecuación de Schrödinger para moléculas diatómicas hemos conseguido separar la función de onda nuclear en un producto de la función de onda rotacional por la vibracional y por la translacional:
+\begin{equation}
+\psi=\psi_{el}\psi_{vib}\psi_{rot}\psi_{trans}
+\end{equation}
 \newpage
 \printbibliography
 \end{document}
