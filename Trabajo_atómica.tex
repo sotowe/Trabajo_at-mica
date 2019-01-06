@@ -6,6 +6,7 @@
 \usepackage{enumerate}
 \usepackage{csquotes}
 \usepackage{braket}
+\usepackage{amsmath}
 \addbibresource{bibliografia.bib}
 
 \title{Modos rotacionales y vibracionales en moléculas}
@@ -39,10 +40,10 @@ La energía está $2l+1$ veces degenerada debido a que para un $l$ fijo, distint
 \subsection{El rotor rígido poliatómico}
 Se define el tensor de inercia $\tilde{I}$ como:
 \begin{equation}
-\tilde{I}=\left( \begin{array}{ccc}
+\tilde{I}=\begin{pmatrix}
 \sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,2}+x^2_{\alpha,3}\right) & -\sum_{\alpha}m_{\alpha}x_{\alpha,1}x_{\alpha,2} & -\sum_{\alpha}m_{\alpha}x_{\alpha,1}x_{\alpha,3} \\\\
 -\sum_{\alpha}m_{\alpha}x_{\alpha,2}x_{\alpha,1} & \sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,1}+x^2_{\alpha,3}\right) &-\sum_{\alpha}m_{\alpha}x_{\alpha,2}x_{\alpha,3} \\\\
--\sum_{\alpha}m_{\alpha}x_{\alpha,3}x_{\alpha,1} & -\sum_{\alpha}m_{\alpha}x_{\alpha,3}x_{\alpha,2} & \sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,1}+x^2_{\alpha,2}\right) \end{array} \right)
+-\sum_{\alpha}m_{\alpha}x_{\alpha,3}x_{\alpha,1} & -\sum_{\alpha}m_{\alpha}x_{\alpha,3}x_{\alpha,2} & \sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,1}+x^2_{\alpha,2}\right) \end{pmatrix}
 \end{equation}
 Clásicamente, la energía cinética rotacional del sistema se obtiene como:
 \begin{equation}
@@ -268,14 +269,57 @@ Teniendo que\\
  $R=74 \, pm=375.014 \, MeV^{-1}$\\
  $m=938.272 \, MeV/c^2$\\
  
- Nos queda que $$I=65 \, 977.176 \, GeV^{-1}c^{-2}$$
+ Nos queda que $$I=65.977 \, eV^{-1}c^{-2}$$
  \subsection{$CO$}
  La molécula de monóxido de carbono $CO$ es una molécula diatómica heteronuclear. Su momento de inercia, como en el caso anterior es $$I=\mu R^2$$
  $R=112.8 \, pm=571.642\, MeV^{-1}$\\
  $m_c=12.0107 \, u=11\, 187.97 \, MeV/c^2$\\
  $m_0=15.999\, u=14\, 903.069\, MeV/c^2$\\
  En este caso 
- $$I= 4\, 805\, 804.014\,GeV^{-1}c^{-2}$$
+ $$I= 2\, 088.335\,eV^{-1}c^{-2}$$
+ \subsection{$H_2O$}
+ Las posiciones de los átomos de agua respecto a su centro de masas son:\\
+ $\vec r_O = 0\, \vec x + 33.29 \, \vec y + 0 \, \vec z \, MeV^{-1}$\\
+ $\vec r_{H1} =-383.94\, \vec x-264.24 \, \vec y + 0 \, \vec z \, MeV^{-1}$\\
+ $\vec r_{H2} = 383.94 \, \vec x -264.24 \, \vec y + 0 \, \vec z \, MeV^{-1}$\\
+ 
+ Y las masas de los átomos son\\
+ $M_H = 938.272 \, MeV$\\
+ $M_O = 14\, 903.069 MeV$\\
+ 
+ A partir de ellos construimos su tensor de inercia
+ $$ \tilde I =
+ \begin{pmatrix}
+ 147.546 & 0 & 0 \\
+ 0 & 276.621 & 0 \\
+ 0 & 0 & 424.167\\
+ \end{pmatrix}
+ \, eV^{-1}
+ $$
+ Vemos que el tensor de inercia es diagonal en las coordenadas cartesianas. Por lo que sus ejes principales son $ \hat x, \,\ \hat y, \,\ \hat z$
+ \subsection{$CH_4$}
+Las posiciones de los átomos  de metano respecto a su centro de masas son:
+ $\vec r_C = 0\, \vec x + 0 \, \vec y + 0 \, \vec z \, MeV^{-1}$\\
+ $\vec r_{H1} = 0\, \vec x+0 \, \vec y + 550.87 \, \vec z \, MeV^{-1}$\\
+ $\vec r_{H2} = 0\, \vec x -477.1 \, \vec y + -275.4\, \vec z \, MeV^{-1}$\\
+ $\vec r_{H3} = 413.2\, \vec x + 238.5 \, \vec y + -272.4 \, \vec z \, MeV^{-1}$\\
+ $\vec r_{H4} = -413.2 \, \vec x -238.5 \, \vec y + -272.4 \, \vec z \, MeV^{-1}$\\
+ 
+ Y las masas de los átomos son\\
+ $M_C = 11\, 187.97 \, MeV$\\
+ $M_H = 938.272 MeV$\\
+ 
+ A partir de estos datos construimos el tensor de inercia
+ $$ \tilde I =
+ \begin{pmatrix}
+ 818.6 & 0 & 0 \\
+ 0 & 818.6 & 0 \\
+ 0 & 0 & 640.7\\
+ \end{pmatrix}
+ \, eV^{-1}
+ $$
+ 
+ En este caso los ejes principales son también los ejes cartesianos $ \hat x, \,\ \hat y, \,\ \hat z$
 \section{Aproximación de los estados vibracionales de una molécula admitiendo que los núcleos del átomo vibran armónicamente en torno a sus posiciones de equilibrio.}
 Supongamos un conjunto de N masas puntuales (los núcleos), cada uno de los cuales vibra en torno a una posición de equilibrio. Sean $a_\alpha$, $b_\alpha$ y $c_\alpha$ las cordenadas cartesianas de un núcleo $\alpha$ en los ejes principales del sistema, y sean $a_{\alpha ,e}$, $b_{\alpha ,e}$ y $c_{\alpha ,e}$ los puntos de equilibrio en esas mismas coordenadas. Definimos los desplazamientos como:
 \begin{equation}
