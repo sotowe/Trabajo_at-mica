@@ -14,31 +14,13 @@
 \begin{document}
 \maketitle
 \section{La molécula como un sólido rígido: hamiltoniano asociado a la rotación de la misma en torno a su centro de masas.}
-Un sólido rígido se define como una colección de partículas, cuyas distancias relativas se mantienen fijas \cite{marion2013}. El momento de inercia $I_i$ de un sólido rígido con $n$ partículas sobre un eje $i$ se define como:
+Un sólido rígido se define como una colección de partículas, cuyas distancias relativas se mantienen fijas \cite{marion2013}. Dado que la distancia es fija, la energía potencial no varía con la rotación del rotor, luego $V=0$. El momento de inercia $I_i$ de un sólido rígido con $n$ partículas sobre un eje $i$ se define como:
 \begin{equation}
 I_i= \sum_{j=1}^n=m_jr_j^2
 \end{equation}
 con $r_j$ la distancia desde la partícula de masa $m_j$ al eje $i$.
 
-\subsection{El rotor rígido diatómico}
-El rotor rígido de dos partículas consiste en dos masas $m_1$ y $m_2$ unidas a una barra sin masa con una distancia fija $d$. Dado que la distancia es fija, la energía potencial no varía con la rotación del rotor, luego $V=0$. \cite{levine1980} El momento de inercia de una molécula diatómica puede escribirse como:
-\begin{equation}
-I=\mu R^2
-\end{equation}
-Podemos determinar los niveles de energía de este sistema resolviendo la ecuación de Schrödinger. Suponiendo que el radio entre los dos átomos no varía, la ecuación de Schrödinger queda:
-\begin{equation}
-- \frac{\hbar^2}{2I}\left[\frac{1}{sin\theta}\frac{\partial}{\partial \theta}\left(sin\theta \frac{\partial}{\partial \theta} \right) + \frac{1}{sin^2\theta}\frac{\partial^2}{\partial \phi^2}\right]Y^m_l \left(\theta,\phi \right) = E_lY^m_l \left(\theta,\phi \right)
-\end{equation}
-Con
-$$E_l= \frac{\hbar^2}{2I}l(l+1)$$
-Si llamamos $$B\equiv \frac{h}{8\pi^2I}$$
-obtenemos que:
-\begin{equation}
-E/h=BJ(J+1)
-\end{equation}
-La energía está $2l+1$ veces degenerada debido a que para un $l$ fijo, distintos valores de $m$ tienen la misma energía.
-\subsection{El rotor rígido poliatómico}
-Se define el tensor de inercia $\tilde{I}$ como:
+Para un sólido poliatómico, se define el tensor de inercia $\tilde{I}$ como:
 \begin{equation}
 \tilde{I}=\begin{pmatrix}
 \sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,2}+x^2_{\alpha,3}\right) & -\sum_{\alpha}m_{\alpha}x_{\alpha,1}x_{\alpha,2} & -\sum_{\alpha}m_{\alpha}x_{\alpha,1}x_{\alpha,3} \\\\
@@ -54,6 +36,11 @@ Una clara simplificación se encuentra si diagonalizamos el tensor de inercia. L
 T_{rot}=\frac{1}{2}\left(I_a\omega^2_a + I_b\omega^2_b + I_c\omega^2_c\right) 
 \end{equation}
 con $I_a$, $I_b$, e $I_c$ los autovalores del momento de inercia.\\
+Los ejes principales de inercia normalmente se toman de forma que
+\begin{equation}
+I_a \leq I_b \leq I_c
+\end{equation}
+
 Para formar el hamiltoniano del sistema, necesitamos la energía en función del momento angular $P$, con $P_i=I_i\omega_i$.
 La energía cinética queda entonces como:
 \begin{equation}
@@ -67,7 +54,7 @@ De la figura \ref{euler} podemos ver que:
 
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{Angulos_Euler.png}
-\caption{EXPLICAR}
+\caption{Ángulos de Euler. $ON$ es la línea de intersección de los planos $XY$ y $ab$, y es perpendicular a los ejes $OZ$ y $Oc$. $\theta$ es el ángulo de rotación sobre el eje $ON$; $\phi$ es el ángulo de rotación sobre el eje $OZ$; $\chi$ es el ángulo de rotación sobre el eje $Oc$ }
 \label{euler}
 \end{figure}
 
@@ -107,7 +94,7 @@ y el operador momento angular total es:
 \begin{equation}
 \hat P^2 = \hat P_a^2+  \hat P_b^2+  \hat P_c^2 = \hat P_X^2+  \hat P_Y^2+  \hat P_Z^2
 \end{equation}
-Una forma de obtener los autovalores de Energía sería sustituir los valores de P y resolver la ecuación de Schrödinger. Sin embargo, estos autovalores se pueden obtener mediante relaciones de conmutación.
+Una forma de obtener los autovalores de Energía sería sustituir los valores de $\hat P_a$, $\hat P_b$ y $\hat P_c$ en el hamiltoniano $\hat H_{rot}$ y resolver la ecuación de autovalores. Sin embargo, estos autovalores se pueden obtener mediante relaciones de conmutación.
 Las relaciones de conmutación que necesitaremos son las siguientes:
 \begin{equation}
 \left[\hat P_i,\hat P_j\right]=-i\hbar\delta_{i,j}\hat P_k
@@ -137,16 +124,19 @@ Puesto que $H_{rot}$ conmuta con $\hat{P^2}$ y con $\hat P_Z$,  se pueden elegir
 \hat H\psi = E\psi
 \end{equation}
 \begin{equation}
-\hat H\psi = J(J+1)\hbar \psi, \qquad J=0,1,2...
+\hat P^2\psi = J(J+1)\hbar \psi, \qquad J=0,1,2...
 \end{equation}
 \begin{equation}
 \hat P_Z\psi = M\hbar\psi, \qquad M = 0,\pm 1,...,\pm J
 \end{equation}
-Los autovalores de energía dependerán de las simetrías de rotación que presente la molécula, estas son:\\
+y las autofinciones del rotor son de la forma:
+\begin{equation}
+\psi = F(\theta, \psi)(2\pi)^{-1/2}e^{iM\phi}
+\end{equation}
+Los autovalores de energía dependerán de las simetrías de rotación que presente la molécula. Estas simetrías pueden ser:\\
 Rotor esférico $I_a=I_b=I_c= I$ \\
 Rotor simétrico $I_a=I_b \neq I_c$ o $I_a\neq I_b=I_c$\\
 Rotor asimétrico $I_a \neq I_b \neq I_c$\\
-Tomaremos siempre los ejes principales de inercia de manera que $I_a\leq I_b\leq I_c$.
 \section{Rotor rígido cuántico: Estados propios y autovalores.}
 \subsection{El rotor esférico}
 El rotor esférico se caracteriza porque los tres momentos principales de inercia son iguales: $$I_a=I_b=I_c= I$$
@@ -156,7 +146,7 @@ El hamiltoniano del sistema queda por tanto como:
 \end{equation}
 La ecuación de Schödinger es:
 \begin{equation}
-\frac{1}{2I}\hat P^2 \psi = E\psi
+\frac{\hat P^2}{2I} \psi = E\psi
 \end{equation}
 Resolviendo la ecuación obtenemos que:$$\frac{1}{2I}J(J+1)\hbar^2\psi=E\psi$$
 \begin{equation}
@@ -169,7 +159,7 @@ En este caso, tenemos además que
 con $$\hat P_c \psi = K\hbar\psi, \qquad K = 0, \pm 1,..., \pm J$$
 Luego la energía está $(2J+1)^2$ veces degenerada.
 \subsection{El rotor simétrico}
-El rotor simétrico se caracteriza porque dos de sus momentos principales de inercia son iguales $I_a=I_b\neq I_c$ (caso achatado) o $I_a\neq I_b=I_c$ (caso alargado). Realizaremos el desarrollo del caso $I_a=I_b\neq I_c$ y luego lo adaptaremos al segundo. 
+El rotor simétrico se caracteriza porque dos de sus momentos principales de inercia son iguales $I_a=I_b\neq I_c$ (caso achatado) o $I_a\neq I_b=I_c$ (caso alargado). Realizaremos el desarrollo del caso $I_a=I_b\neq I_c$ y luego lo adaptaremos al caso alargado. 
 El hamiltoniano del sistema es:
 \begin{equation}
 \hat H=\frac{\hat P_a^2+\hat P_b^2}{2I_b}+\frac{\hat P_c^2}{2I_c}=\frac{\hat P^2- \hat P_c^2}{2I_b}+\frac{\hat P_c^2}{2I_c}
@@ -185,7 +175,7 @@ Las energías se obtienen como: $$\left(\frac{\hat P^2- \hat P_c^2}{2I_b}+\frac{
  \begin{equation}
  A \equiv \frac{h}{8\pi^2I_a}\geq B\equiv \frac{h}{8\pi^2I_b}\geq C\equiv \frac{h}{8\pi^2I_c}
  \end{equation}
- Teniendo entonces que las energías son
+ Y las energías son por tanto:
  \begin{equation}
  E/h=BJ\left(J+1\right)+\left(C-B\right)K^2 \qquad (achatado)
  \end{equation}
@@ -226,8 +216,30 @@ Siendo
 $$
 A \equiv \frac{h}{8\pi^2I_a}\geq B\equiv \frac{h}{8\pi^2I_b}\geq C\equiv \frac{h}{8\pi^2I_c}
 $$
-Podemos ver que los autovalores del hamiltoniano no dependen de $M$, por tanto, la degeneración de la energía será $2J+1$, correspondientes a los posibles valores de $M$ para un $J$ dado.
+Las primeras energías son, en orden creciente:\\
+Para $J = 0$
+$$E = 0$$
+Para $J = 1$
+$$E = h(B+C), \,\ h(A+C), \,\ h(A+B)$$
+Podemos ver que los autovalores del hamiltoniano no dependen de $M$, por tanto, la degeneración de la energía será $2J+1$, correspondiente a los posibles valores de $M$ para un $J$ dado.
 Cada función de onda del rotor asimétrico $\psi_i$ es una combinación lineal de las $2J+1$ funciones de onda de del rotor simétrico con los mismos valores de $J$ y $M$ que $\psi_i$.
+\subsection{El rotor rígido diatómico}
+El rotor rígido de dos partículas puede considerarse como un caso especial del rotor rígido simétrico en el que $I_a = 0$ y por tanto $K=0$. Consiste en dos masas $m_1$ y $m_2$ unidas a una barra sin masa con una distancia fija $d$. El momento de inercia de una molécula diatómica puede escribirse como:
+\begin{equation}
+I=\mu R^2
+\end{equation}
+Podemos determinar los niveles de energía de este sistema resolviendo la ecuación de Schrödinger. Suponiendo que el radio entre los dos átomos no varía, la ecuación de Schrödinger queda:
+\begin{equation}
+- \frac{\hbar^2}{2I}\left[\frac{1}{sin\theta}\frac{\partial}{\partial \theta}\left(sin\theta \frac{\partial}{\partial \theta} \right) + \frac{1}{sin^2\theta}\frac{\partial^2}{\partial \phi^2}\right]Y^m_l \left(\theta,\phi \right) = E_lY^m_l \left(\theta,\phi \right)
+\end{equation}
+Con
+$$E_l= \frac{\hbar^2}{2I}l(l+1)$$
+Si llamamos $$B\equiv \frac{h}{8\pi^2I}$$
+obtenemos que:
+\begin{equation}
+E/h=BJ(J+1)
+\end{equation}
+La energía está $2l+1$ veces degenerada debido a que para un $l$ fijo, distintos valores de $m$ tienen la misma energía.
 
 \section{Estructura del espectro rotacional.}
 El espectro rotacional de las moléculas se observa casi exclusívamente como espectro de absorción, ya que la emisión espontánea es muy poco probable dada las bajas energías de transición. El espectro rotacional cae en la región de las microondas, por lo que se requieren espectrómetros del infrarojo lejano o espectrómetros de microondas para observarlos.\cite{haken2013}\\
@@ -243,13 +255,13 @@ determinan el momento dipolar eléctrico permanente de la molécula en el estado
 Las reglas de selección que aparecen asociadas a las transiciones electromagnéticas en moléculas son las habituales para una transición dipolar eléctrica, esto es, son las que corresponden al valor esperado de un tensor esférico de primer orden entre estados de momento angular definido.
 Para el rotor simétrico tenemos como reglas de selección
 \begin{equation}
-\Delta J = 0,\pm 1, \qquad\Delta K =0, \Delta M = 0, \pm 1
+\Delta J = 0,\pm 1 \qquad\Delta K =0 \qquad \Delta M = 0, \pm 1
 \end{equation}
 Teniendo que cuando $\Delta J = 0$ con $\Delta M \neq 0$ no hay absorción o emisión de radiación.\\
 
 Para el caso más simple, esto es una molécula heteronuclear diatómica, tenemos que 
 \begin{equation}
-h\nu = E_{J+1}-E{J}
+h\nu = E_{J+1}-E_{J}
 \end{equation}
 Luego
 \begin{equation}
@@ -257,12 +269,16 @@ Luego
 \end{equation}
 De esta ecuación podemos observar que moléculas más pesadas, las cuales tendrán un $I$ mayor y por tanto una constante rotacional $B$ menor, tendrán un espaciado menor entre sus líneas de absorción (figura \ref{niveles1}).
 \begin{figure}
-\includegraphics[width=0.8\textwidth]{niveles1.png}
-\caption{EXPLICAR}
+\includegraphics[width=0.6\textwidth]{niveles1.png}
+\caption{Niveles energéticos para la rotación de una molécula diatómica rígida. La paridad de los niveles queda a la derecha de la figura, podemos observar que la regla de selección implica un cambio en la paridad de la molécula.}
 \label{niveles1}
 \end{figure}
 \section{Momentos de inercia de distintas moléculas respecto de sus ejes principales en sus estados fundamentales: $H_2$ , $CO$, $H_2O$ , $CH_4$ ...}
+En esta sección  para simplificar los cálculos trabajaremos con unidades naturales, es decir tomaremos $\hbar = 1$ y $c=1$.
+Las constantes rotacionales las escribiremos como:
+$$A' = \frac{1}{2I_a}$$
 \subsection{$H_2$}
+\includegraphics[width=0.3\textwidth]{hidrogeno.png}\\
 La molécula de hidrógeno $(H_2)$ es una molécula diatómica homonuclear. Su momento de inercia puede calcularse como $$I=\mu R^2$$
 como $m_1=m_2=m$ tenemos entonces que $$I=\frac{1}{2}mR^2$$
 Teniendo que\\
@@ -270,15 +286,25 @@ Teniendo que\\
  $m=938.272 \, MeV/c^2$\\
  
  Nos queda que $$I=65.977 \, eV^{-1}c^{-2}$$
+ luego 
+ $$B'=7.58\cdot 10^{-3}\, eV$$
+ Y
+ $$E_{rot} = 7.58\cdot 10^{-3}J(J+1)\, eV$$
  \subsection{$CO$}
- La molécula de monóxido de carbono $CO$ es una molécula diatómica heteronuclear. Su momento de inercia, como en el caso anterior es $$I=\mu R^2$$
+ \includegraphics[width=0.3\textwidth]{monoxido.png}\\
+ La molécula de monóxido de carbono $(CO)$ es una molécula diatómica heteronuclear. Su momento de inercia, como en el caso anterior es $$I=\mu R^2$$
  $R=112.8 \, pm=571.642\, MeV^{-1}$\\
  $m_c=12.0107 \, u=11\, 187.97 \, MeV/c^2$\\
  $m_0=15.999\, u=14\, 903.069\, MeV/c^2$\\
  En este caso 
  $$I= 2\, 088.335\,eV^{-1}c^{-2}$$
+ Luego
+ $$B'=2.4 \cdot 10^{-4} \, eV$$
+ Y la energía por tanto
+ $$E_{rot} =2.4 \cdot 10^{-4} J(J+1)\, eV$$
  \subsection{$H_2O$}
- Las posiciones de los átomos de agua respecto a su centro de masas son:\\
+ \includegraphics[width=0.4\textwidth]{agua.png}\\
+ Las posiciones de los átomos de agua $(H_2O)$ respecto a su centro de masas son:\\
  $\vec r_O = 0\, \vec x + 33.29 \, \vec y + 0 \, \vec z \, MeV^{-1}$\\
  $\vec r_{H1} =-383.94\, \vec x-264.24 \, \vec y + 0 \, \vec z \, MeV^{-1}$\\
  $\vec r_{H2} = 383.94 \, \vec x -264.24 \, \vec y + 0 \, \vec z \, MeV^{-1}$\\
@@ -296,9 +322,17 @@ Teniendo que\\
  \end{pmatrix}
  \, eV^{-1}
  $$
- Vemos que el tensor de inercia es diagonal en las coordenadas cartesianas. Por lo que sus ejes principales son $ \hat x, \,\ \hat y, \,\ \hat z$
+ Vemos que el tensor de inercia es diagonal en las coordenadas cartesianas. Por lo que sus ejes principales son $ \hat x, \,\ \hat y, \,\ \hat z$\\
+ En este caso tenemos un rotor asimétrico. Donde:
+ $$A'= 3.4 \cdot 10^{-3}\, eV \qquad B' = 1.8 \cdot 10^{-3}\, eV \qquad C' = 1.2 \cdot 10^{-3}\, eV$$
+ Las primeras energías son:
+ $$E_0 = 0$$
+ $$E_1 = (B'+C') = 3 \cdot 10^{-3}\, eV $$
+ $$E_2 = (A'+C') = 4.6 \cdot 10^{-3}\, eV$$
+ $$E_3 = (A'+B') = 5.2 \cdot 10^{-3}\, eV$$ 
  \subsection{$CH_4$}
-Las posiciones de los átomos  de metano respecto a su centro de masas son:
+ \includegraphics[width=0.4\textwidth]{metano.png}\\
+Las posiciones de los átomos  de metano $(CH_4)$ respecto a su centro de masas son:
  $\vec r_C = 0\, \vec x + 0 \, \vec y + 0 \, \vec z \, MeV^{-1}$\\
  $\vec r_{H1} = 0\, \vec x+0 \, \vec y + 550.87 \, \vec z \, MeV^{-1}$\\
  $\vec r_{H2} = 0\, \vec x -477.1 \, \vec y + -275.4\, \vec z \, MeV^{-1}$\\
@@ -319,7 +353,11 @@ Las posiciones de los átomos  de metano respecto a su centro de masas son:
  \, eV^{-1}
  $$
  
- En este caso los ejes principales son también los ejes cartesianos $ \hat x, \,\ \hat y, \,\ \hat z$
+Los ejes principales son también los ejes cartesianos $ \hat x, \,\ \hat y, \,\ \hat z$. 
+Esta molécula se comporta rotor simétrico alargado, con 
+ $$A'= 7.7 \cdot 10^{-3}\, eV \qquad B' = C' = 6.1 \cdot 10^{-3}\, eV $$
+ Y la energía rotacional es
+ $$E_{rot}=[6.1\cdot 10^{-3}J(J+1) -1.6 \cdot 10^{-3}K^2] \, eV$$
 \section{Aproximación de los estados vibracionales de una molécula admitiendo que los núcleos del átomo vibran armónicamente en torno a sus posiciones de equilibrio.}
 Supongamos un conjunto de N masas puntuales (los núcleos), cada uno de los cuales vibra en torno a una posición de equilibrio. Sean $a_\alpha$, $b_\alpha$ y $c_\alpha$ las cordenadas cartesianas de un núcleo $\alpha$ en los ejes principales del sistema, y sean $a_{\alpha ,e}$, $b_{\alpha ,e}$ y $c_{\alpha ,e}$ los puntos de equilibrio en esas mismas coordenadas. Definimos los desplazamientos como:
 \begin{equation}
@@ -336,20 +374,28 @@ Simplificando la notación y llamando $q_i=m_i^{1/2}x_i^j$ con $j=1,2,3$ y $i=1,
 \begin{equation}
 T=\frac{1}{2}\sum_{i=1}^{3N}\dot q_i^2
 \end{equation}
-Para una molécula, la energía potencial vibracional viene dad por la función U, la suma de las energías electrónicas y las repulsiones nucleares:
+O en forma matricial:
+\begin{equation}
+T=\boldsymbol q^t\tilde T\boldsymbol q
+\end{equation}
+Para una molécula, la energía potencial vibracional viene dada por la función U, que depende de la suma de las energías electrónicas y las repulsiones nucleares:
 \begin{equation}
 V=U(q_1,...,q_{3N})
 \end{equation}
-Expandiendo la energía potencial en serie de Taylor y teniendo en cuenta que en el equilibrio
+Expandiendo la energía potencial en serie de Taylor y teniendo en cuenta que en el equilibrio,
 \begin{equation}
 \left(\frac{\partial U}{\partial q_i}\right)_e=0, \qquad i= 1,...,3N
 \end{equation}
-Tenemos que
+el cual corresponde a $q_1=q_2=...=q_n$, tenemos que
 \begin{equation}
 U = U_e + \frac{1}{2}\sum_{i=1}^{3N}\sum_{k=1}^{3N}u_{ik}q_iq_k
 \end{equation}
 \begin{equation}
 u_{ik} \equiv \left(\frac{\partial^2U}{\partial q_i \partial q_k}\right)_e
+\end{equation}
+O en forma matricial
+\begin{equation}
+U=U_e+\frac{1}{2}\boldsymbol q^t\tilde U\boldsymbol q
 \end{equation}
 Aplicamos ahora la segunda ley de Newton:
 \begin{equation}
@@ -359,17 +405,17 @@ que escribiéndolo en las coordenadas ponderadas $q_i$:
 \begin{equation}
 \frac{d^2q_j}{dt^2}+\frac{\partial V}{\partial q_j}= 0, \qquad j=1,...,3N
 \end{equation}
-V contiene una doble sumatoria sobre todas las $q's$. Para obtener un conjunto de ecuaciones diferenciales más simple realizaremos un cambio de variables haciendo que $U$ sea diagonal.
-En nuestra nueva base de vectores obtenemos que:
+V contiene una doble sumatoria sobre todas las $q's$. Por lo que $\partial V/\partial q_j$ contiene una sumatoria sobre los $q's$. De esta forma, cada ecuación diferencial contiene todos los $q_j's$, lo que complica mucho la resolución de las ecuaciones. Para obtener un conjunto de ecuaciones diferenciales más simple realizaremos un cambio de variables haciendo que la matriz $\tilde U$ sea diagonal.
+En nuestra nueva base de vectores $L^{1},...,L^{3N}$ obtenemos que:
 \begin{equation}
 U=U_e + \frac{1}{2}\sum_{k=1}^{3N-6}\lambda_kQ_k^2
 \end{equation}
 Con $Q_k$ siendo las coordenadas normales, tales que
 \begin{equation}
-Q_i=\sum_{k=1}^{3N}l_{ki}q_k, \qquad i=1,...,3N
+Q_i=\sum_{j=1}^{3N}l_{ji}q_j, \qquad i=1,...,3N
 \end{equation}
- y $\lambda_k$ son los autovalores obtenidos en las nuevas coordenadas.
-La energía cinética en estas nuevas coordenadas queda como:
+donde $l_{ji}$ es la coordenada $j_{esima}$ del autovector $L^{(i)}$ y $\lambda_k$ son los autovalores obtenidos en el nuevo sistema de coordenadas.
+La energía cinética en este nuevo sistema de coordenadas queda como:
 \begin{equation}
 T=\frac{1}{2}\sum_{k=1}^{3N-6}\dot Q_k^2
 \end{equation}
@@ -430,11 +476,11 @@ obtenemos la energía electrónica para una configuración nuclear dada.
 
 Sea $V_{NN}$ a la energía potencial de repulsión entre los núcleos atómicos. Para una configuración nuclear concreta, esta energía de repulsión es constante , y podemos escribir 
 \begin{equation}
-U=E_{el}+V{NN}
+U=E_{el}+V_{NN}
 \end{equation}
 Tras resolver la ecuación de Schrödinger nos queda 
 \begin{equation}
-\psi_{el}=\psi{el,n}(q_i;q_\alpha)\,\ \,\ y \,\ \,\ U=U_n(q_\alpha)
+\psi_{el}=\psi_{el,n}(q_i;q_\alpha)\,\ \,\ y \,\ \,\ U=U_n(q_\alpha)
 \end{equation}
 donde n representa los números cuánticos electrónicos.
 Una vez tenemos las energías y las funciones de onda eléctricas podemos resolver la ecuación de Schrödinger para el movimiento de los núcleos:
@@ -534,13 +580,19 @@ La aproximación de Born-Oppenheimer permite separar la función de onda molecul
 \begin{equation}
 \psi=\psi_{el}\psi_{vib}\psi_{rot}\psi_{trans}
 \end{equation}
-Mientras que para moléculas diatómicas la interacción vibración-rotación añade sólamente pequeñas correcciones a la energía, para muchas moléculas poliatómicas la interacción vibración-rotación trae correcciones relativamente grandes. Lo mismo ocurre para la aproximación de Born-Oppenheimer.\\
+Mientras que para moléculas diatómicas la interacción vibración-rotación añade sólamente pequeñas correcciones a la energía, para muchas moléculas poliatómicas la interacción vibración-rotación trae correcciones relativamente grandes. Estos nuevos términos son los llamados términos de anarmonicidad y, se pueden añadir perturbativamente para ser más precisos en la descripción.\\
+
+Otra mejora en la descripción de nuestro sistema es el uso de otras energías potenciales para $U(R)$. Previamente hemos expandido la energía potencial $U(R)$ en series en torno a $R_e$. Esta aproximación es buena para regiones cerca del equilibrio. Sin embargo, para valores grandes de $R$, la serie de Taylor en torno a $R_e$ es divergente. Una opción es tomar energías potenciales empíricas. Estos potenciales son específicos para cada estado molecular y para cada molécula. Uno de los potenciales que mejor resultados dan es la función de morse, el cual tiene la forma:
+\begin{equation}
+U=D_e \left[ 1- e^{-a(R-R_e)} \right]^2
+\end{equation}
+Donde los parámetros $D_e$, $a$ y $R_e$ se obtienen experimentalmente.\\
 
 El acoplamiento de los movimientos rotacional y vibracional en una molécula se puede entender en términos de física clásica. Sin embargo, podemos ignorar este acoplamiento y considerar la excitación de una molécula diatómica en la primera aproximación como simplemente la suma de la excitación del oscilador armónico y del rotor rígido. En ese caso obtenemos los niveles energéticos:
 \begin{equation}
 E(v,J)=\hbar\nu(v+\frac{1}{2})+ BhJ(J+1)
 \end{equation}
-Donde  las transiciones púramente rotacionales $(\Delta v = 0, \,\ \Delta J = \pm 1)$ están permitidas, pero las transiciones púramente vibracionales $(\Delta v = \pm 1, \,\ \Delta J = 0)$ no están permitidas. Esto se puede entender desde un punto de vista clásico, ya que una transición vibracional lleva consigo un cambio en la longitud del enlace, lo que conlleva un cambio en la velocidad de rotación. La regla de selección $\Delta J=0$ solo es válida cuando el momento angular de la molécula es paralelo al eje de su cilindro.
+Donde  las transiciones púramente rotacionales $(\Delta v = 0, \,\ \Delta J = \pm 1)$ están permitidas, pero las transiciones púramente vibracionales $(\Delta v = \pm 1, \,\ \Delta J = 0)$ no lo están. Esto se puede entender desde un punto de vista clásico. Como los movimientos vibracionales son mucho más rápidos que los movimientos rotacionales, el rotor ve una distancia internuclear $\braket{R}$, la cual es la distancia media entre los átomos. En el caso del oscilador anarmónico la distancia internuclear media $\braket{R}$ aumenta al aumentar sus números cuántico, lo que conlleva un cambio en la velocidad de rotación. La regla de selección $\Delta J=0$ solo es válida cuando el momento angular de la molécula es paralelo al eje de su cilindro.
 En la figura (\ref{transiciones}) se observan las líneas típicas para un potencial de morse.
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{niv_rot_vib_elect.png}
