@@ -364,7 +364,7 @@ Supongamos un conjunto de N masas puntuales (los núcleos), cada uno de los cual
 x_\alpha = a_\alpha - a_{\alpha, e}, \qquad y_\alpha = b_\alpha - b_{\alpha, e}, \qquad z_\alpha = c_\alpha - c_{\alpha, e}
 \end{equation}
 
-Ya que hay sólo $3N-6$ grados de libertad vibracionales, estas coordenadas no son independientes. Están conectadas por seis relaciones, las cuales especifican que los ejes abc se transladan y rotan con la molécula.\\
+Ya que hay sólo $3N-6$ grados de libertad vibracionales ($3N-5$ para moléculas lineales), estas coordenadas no son independientes. Están conectadas por 6 relaciones (5 para moléculas lineales), las cuales especifican que los ejes abc se transladan y rotan con la molécula.\\
 
 La energía cinética clásica de vibración en torno a las posiciones de equilibrio es:
 \begin{equation}
@@ -408,13 +408,24 @@ que escribiéndolo en las coordenadas ponderadas $q_i$:
 V contiene una doble sumatoria sobre todas las $q's$. Por lo que $\partial V/\partial q_j$ contiene una sumatoria sobre los $q's$. De esta forma, cada ecuación diferencial contiene todos los $q_j's$, lo que complica mucho la resolución de las ecuaciones. Para obtener un conjunto de ecuaciones diferenciales más simple realizaremos un cambio de variables haciendo que la matriz $\tilde U$ sea diagonal.
 En nuestra nueva base de vectores $L^{1},...,L^{3N}$ obtenemos que:
 \begin{equation}
-U=U_e + \frac{1}{2}\sum_{k=1}^{3N-6}\lambda_kQ_k^2
+\tilde L^t\tilde U\tilde L = \tilde \Lambda
 \end{equation}
-Con $Q_k$ siendo las coordenadas normales, tales que
+Con $\tilde L$ la matriz de los vectores $L^{(k)}$ puestos sobre columnas y $\tilde \Lambda$ la matriz diagonal. Si definimos las coordenadas normales $Q_i$ como:
 \begin{equation}
 Q_i=\sum_{j=1}^{3N}l_{ji}q_j, \qquad i=1,...,3N
 \end{equation}
-donde $l_{ji}$ es la coordenada $j_{esima}$ del autovector $L^{(i)}$ y $\lambda_k$ son los autovalores obtenidos en el nuevo sistema de coordenadas.
+entonces
+\begin{equation}
+Q = \tilde L^t\boldsymbol q \Rightarrow \boldsymbol q = \tilde L\boldsymbol Q
+\end{equation}
+donde $l_{ji}$ es la coordenada $j_{esima}$ del autovector $L^{(i)}$. Sustituyendo el valor de $\boldsymbol q$ en la igualdad de la energía potencial $U$ nos queda que:
+\begin{equation}
+U-U_e=\frac{1}{2}\boldsymbol q^t\tilde U \boldsymbol q = \frac{1}{2}\boldsymbol Q^t\tilde U \boldsymbol Q
+\end{equation}
+O lo que es lo mismo
+\begin{equation}
+U=U_e + \frac{1}{2}\sum_{k=1}^{3N-6}\lambda_kQ_k^2
+\end{equation}
 La energía cinética en este nuevo sistema de coordenadas queda como:
 \begin{equation}
 T=\frac{1}{2}\sum_{k=1}^{3N-6}\dot Q_k^2
@@ -455,6 +466,8 @@ Y finalmente, la energía vibracional de la molécula es
 \begin{equation}
 E_{vib}=\sum_{k=1}^{3N-6}\left(v_k+\frac{1}{2}\right)h\nu_k
 \end{equation}
+En el caso de que la molécula sea lineal, los términos $3N-6$ han de ser sustituidos por $3N-5$ puesto que las moléculas lineales tienen un grado de libertad adicional.
+En el desarrollo que hemos realizado no nos hemos molestado en encontrar las posibles relaciones que existen entre las distintas $q's$ puesto que al diagonalizar la matriz de potencial $\tilde U$ nos saldrán 6 o 5 autovales $\lambda = 0$.
 \section{Obtención de los autoestados y autovalores en general.}
 En general, para una molécula poliatómica el Hamiltoniano estará constituido por la energía cinética del movimiento de los núcleos atómicos, la energía cinética de los electrones de cada átomo, y la interacción electrostática entre electrones y núcleos. El Hamiltoniano del sistema en el sistema centro de masas será:
 $$
@@ -580,9 +593,10 @@ La aproximación de Born-Oppenheimer permite separar la función de onda molecul
 \begin{equation}
 \psi=\psi_{el}\psi_{vib}\psi_{rot}\psi_{trans}
 \end{equation}
-Mientras que para moléculas diatómicas la interacción vibración-rotación añade sólamente pequeñas correcciones a la energía, para muchas moléculas poliatómicas la interacción vibración-rotación trae correcciones relativamente grandes. Estos nuevos términos son los llamados términos de anarmonicidad y, se pueden añadir perturbativamente para ser más precisos en la descripción.\\
 
-Otra mejora en la descripción de nuestro sistema es el uso de otras energías potenciales para $U(R)$. Previamente hemos expandido la energía potencial $U(R)$ en series en torno a $R_e$. Esta aproximación es buena para regiones cerca del equilibrio. Sin embargo, para valores grandes de $R$, la serie de Taylor en torno a $R_e$ es divergente. Una opción es tomar energías potenciales empíricas. Estos potenciales son específicos para cada estado molecular y para cada molécula. Uno de los potenciales que mejor resultados dan es la función de morse, el cual tiene la forma:
+Mientras que para moléculas diatómicas la interacción vibración-rotación añade sólamente pequeñas correcciones a la energía, para muchas moléculas poliatómicas la interacción vibración-rotación trae correcciones relativamente grandes. Estos nuevos términos son los llamados términos de anarmonicidad y, en moléculas diatómicas, se pueden añadir perturbativamente para ser más precisos en la descripción.\\
+
+Otra mejora en la descripción de nuestro sistema es el uso de otras energías potenciales para $U(R)$. Previamente hemos expandido la energía potencial $U(R)$ en series en torno a $R_e$. Esta aproximación es buena para regiones cerca del equilibrio. Sin embargo, para valores grandes de $R$, la serie de Taylor en torno a $R_e$ es divergente. Una opción es tomar energías potenciales empíricas. Estos potenciales son específicos para cada estado molecular y para cada molécula. Uno de los potenciales que mejor resultados da es la función de morse, la cual tiene la forma:
 \begin{equation}
 U=D_e \left[ 1- e^{-a(R-R_e)} \right]^2
 \end{equation}
@@ -596,7 +610,7 @@ Donde  las transiciones púramente rotacionales $(\Delta v = 0, \,\ \Delta J = \
 En la figura (\ref{transiciones}) se observan las líneas típicas para un potencial de morse.
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{niv_rot_vib_elect.png}
-\caption{EXPLICAR}
+\caption{Niveles vibracionales-rotacionales en el estado electrónico fundamental y en un estado electrónico excitado. Las transiciones entre niveles en el estado electrónico fundamental dan lugar al espectro vibracional-rotacional. Las transiciones entre estados electrónicos diferentes contribuyen al espectro de la banda electrónica}
 \label{transiciones}
 \end{figure}
 \newpage
