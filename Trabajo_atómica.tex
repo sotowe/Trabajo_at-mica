@@ -13,6 +13,7 @@
 \author{José Soto García}
 \begin{document}
 \maketitle
+
 \section{La molécula como un sólido rígido: hamiltoniano asociado a la rotación de la misma en torno a su centro de masas.}
 Un sólido rígido se define como una colección de partículas, cuyas distancias relativas se mantienen fijas \cite{marion2013}. Dado que la distancia es fija, la energía potencial no varía con la rotación del rotor, luego $V=0$. El momento de inercia $I_i$ de un sólido rígido con $n$ partículas sobre un eje $i$ se define como:
 \begin{equation}
@@ -23,9 +24,9 @@ con $r_j$ la distancia desde la partícula de masa $m_j$ al eje $i$.
 Para un sólido poliatómico, se define el tensor de inercia $\tilde{I}$ como:
 \begin{equation}
 \tilde{I}=\begin{pmatrix}
-\sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,2}+x^2_{\alpha,3}\right) & -\sum_{\alpha}m_{\alpha}x_{\alpha,1}x_{\alpha,2} & -\sum_{\alpha}m_{\alpha}x_{\alpha,1}x_{\alpha,3} \\\\
--\sum_{\alpha}m_{\alpha}x_{\alpha,2}x_{\alpha,1} & \sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,1}+x^2_{\alpha,3}\right) &-\sum_{\alpha}m_{\alpha}x_{\alpha,2}x_{\alpha,3} \\\\
--\sum_{\alpha}m_{\alpha}x_{\alpha,3}x_{\alpha,1} & -\sum_{\alpha}m_{\alpha}x_{\alpha,3}x_{\alpha,2} & \sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,1}+x^2_{\alpha,2}\right) \end{pmatrix}
+\displaystyle\sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,2}+x^2_{\alpha,3}\right) & -\displaystyle\sum_{\alpha}m_{\alpha}x_{\alpha,1}x_{\alpha,2} & -\displaystyle\sum_{\alpha}m_{\alpha}x_{\alpha,1}x_{\alpha,3} \\\\
+-\displaystyle\sum_{\alpha}m_{\alpha}x_{\alpha,2}x_{\alpha,1} & \displaystyle\sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,1}+x^2_{\alpha,3}\right) &-\displaystyle\sum_{\alpha}m_{\alpha}x_{\alpha,2}x_{\alpha,3} \\\\
+-\displaystyle\sum_{\alpha}m_{\alpha}x_{\alpha,3}x_{\alpha,1} & -\displaystyle\sum_{\alpha}m_{\alpha}x_{\alpha,3}x_{\alpha,2} & \displaystyle\sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,1}+x^2_{\alpha,2}\right) \end{pmatrix}
 \end{equation}
 Clásicamente, la energía cinética rotacional del sistema se obtiene como:
 \begin{equation}
@@ -46,10 +47,12 @@ La energía cinética queda entonces como:
 \begin{equation}
 T_{rot}=\frac{P_a^2}{2I_a}+\frac{P_b^2}{2I_b}+\frac{P_c^2}{2I_c}
 \end{equation}
+Una vez tenemos la energía cinética en función de los momentos angulares debemos sustituir los momentos angulares $P_i$ por su operador correspondiente cuántico $\hat P_i$.\\
+
 El nuevo sistema de referencia $\left\lbrace a,b,c \right\rbrace$ se consigue mediante tres rotaciones  $\left\lbrace \theta,\phi,\chi \right\rbrace$ a través del centro de masas $O$. Son los llamados ángulos de Euler (figura \ref{euler}).
 De la figura \ref{euler} podemos ver que:
 \begin{equation}
-\hat P_{\phi}=\frac{\partial}{\partial \phi},\,\ \hat P_{N}=\frac{\partial}{\partial N},\,\ \hat P_{\chi}=\frac{\partial}{\partial \chi}
+\hat P_{\phi}=-i\hbar\frac{\partial}{\partial \phi},\,\ \hat P_{N}=-i\hbar\frac{\partial}{\partial N},\,\ \hat P_{\chi}=-i\hbar\frac{\partial}{\partial \chi}
 \end{equation}
 
 \begin{figure}
@@ -154,7 +157,7 @@ E=\frac{J(J+1)\hbar^2}{2I}, \qquad J=0,1,2...
 \end{equation}
 En este caso, tenemos además que
 \begin{equation}
-\left[\hat H,\hat P_c \right]
+\left[\hat H,\hat P_c \right]=0
 \end{equation}
 con $$\hat P_c \psi = K\hbar\psi, \qquad K = 0, \pm 1,..., \pm J$$
 Luego la energía está $(2J+1)^2$ veces degenerada.
@@ -460,14 +463,26 @@ que tienen la estructura del oscilador armónico, cuyas soluciones ya conocemos:
 E_k=\left(v_k+\frac{1}{2}\right)h\nu_k,	\qquad v_k=0,1,2,...
 \end{equation}
 \begin{equation}
-\alpha_k=\frac{2\pi\nu_k}{\hbar}=\frac{\lambda_k^{1/2}}{\hbar}
+\alpha_k=\frac{2\pi\nu_k}{\hbar}=\frac{\lambda_k^{1/2}}{\hbar} \qquad \nu_k=\lambda_k^{1/2}
 \end{equation}
 Y finalmente, la energía vibracional de la molécula es
 \begin{equation}
 E_{vib}=\sum_{k=1}^{3N-6}\left(v_k+\frac{1}{2}\right)h\nu_k
 \end{equation}
 En el caso de que la molécula sea lineal, los términos $3N-6$ han de ser sustituidos por $3N-5$ puesto que las moléculas lineales tienen un grado de libertad adicional.
-En el desarrollo que hemos realizado no nos hemos molestado en encontrar las posibles relaciones que existen entre las distintas $q's$ puesto que al diagonalizar la matriz de potencial $\tilde U$ nos saldrán 6 o 5 autovales $\lambda = 0$.
+En el desarrollo que hemos realizado no nos hemos molestado en encontrar las posibles relaciones que existen entre las distintas $q's$ puesto que al diagonalizar la matriz de potencial $\tilde U$ nos saldrán 6 o 5 autovales $\lambda = 0$.\\
+
+Un modo normal de vibración se describe mediante vectores desplazamiento que indican la dirección y la amplitud relativa de la vibración de cada núcleo. Si se realiza una operación de simetría $\hat R$ sobre una molécula obtenemos una configuración nuclear que es indistinguible de la original, por lo que la función energía potencial $U$ permanece invariante cuando se le aplica el operador correspondiente $\hat O_R$ a U
+\begin{equation}
+\sum_{k=1}^{3N-6}\lambda_k(\hat O_RQ_k)^2=\sum_{k=1}^{3N-6}\lambda_kQ_k^2
+\end{equation} 
+Si no hay vibraciones degeneradas, cada coordenada normal o bien queda invariable o se multiplica por -1 al aplicar una operación de simetría, luego decimos que un modo no degenerado es simétrico o antisimétrico respecto a la operación de simetría $\hat R$. En los modos degenerados, las coordenadas normales de un modo degenerado se convirten en una combinación lineal de las coordenadas normales que corresponden a la frecuencia degenerada.
+\begin{equation}
+\hat O_RQ_j = aQ_j + bQ_k
+\end{equation}
+si $\lambda_j=\lambda_k$\\
+
+Los requisitos de simetría limitan las posibles formas de las vibraciones normales. Así, para un modo no degenerado, un núcleo que se encuentre en un plano de simetría solo puede vibrar en ese plano o en un plano perpendicular a él, mientras que un núcleo que se encuentre en un eje de simetría sólo puede vibrar a lo largo de ese eje o perpendicular a él. La simetría de la molécula se puede utilizar por tanto para deducir la apariencia cualitativa de los modos normales de vibración sin tener que resolver la ecuación secular de la vibración.
 \section{Obtención de los autoestados y autovalores en general.}
 En general, para una molécula poliatómica el Hamiltoniano estará constituido por la energía cinética del movimiento de los núcleos atómicos, la energía cinética de los electrones de cada átomo, y la interacción electrostática entre electrones y núcleos. El Hamiltoniano del sistema en el sistema centro de masas será:
 $$
@@ -536,7 +551,7 @@ U(R) \approx U(R_e)+\frac{1}{2}U''(R_e)(R-R_e)^2
 En la figura \ref{potencial} se puede observar en trazado contínuo la curva de potencial típica para moléculas diatómicas y en trazado discontínuo la aproximación de segundo orden a la curva. Vemos como esta aproximación sólamente es válida para desplazamientos pequeños respecto a la posición de equilibrio.
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{curva_potencial.png}
-\caption{EXPLICAR}
+\caption{Aproximación del potencial U(R) a una parábola (línea discontínua). Podemos observar que para distancias lejanas a la posición de equilibrio la parábola deja de ser una buena aproximación.}
 \label{potencial}
 \end{figure}
 Realizamos ahora el cambio de variable 
