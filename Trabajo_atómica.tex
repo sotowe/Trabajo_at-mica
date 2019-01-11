@@ -160,7 +160,11 @@ En este caso, tenemos además que
 \left[\hat H,\hat P_c \right]=0
 \end{equation}
 con $$\hat P_c \psi = K\hbar\psi, \qquad K = 0, \pm 1,..., \pm J$$
-Luego la energía está $(2J+1)^2$ veces degenerada.
+Luego las autofunciones del rotor esférico son
+\begin{equation}
+\psi_{JKM}=H_{JKM}(\theta)\frac{1}{2\pi}e^{iM\phi}e^{iK\chi}
+\end{equation}
+y la energía está $(2J+1)^2$ veces degenerada.
 \subsection{El rotor simétrico}
 El rotor simétrico se caracteriza porque dos de sus momentos principales de inercia son iguales $I_a=I_b\neq I_c$ (caso achatado) o $I_a\neq I_b=I_c$ (caso alargado). Realizaremos el desarrollo del caso $I_a=I_b\neq I_c$ y luego lo adaptaremos al caso alargado. 
 El hamiltoniano del sistema es:
@@ -178,13 +182,17 @@ Las energías se obtienen como: $$\left(\frac{\hat P^2- \hat P_c^2}{2I_b}+\frac{
  \begin{equation}
  A \equiv \frac{h}{8\pi^2I_a}\geq B\equiv \frac{h}{8\pi^2I_b}\geq C\equiv \frac{h}{8\pi^2I_c}
  \end{equation}
- Y las energías son por tanto:
+ Las energías son por tanto:
  \begin{equation}
  E/h=BJ\left(J+1\right)+\left(C-B\right)K^2 \qquad (achatado)
  \end{equation}
  \begin{equation}
  E/h=BJ\left(J+1\right)+\left(A-B\right)K^2 \qquad (alargado)
  \end{equation}
+ y las autofunciones son de la forma
+ \begin{equation}
+\psi_{JKM}=G_{JKM}(\theta)\frac{1}{2\pi}e^{iM\phi}e^{iK\chi}
+\end{equation}
 La energía depende de $J$ y $K^2$. Hay una degeneración $(2J+1)$ asociada a $M$. Además, para $K\neq 0$ hay una degeneración doble debida a los valores de $\pm K$, luego para $K\neq 0$ la degeneración de la energía es $4J+2$.
 \subsection{El rotor asimétrico}
 En el rotor asimétrico $I_a\neq I_b\neq I_c$
@@ -247,13 +255,18 @@ La energía está $2l+1$ veces degenerada debido a que para un $l$ fijo, distint
 \section{Estructura del espectro rotacional.}
 El espectro rotacional de las moléculas se observa casi exclusívamente como espectro de absorción, ya que la emisión espontánea es muy poco probable dada las bajas energías de transición. El espectro rotacional cae en la región de las microondas, por lo que se requieren espectrómetros del infrarojo lejano o espectrómetros de microondas para observarlos.\cite{haken2013}\\
 
-Sólo las moléculas con momento dipolar eléctrico permanente permiten la observación de su espectro rotacional.  Esto es debido a que este tipo de moléculas, cuando está rotando, parece tener un momento dipolar dependiente del tiempo para un observador estacionario. La rotación de este tipo de moléculas lleva absorción de radiación electromagnética cuando las frecuencia electromagnética irradiada encaja con la frecuencia de rotación del dipolo. Por tanto, moléculas homonucleares diatómicas como el $H_2$, el $N_2$ o el $O_2$ no presentan espectro rotacional. Lo mismo ocurre con moléculas más grandes como el $CCl_4$, a menos que la rotación induzca un momento dipolar o la molécula presente algún tipo de vibración asimétrica que le induzca un momento \cite{haken2013}.\\
+Las reglas de selección para las transiciones electromagnéticas en la molécula provienen de las simetrías de las funciones de onda al aplicar la teoría de perturbaciones dependiente del tiempo producidas por un campo electromagnético periódico.
+Sólo las moléculas con momento dipolar eléctrico permanente permiten la observación de su espectro rotacional.  Esto es debido a que este tipo de moléculas, cuando está rotando, parece tener un momento dipolar dependiente del tiempo para un observador estacionario. La rotación de este tipo de moléculas lleva absorción de radiación electromagnética cuando las frecuencia electromagnética irradiada encaja con la frecuencia de rotación del dipolo. Por tanto, moléculas homonucleares diatómicas como el $H_2$, el $N_2$ o el $O_2$ no presentan espectro rotacional. Lo mismo ocurre con moléculas más grandes como el $CCl_4$, a menos que la rotación induzca un momento dipolar o la molécula presente algún tipo de vibración asimétrica que le induzca un momento. Y por supuesto las moléculas con simetría esférica tampoco presentan espectro de microondas\cite{haken2013}.\\
  
-Los elementos diagonales del operador $\hat D$ dados por:
+Para saber si la transición entre dos estados está permitida debemos resolver la integral:
 \begin{equation}
-D_{\alpha\alpha}=\bra{\psi_\alpha}\hat D\ket{\psi_\alpha},\qquad \alpha \equiv \left(s,v,J,M,K\right),
+D_{\alpha\beta}=\bra{\psi_\alpha}\hat D\ket{\psi_\beta},\qquad \alpha \equiv \left(s,v,J,M,K\right), \,\ \beta \equiv \left(s',v',J',M',K'\right)
 \end{equation}
-determinan el momento dipolar eléctrico permanente de la molécula en el estado $\psi_\alpha$.\\
+con
+\begin{equation}
+\hat D = -\sum_i e \boldsymbol r_i + \sum_\alpha Z_\alpha e \boldsymbol r_\alpha
+\end{equation}
+Si queremos saber las transiciones rotacionales puras sólo tenemos que considerar que $s$ y $v$ no varían.\\
 
 Las reglas de selección que aparecen asociadas a las transiciones electromagnéticas en moléculas son las habituales para una transición dipolar eléctrica, esto es, son las que corresponden al valor esperado de un tensor esférico de primer orden entre estados de momento angular definido.
 Para el rotor simétrico tenemos como reglas de selección
@@ -261,6 +274,11 @@ Para el rotor simétrico tenemos como reglas de selección
 \Delta J = 0,\pm 1 \qquad\Delta K =0 \qquad \Delta M = 0, \pm 1
 \end{equation}
 Teniendo que cuando $\Delta J = 0$ con $\Delta M \neq 0$ no hay absorción o emisión de radiación.\\
+Para trompos asimétricos con momento dipolar, las reglas de selección $J$ y $M$ son:
+\begin{equation}
+\Delta J = 0, \pm 1 \qquad\Delta M = 0, \pm 1
+\end{equation}
+aquí $K$ no es un buen número cuántico. \\
 
 Para el caso más simple, esto es una molécula heteronuclear diatómica, tenemos que 
 \begin{equation}
@@ -276,6 +294,23 @@ De esta ecuación podemos observar que moléculas más pesadas, las cuales tendr
 \caption{Niveles energéticos para la rotación de una molécula diatómica rígida. La paridad de los niveles queda a la derecha de la figura, podemos observar que la regla de selección implica un cambio en la paridad de la molécula.}
 \label{niveles1}
 \end{figure}
+\\
+
+Finalmente, para poder entender la intensidad de la distribución del espectro, es necesario conocer que estados iniciales de absorción están ocupados a la temperatura T de las medidas. La probabilidad de ocupación $N_J$ de un nivel con un número rotacional cuántico $J$  para una molécula diatómica está dada por la expresión:
+\begin{equation}
+\frac{N_J}{N_0}=(2J+1)e^{-BhJ(J+1)/kT}
+\end{equation}
+La intensidad de las líneas de absorción es proporcional al ratio de ocupación $N_J/N_0$ (figura\ref{intensidad}). 
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{intensidad.png}
+\caption{Espectro rotacional para el HCl en estado gaseoso.}
+\label{intensidad}
+\end{figure}
+La intensidad máxima de absorción vendrá dada para
+\begin{equation}
+J=\sqrt{\frac{kT}{2hB}}-\frac{1}{2}
+\end{equation}
+
 \section{Momentos de inercia de distintas moléculas respecto de sus ejes principales en sus estados fundamentales: $H_2$ , $CO$, $H_2O$ , $CH_4$ ...}
 En esta sección  para simplificar los cálculos trabajaremos con unidades naturales, es decir tomaremos $\hbar = 1$ y $c=1$.
 Las constantes rotacionales las escribiremos como:

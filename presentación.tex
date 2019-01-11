@@ -136,8 +136,87 @@ Luego la energía está $(2J+1)^2$ veces degenerada.
 \end{frame}
 
 %DIAPOSITIVA 8
-\begin{frame}{RRotor rígido cuántico: Estados propios y autovalores}
+\begin{frame}{Rotor rígido cuántico: Estados propios y autovalores}
 \framesubtitle {El rotor simétrico: $I_a=I_b\neq I_c$ (caso achatado) o $I_a\neq I_b=I_c$ (caso alargado)}
+La ecuación de Schrödinger es
+\begin{equation*}
+\frac{\hat P^2- \hat P_c^2}{2I_b}+\frac{\hat P_c^2}{2I_c}\psi=E\psi
+\end{equation*}
+En este caso también tenemos que:
+\begin{equation}
+\left[\hat H,\hat P_c \right]=0
+\end{equation}
+Luego llamando:
+ \begin{equation}
+ A \equiv \frac{h}{8\pi^2I_a}\geq B\equiv \frac{h}{8\pi^2I_b}\geq C\equiv \frac{h}{8\pi^2I_c}
+ \end{equation}
+ Llegamos a que:
+ \begin{equation}
+ E/h=BJ\left(J+1\right)+\left(C-B\right)K^2 \qquad (achatado)
+ \end{equation}
+ \begin{equation}
+ E/h=BJ\left(J+1\right)+\left(A-B\right)K^2 \qquad (alargado)
+ \end{equation}
+ Y la energía está $4j+2$ veces degenerada
+\end{frame}
+
+%DIAPOSITIVA 9
+\begin{frame}{Rotor rígido cuántico: Estados propios y autovalores}
+\framesubtitle {El rotor asimétrico: $I_a \neq I_b\neq I_c$ }
+En este caso
+\begin{equation}
+\left[\hat H,\hat P_c \right] \neq 0
+\end{equation}
+Y el hamiltoniano no es separable.
+Podemos resolver la ecuación del hamiltoniano usando  las autofunciones del rotor simétrico
+\begin{equation}
+\psi_i = \sum_{K'=-J}^Jc_{i,JMK'}\phi_{JMK'}
+\end{equation}
+con
+\begin{equation}
+H_{K'K''}\equiv\int\phi^*_{JMK'}\hat H\phi_{JMK''}d\tau
+\end{equation}
+Y sus autofunciones son de la forma
+\begin{equation}
+\psi_i = \sum_{K'=-J}^Jc_{i,JMK'}\phi_{JMK'}
+\end{equation}
+\end{frame}
+
+%DIAPOSITIVA 10
+\begin{frame}{Estructura del espectro rotacional}
+\begin{itemize}
+\item Región de microondas
+\item Sólo moléculas con momento dipolar eléctrico permanente
+\item Acoplamiento frecuencia magnética irradiada con frecuencia del dipolo
+\item Reglas de selección: $\bra{\psi_{JMK}}\hat D \ket{\psi_{J'K'M'}}$
+\begin{equation*}
+\Delta J = 0,\pm 1 \qquad\Delta K =0 \qquad \Delta M = 0, \pm 1
+\end{equation*}
+\item Intensidad absorción $\propto$ probabilidad ocupación de los niveles
+\begin{equation*}
+\frac{N_J}{N_0}=(2J+1)e^{-BhJ(J+1)/kT}
+\end{equation*}
+\end{itemize}
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{intensidad.png}
+\caption{Espectro rotacional para el HCl en estado gaseoso.}
+\label{intensidad}
+\end{figure}
+\end{frame}
+
+%DIAPOSITIVA 11
+\begin{frame}{Algunos ejemplos}
+\framesubtitle{$H_2$}
+\includegraphics[width=0.3\textwidth]{hidrogeno.png}\\
+$$I=\frac{1}{2}mR^2$$
+ $R=74 \, pm=375.014 \, MeV^{-1}$\\
+ $m=938.272 \, MeV/c^2$\\
+ \begin{itemize}
+  \item Nos queda que 
+ $$I=65.977 \, eV^{-1}c^{-2}$$
+\item luego 
+ $$E_{rot} = 7.58\cdot 10^{-3}J(J+1)\, eV$$
+ \end{itemize}
 \end{frame}
 
 
