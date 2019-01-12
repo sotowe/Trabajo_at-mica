@@ -13,7 +13,15 @@
 \author{José Soto García}
 \begin{document}
 \maketitle
-
+%DIAPOSITIVA 1
+\begin{frame}{La molécula como un sólido rígido}
+\begin{itemize}
+\item Suponemos la molécula como un sólido rígido.
+\item La vibración ocurre en una escala temporal mucho menor que las rotaciones.
+\item En una rotación los átomos vibran tantas veces que podemos considerar que estan quietos en su posición de equilibrio.
+\item Consideramos la distancia interatómica como la distancia media $\braket{R}$.	
+\end{itemize}
+\end{frame}
 %DIAPOSITIVA 2
 \begin{frame}{La molécula como un sólido rígido}
 \framesubtitle{Un poco de mecánica clásica}
@@ -219,5 +227,179 @@ $$I=\frac{1}{2}mR^2$$
  \end{itemize}
 \end{frame}
 
+%DIAPOSITIVA 12
+\begin{frame}{Algunos ejemplos}
+\framesubtitle{$CH_4$}
+\includegraphics[width=0.4\textwidth]{metano.png}\\
+\begin{itemize}
+\item Las posiciones de los átomos  de metano $(CH_4)$ respecto a su centro de masas son:\\
+ $\vec r_C = 0\, \vec x + 0 \, \vec y + 0 \, \vec z \, MeV^{-1}$\\
+ $\vec r_{H1} = 0\, \vec x+0 \, \vec y + 550.87 \, \vec z \, MeV^{-1}$\\
+ $\vec r_{H2} = 0\, \vec x -477.1 \, \vec y + -275.4\, \vec z \, MeV^{-1}$\\
+ $\vec r_{H3} = 413.2\, \vec x + 238.5 \, \vec y + -272.4 \, \vec z \, MeV^{-1}$\\
+ $\vec r_{H4} = -413.2 \, \vec x -238.5 \, \vec y + -272.4 \, \vec z \, MeV^{-1}$\\
+ 
+\item Las masas de los átomos son\\
+ $M_C = 11\, 187.97 \, MeV$\\
+ $M_H = 938.272 MeV$\\
+\end{itemize}
+\end{frame}
 
+%DIAPOSITIVA 13
+\begin{frame}{Algunos ejemplos}
+ A partir de estos datos construimos el tensor de inercia
+ $$ \tilde I =
+ \begin{pmatrix}
+ 818.6 & 0 & 0 \\
+ 0 & 818.6 & 0 \\
+ 0 & 0 & 640.7\\
+ \end{pmatrix}
+ \, eV^{-1}
+ $$
+ 
+Esta molécula se comporta trompo simétrico alargado
+
+Su energía rotacional es
+ $$E_{rot}=[6.1\cdot 10^{-3}J(J+1) -1.6 \cdot 10^{-3}K^2] \, eV$$
+\end{frame}
+
+%DIAPOSITIVA 14
+\begin{frame}{Aproximación de los estados vibracionales}
+\framesubtitle{Un poco de mecánica clásica}
+\begin{itemize}
+\item Suponemos N masas puntuales (los núcleos) cada uno de los cuales vibra en torno a una posición de equilibrio.
+\item La energía cinética clásica de vibración en torno a la posición de equilibrio es:
+\begin{equation}
+T= \frac{1}{2}\sum_{\alpha = 1}^Nm_\alpha\left[\left(\frac{dx_\alpha}{dt}\right)^2+\left(\frac{dy_\alpha}{dt}\right)^2+\left(\frac{dz_\alpha}{dt}\right)^2\right]
+\end{equation}
+en coordenadas ponderadas
+\begin{equation}
+T=\frac{1}{2}\sum_{i=1}^{3N}\dot q_i^2
+\end{equation}
+\item La energía potencial en torno al equilibrio es:
+\begin{equation}
+U = U_e + \frac{1}{2}\sum_{i=1}^{3N}\sum_{k=1}^{3N}\left(\frac{\partial^2U}{\partial q_i \partial q_k}\right)_eq_iq_k
+\end{equation}
+\end{itemize}
+\end{frame}
+
+%DIAPOSITIVA 15
+\begin{frame}
+\begin{itemize}
+\item En forma matricial
+\begin{equation}
+T=\frac{1}{2}\boldsymbol {\dot q}^t\boldsymbol {\dot q}
+\end{equation}
+\begin{equation}
+U=U_e+\frac{1}{2}\boldsymbol q^t\tilde U\boldsymbol q
+\end{equation}
+\item Diagonalizamos $\tilde U$.
+\begin{equation}
+\tilde L^t\tilde U\tilde L = \tilde \Lambda
+\end{equation}
+\item Definimos las coordenadas normales $Q_i$ como:
+\begin{equation}
+\boldsymbol Q = \tilde L^t\boldsymbol q \Rightarrow \boldsymbol q = \tilde L\boldsymbol Q
+\end{equation}
+\item Nos queda
+\begin{equation}
+U-U_e=\frac{1}{2}\boldsymbol q^t\tilde U \boldsymbol q = \frac{1}{2}\boldsymbol Q^t (\tilde L^t\tilde U \tilde L) \boldsymbol Q =  \frac{1}{2}\boldsymbol Q^t\tilde \Lambda \boldsymbol Q
+\end{equation}
+\begin{equation}
+T=\frac{1}{2}\boldsymbol{\dot q^t \dot q}=\frac{1}{2}\boldsymbol{\dot Q}\tilde L^t\tilde L\boldsymbol{\dot Q}= \frac{1}{2}\dot{\boldsymbol Q^t}\dot{\boldsymbol Q}
+\end{equation}
+\end{itemize}
+\end{frame}
+
+%DIAPOSITIVA 16
+\begin{frame}
+\begin{itemize}
+\item El hamiltoniano queda:
+\begin{equation}
+\hat H= \frac{1}{2}\sum_{k=1}^{3N-6} \hat{\dot Q}_k^2 + \frac{1}{2} \sum_{k=1}^{3N-6} \lambda_k \hat Q_k^2 + U_e
+\end{equation}
+{\tiny Con $\lambda_k$ los autovalores de $\tilde \Lambda$}
+\item $\lambda_{N-5}=...=\lambda_N=0$ corresponden a los grados de libertad traslacionales y rotacionales.
+\item Teniendo en cuenta que $p_x=m\dot x$ nos queda 
+\begin{equation}
+\hat{\dot{Q_k}}=\frac{\hbar}{i}\frac{\partial}{\partial Q_k}
+\end{equation}
+\item Luego tomando $U_e=0$ el hamiltoniano final es
+\begin{equation}
+\hat H= -\frac{\hbar^2}{2}\sum_{k=1}^{3N-6} \frac{\partial^2}{\partial Q^2_k} + \frac{1}{2} \sum_{k=1}^{3N-6} \lambda_k \hat Q_k^2
+\end{equation}
+\end{itemize}
+\end{frame}
+
+%DIAPOSITIVA 17
+\begin{frame}
+\begin{itemize}
+\item El hamiltoniano es separable: $\hat H=\displaystyle\sum_{k=1}^{2N-6} \hat H_k$ con
+\begin{equation}
+\hat H_k = -\frac{\hbar^2}{2}\frac{\partial^2}{\partial Q^2}+\frac{1}{2}\lambda_kQ_k^2
+\end{equation}
+que tiene la estructura del oscilador armónico, cuyas soluciones ya conocemos:
+\begin{equation}
+\psi_k(Q_k)\frac{1}{\left(2^{v_k}v_k!\right)^{1/2}}\left(\frac{\alpha_k}{\pi}\right)^{1/4}e^{-\alpha_kQ^2_k/2}H_{v_k}(\alpha_k^{1/2}Q_k)
+\end{equation}
+\begin{equation}
+E_k=\left(v_k+\frac{1}{2}\right)h\nu_k,	\qquad v_k=0,1,2,...
+\end{equation}
+\begin{equation}
+\alpha_k=\frac{2\pi\nu_k}{\hbar}=\frac{\lambda_k^{1/2}}{\hbar} \qquad \nu_k=\lambda_k^{1/2}
+\end{equation}
+\end{itemize}
+\end{frame}
+
+%DIAPOSITIVA 18
+\begin{frame}{Obtención de los autoestados y autovalores en general}
+\begin{itemize}
+\item En genergal, para una molécula poliatómica el hamiltoniano estará constituido por:
+\begin{itemize}
+\item La energía cinética del movimiento de los núcleos
+\item La energía cinética de los electrones
+\item La interacción electrostática entre núcleos, entre electrones, y entre núcleos y electrones
+\end{itemize}
+$$
+\hat H = -\frac{\hbar^2}{2}\sum_{\alpha=1}\frac{\nabla_\alpha^2}{m_\alpha}-\frac{\hbar^2}{2m}\sum_{i}\nabla_i^2+\sum_\alpha\sum_{\beta >\alpha}\frac{Z_\alpha Z_\beta e^2}{r_{\alpha \beta}}
+$$
+\begin{equation}
+-\sum_\alpha\sum_i\frac{Z_\alpha e^2}{r_{i\alpha}}+\sum_j\sum_{i>j}\frac{e^2}{r_{ij}}
+\end{equation}
+\item Aproximación de Born-Oppenheimer. Separamos el movimiento electrónico del movimiento de los núcleos
+\begin{equation}
+\hat H_{el} = -\frac{\hbar^2}{2m}\sum_{i}\nabla_i^2-\sum_\alpha\sum_i\frac{Z_\alpha e^2}{r_{i\alpha}}+\sum_j\sum_{i>j}\frac{e^2}{r_{ij}}
+\end{equation}
+\end{itemize}
+\end{frame}
+
+%DIAPOSITIVA 19
+\begin{frame}{Obtención de los autoestados y autovalores en general}
+\begin{itemize}
+\item Una vez obtenida la energía  electrónica $E_{el}$ podemos escribir el hamiltoniano nuclear
+\begin{equation}
+\hat H_N=-\frac{\hbar^2}{2}\sum_\alpha \frac{\nabla^2_\alpha}{m_\alpha}+V_{NN}+E_{el}
+\end{equation}
+\item Para una molécula diatómica, llamando $U(q_\alpha)\equiv E_{el}+V_{NN}$, escribiendo la ecuación en coordenadas del centro de masas y excluyendo la energía translacional nos queda:
+\begin{equation}
+\left[-\frac{\hbar^2}{2\mu}\nabla^2+U(R)\right]\psi_N=E\psi_N
+\end{equation}
+\item Tenemos un problema de fuerzas centrales
+\begin{equation}
+\psi_N=F(R)Y^M_J(\theta_N,\phi_N)
+\end{equation}
+\end{itemize}
+\end{frame}
+
+%DIAPOSITIVA 20
+\begin{frame}{Obtención de los autoestados y autovalores en general}
+\begin{itemize}
+\item El potencial U(R) se encuentra resolviendo la ecuación electrónica molecular de Schrodinger
+\item Buscamos una aproximación que represente razonablemente bien este potencial para la mayoría de las moléculas
+\item Esperamos que el núcleo vibre alrededor de un mínimo de potencial de enrgía
+\begin{equation}
+U(R) \approx U(R_e)+\frac{1}{2}U''(R_e)(R-R_e)^2
+\end{equation}
+\end{itemize}
+\end{frame}
 \end{document}

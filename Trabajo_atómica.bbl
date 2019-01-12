@@ -106,6 +106,40 @@
       \field{title}{Classical dynamics of particles and systems}
       \field{year}{2013}
     \endentry
+    \entry{wilson1980}{book}{}
+      \name{author}{3}{}{%
+        {{hash=67e344ad59794a614886050486e9bcd1}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Edgar\bibnamedelima Bright},
+           giveni={E\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=2e9453770bb490cae2bcc424c2ebfa59}{%
+           family={Decius},
+           familyi={D\bibinitperiod},
+           given={John\bibnamedelima Courtney},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=92606de0122254f6257ca20095cd7b2a}{%
+           family={Cross},
+           familyi={C\bibinitperiod},
+           given={Paul\bibnamedelima C},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Courier Corporation}%
+      }
+      \strng{namehash}{6c39b96d08af7e1407e3e95cac94a03b}
+      \strng{fullhash}{6c39b96d08af7e1407e3e95cac94a03b}
+      \strng{bibnamehash}{6c39b96d08af7e1407e3e95cac94a03b}
+      \strng{authorbibnamehash}{6c39b96d08af7e1407e3e95cac94a03b}
+      \strng{authornamehash}{6c39b96d08af7e1407e3e95cac94a03b}
+      \strng{authorfullhash}{6c39b96d08af7e1407e3e95cac94a03b}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Molecular vibrations: the theory of infrared and Raman vibrational spectra}
+      \field{year}{1980}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

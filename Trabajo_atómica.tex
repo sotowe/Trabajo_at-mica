@@ -370,7 +370,7 @@ Teniendo que\\
  $$E_3 = (A'+B') = 5.2 \cdot 10^{-3}\, eV$$ 
  \subsection{$CH_4$}
  \includegraphics[width=0.4\textwidth]{metano.png}\\
-Las posiciones de los átomos  de metano $(CH_4)$ respecto a su centro de masas son:
+Las posiciones de los átomos  de metano $(CH_4)$ respecto a su centro de masas son:\\
  $\vec r_C = 0\, \vec x + 0 \, \vec y + 0 \, \vec z \, MeV^{-1}$\\
  $\vec r_{H1} = 0\, \vec x+0 \, \vec y + 550.87 \, \vec z \, MeV^{-1}$\\
  $\vec r_{H2} = 0\, \vec x -477.1 \, \vec y + -275.4\, \vec z \, MeV^{-1}$\\
@@ -414,9 +414,9 @@ T=\frac{1}{2}\sum_{i=1}^{3N}\dot q_i^2
 \end{equation}
 O en forma matricial:
 \begin{equation}
-T=\boldsymbol q^t\tilde T\boldsymbol q
+T=\frac{1}{2}\boldsymbol {\dot q}^t\boldsymbol {\dot q}
 \end{equation}
-Para una molécula, la energía potencial vibracional viene dada por la función U, que depende de la suma de las energías electrónicas y las repulsiones nucleares:
+Para una molécula, la energía potencial vibracional viene dada por la función U, que depende de las coordenadas reducidas $q_1,....,q_N$.
 \begin{equation}
 V=U(q_1,...,q_{3N})
 \end{equation}
@@ -428,6 +428,7 @@ el cual corresponde a $q_1=q_2=...=q_n$, tenemos que
 \begin{equation}
 U = U_e + \frac{1}{2}\sum_{i=1}^{3N}\sum_{k=1}^{3N}u_{ik}q_iq_k
 \end{equation}
+Donde $U_e$ es la energía electrónica de equilibrio.
 \begin{equation}
 u_{ik} \equiv \left(\frac{\partial^2U}{\partial q_i \partial q_k}\right)_e
 \end{equation}
@@ -454,11 +455,11 @@ Q_i=\sum_{j=1}^{3N}l_{ji}q_j, \qquad i=1,...,3N
 \end{equation}
 entonces
 \begin{equation}
-Q = \tilde L^t\boldsymbol q \Rightarrow \boldsymbol q = \tilde L\boldsymbol Q
+\boldsymbol Q = \tilde L^t\boldsymbol q \Rightarrow \boldsymbol q = \tilde L\boldsymbol Q
 \end{equation}
 donde $l_{ji}$ es la coordenada $j_{esima}$ del autovector $L^{(i)}$. Sustituyendo el valor de $\boldsymbol q$ en la igualdad de la energía potencial $U$ nos queda que:
 \begin{equation}
-U-U_e=\frac{1}{2}\boldsymbol q^t\tilde U \boldsymbol q = \frac{1}{2}\boldsymbol Q^t\tilde U \boldsymbol Q
+U-U_e=\frac{1}{2}\boldsymbol q^t\tilde U \boldsymbol q = \frac{1}{2}\boldsymbol Q^t\tilde \Lambda \boldsymbol Q
 \end{equation}
 O lo que es lo mismo
 \begin{equation}
@@ -474,7 +475,7 @@ Y finalmente, la ecuación del movimiento en coordenadas normales queda:
 \end{equation}
 Añadiendo la energía cinética y la energía potencial y cambiando las cantidades clásicas por operadores obtenemos el Hamiltoniano vibracional cuántico aproximado para una molécula poliatómica.
 \begin{equation}
-\hat H= \frac{1}{2}\sum_{k=1}^{3N-6} \hat{\dot Q_k^2} + \frac{1}{2} \sum_{k=1}^{3N-6} \lambda_k \hat Q_k^2 + U_e
+\hat H= \frac{1}{2}\sum_{k=1}^{3N-6} \hat{\dot Q}_k^2 + \frac{1}{2} \sum_{k=1}^{3N-6} \lambda_k \hat Q_k^2 + U_e
 \end{equation}
 Teniendo en cuenta que $p_x=m\dot x$ llegamos a que
 $$\hat{\dot{x}}=\frac{\hbar}{im}\frac{\partial}{\partial x}$$
@@ -505,7 +506,7 @@ Y finalmente, la energía vibracional de la molécula es
 E_{vib}=\sum_{k=1}^{3N-6}\left(v_k+\frac{1}{2}\right)h\nu_k
 \end{equation}
 En el caso de que la molécula sea lineal, los términos $3N-6$ han de ser sustituidos por $3N-5$ puesto que las moléculas lineales tienen un grado de libertad adicional.
-En el desarrollo que hemos realizado no nos hemos molestado en encontrar las posibles relaciones que existen entre las distintas $q's$ puesto que al diagonalizar la matriz de potencial $\tilde U$ nos saldrán 6 o 5 autovales $\lambda = 0$.\\
+En el desarrollo que hemos realizado no nos hemos molestado en encontrar las posibles relaciones que existen entre las distintas $q's$ puesto que al diagonalizar la matriz de potencial $\tilde U$ nos saldrán 6 o 5 autovales $\lambda = 0$, los cuales corresponden a los grados de libertad traslacionales y rotacionales \cite{wilson1980}\cite{levine1980}.\\
 
 Un modo normal de vibración se describe mediante vectores desplazamiento que indican la dirección y la amplitud relativa de la vibración de cada núcleo. Si se realiza una operación de simetría $\hat R$ sobre una molécula obtenemos una configuración nuclear que es indistinguible de la original, por lo que la función energía potencial $U$ permanece invariante cuando se le aplica el operador correspondiente $\hat O_R$ a U
 \begin{equation}
@@ -519,7 +520,7 @@ si $\lambda_j=\lambda_k$\\
 
 Los requisitos de simetría limitan las posibles formas de las vibraciones normales. Así, para un modo no degenerado, un núcleo que se encuentre en un plano de simetría solo puede vibrar en ese plano o en un plano perpendicular a él, mientras que un núcleo que se encuentre en un eje de simetría sólo puede vibrar a lo largo de ese eje o perpendicular a él. La simetría de la molécula se puede utilizar por tanto para deducir la apariencia cualitativa de los modos normales de vibración sin tener que resolver la ecuación secular de la vibración.
 \section{Obtención de los autoestados y autovalores en general.}
-En general, para una molécula poliatómica el Hamiltoniano estará constituido por la energía cinética del movimiento de los núcleos atómicos, la energía cinética de los electrones de cada átomo, y la interacción electrostática entre electrones y núcleos. El Hamiltoniano del sistema en el sistema centro de masas será:
+En general, para una molécula poliatómica el Hamiltoniano estará constituido por la energía cinética del movimiento de los núcleos atómicos, la energía cinética de los electrones de cada átomo, y la interacción electrostática entre electrones y núcleos. El Hamiltoniano en el sistema centro de masas será:
 $$
 \hat H = -\frac{\hbar^2}{2}\sum_{\alpha=1}\frac{\nabla_\alpha^2}{m_\alpha}-\frac{\hbar^2}{2m}\sum_{i}\nabla_i^2+\sum_\alpha\sum_{\beta >\alpha}\frac{Z_\alpha Z_\beta e^2}{r_{\alpha \beta}}
 $$
@@ -609,7 +610,7 @@ Escribimos ahora
 \begin{equation}
 \frac{J(J+1)\hbar^2}{2\mu (q+R)^2}=\frac{J(J+1)\hbar^2}{2\mu R_e^2}\left[1-2\frac{q}{R_e}+3\frac{q^2}{R_e^2}-...\right]
 \end{equation}
-despreciando los términos entre paréntesis y llamando 
+Para valores próximos a $R_e$ podemos despreciar los términos con $q$ en el corchete, por lo que llamando
 \begin{equation}
 W \equiv	E-U(R_e)-\frac{J(J+1)\hbar^2}{2\mu R_e^2}
 \end{equation}

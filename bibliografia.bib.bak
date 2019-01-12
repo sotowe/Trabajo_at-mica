@@ -14,4 +14,11 @@
   author    = {Levine, Ira N and Ortigosa, Antonio Fuster and Rodríguez, Alberto Requena},
 }
 
+@Book{marion2013,
+  title     = {Classical dynamics of particles and systems},
+  publisher = {Academic Press},
+  year      = {2013},
+  author    = {Marion, Jerry B},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
