@@ -397,9 +397,49 @@ $$
 \item El potencial U(R) se encuentra resolviendo la ecuación electrónica molecular de Schrodinger
 \item Buscamos una aproximación que represente razonablemente bien este potencial para la mayoría de las moléculas
 \item Esperamos que el núcleo vibre alrededor de un mínimo de potencial de enrgía
-\begin{equation}
+\begin{equation*}
 U(R) \approx U(R_e)+\frac{1}{2}U''(R_e)(R-R_e)^2
+\end{equation*}
+\item Con algunos cambios de variables ($G(R)=RF(R), \,\ q=R-R_e$) y desarrollando el laplaciano:
+\begin{equation*}
+-\frac{\hbar^2}{2\mu}G''(q)+\left[\frac{J(J+1)\hbar^2}{2\mu (q+R_e)^2}+U(R_e)+\frac{1}{2}k_eq^2-E\right]G(q)=0
+\end{equation*}
+\end{itemize}
+\end{frame}
+
+%DIAPOSITIVA 21
+\begin{frame}{Obtención de los autoestados y autovalores en general}
+\begin{itemize}
+\item Otra aproximación
+\begin{equation*}
+\frac{J(J+1)\hbar^2}{2\mu (q+R_e)^2}=\frac{J(J+1)\hbar^2}{2\mu R_e^2}\left[1-2\frac{q}{R_e}+3\frac{q^2}{R_e^2}-...\right] \approx \frac{J(J+1)\hbar^2}{2\mu R_e^2}
+\end{equation*}
+\item Llamando
+\begin{equation*}
+W \equiv	E-U(R_e)-\frac{J(J+1)\hbar^2}{2\mu R_e^2}
+\end{equation*}
+\item Llegamos al oscilador armónico
+\begin{equation}
+-\frac{\hbar^2}{2\mu}G''(q)\left[\frac{1}{2}k_eq^2-W\right] G(q)=0
+\end{equation}
+Y la energía final es
+\begin{equation}
+E=U(R_e)+\left(v+\frac{1}{2}\right)h\nu_e+J(J+1)hB_e
 \end{equation}
 \end{itemize}
+\end{frame}
+
+%DIAPOSITIVA 22
+\begin{frame}{Obtención de los autoestados y autovalores en general}
+\begin{itemize}
+\item Por tanto:
+\begin{equation}
+E_{tot} = U_e+E_{vib}+E_{rot}+E_{trans}
+\end{equation}
+\begin{equation}
+\psi=\psi_{el}\psi_{vib}\psi_{rot}\psi_{trans}
+\end{equation}
+\end{itemize}
+
 \end{frame}
 \end{document}

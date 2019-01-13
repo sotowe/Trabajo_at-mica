@@ -1,0 +1,32 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {spanish}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}La mol\IeC {\'e}cula como un s\IeC {\'o}lido r\IeC {\'\i }gido}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Rotor r\IeC {\'\i }gido cu\IeC {\'a}ntico: Estados propios y autovalores.}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}El rotor esf\IeC {\'e}rico}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}El rotor sim\IeC {\'e}trico}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3}El rotor asim\IeC {\'e}trico}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4}El rotor r\IeC {\'\i }gido diat\IeC {\'o}mico}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Estructura del espectro rotacional.}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Momentos de inercia de distintas mol\IeC {\'e}culas respecto de sus ejes principales en sus estados fundamentales}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}$H_2$}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}$CO$}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3}$H_2O$}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4}$CH_4$}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Aproximaci\IeC {\'o}n de los estados vibracionales de una mol\IeC {\'e}cula.}{14}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Obtenci\IeC {\'o}n de los autoestados y autovalores en general.}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Correciones a la energ\IeC {\'\i }a}{21}

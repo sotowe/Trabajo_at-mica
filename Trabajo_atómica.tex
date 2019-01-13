@@ -13,8 +13,10 @@
 \author{José Soto García}
 \begin{document}
 \maketitle
-
-\section{La molécula como un sólido rígido: hamiltoniano asociado a la rotación de la misma en torno a su centro de masas.}
+\newpage
+\tableofcontents
+\newpage
+\section{La molécula como un sólido rígido}
 Un sólido rígido se define como una colección de partículas, cuyas distancias relativas se mantienen fijas \cite{marion2013}. Dado que la distancia es fija, la energía potencial no varía con la rotación del rotor, luego $V=0$. El momento de inercia $I_i$ de un sólido rígido con $n$ partículas sobre un eje $i$ se define como:
 \begin{equation}
 I_i= \sum_{j=1}^n=m_jr_j^2
@@ -311,7 +313,7 @@ La intensidad máxima de absorción vendrá dada para
 J=\sqrt{\frac{kT}{2hB}}-\frac{1}{2}
 \end{equation}
 
-\section{Momentos de inercia de distintas moléculas respecto de sus ejes principales en sus estados fundamentales: $H_2$ , $CO$, $H_2O$ , $CH_4$ ...}
+\section{Momentos de inercia de distintas moléculas respecto de sus ejes principales en sus estados fundamentales}
 En esta sección  para simplificar los cálculos trabajaremos con unidades naturales, es decir tomaremos $\hbar = 1$ y $c=1$.
 Las constantes rotacionales las escribiremos como:
 $$A' = \frac{1}{2I_a}$$
@@ -396,7 +398,7 @@ Esta molécula se comporta rotor simétrico alargado, con
  $$A'= 7.7 \cdot 10^{-3}\, eV \qquad B' = C' = 6.1 \cdot 10^{-3}\, eV $$
  Y la energía rotacional es
  $$E_{rot}=[6.1\cdot 10^{-3}J(J+1) -1.6 \cdot 10^{-3}K^2] \, eV$$
-\section{Aproximación de los estados vibracionales de una molécula admitiendo que los núcleos del átomo vibran armónicamente en torno a sus posiciones de equilibrio.}
+\section{Aproximación de los estados vibracionales de una molécula.}
 Supongamos un conjunto de N masas puntuales (los núcleos), cada uno de los cuales vibra en torno a una posición de equilibrio. Sean $a_\alpha$, $b_\alpha$ y $c_\alpha$ las cordenadas cartesianas de un núcleo $\alpha$ en los ejes principales del sistema, y sean $a_{\alpha ,e}$, $b_{\alpha ,e}$ y $c_{\alpha ,e}$ los puntos de equilibrio en esas mismas coordenadas. Definimos los desplazamientos como:
 \begin{equation}
 x_\alpha = a_\alpha - a_{\alpha, e}, \qquad y_\alpha = b_\alpha - b_{\alpha, e}, \qquad z_\alpha = c_\alpha - c_{\alpha, e}
@@ -520,7 +522,7 @@ si $\lambda_j=\lambda_k$\\
 
 Los requisitos de simetría limitan las posibles formas de las vibraciones normales. Así, para un modo no degenerado, un núcleo que se encuentre en un plano de simetría solo puede vibrar en ese plano o en un plano perpendicular a él, mientras que un núcleo que se encuentre en un eje de simetría sólo puede vibrar a lo largo de ese eje o perpendicular a él. La simetría de la molécula se puede utilizar por tanto para deducir la apariencia cualitativa de los modos normales de vibración sin tener que resolver la ecuación secular de la vibración.
 \section{Obtención de los autoestados y autovalores en general.}
-En general, para una molécula poliatómica el Hamiltoniano estará constituido por la energía cinética del movimiento de los núcleos atómicos, la energía cinética de los electrones de cada átomo, y la interacción electrostática entre electrones y núcleos. El Hamiltoniano en el sistema centro de masas será:
+En general, para una molécula poliatómica su Hamiltoniano estará constituido por la energía cinética del movimiento de los núcleos atómicos, la energía cinética de los electrones de cada átomo, y la interacción electrostática entre electrones, núcleos y electrones y núcleos. El Hamiltoniano en el sistema centro de masas será:
 $$
 \hat H = -\frac{\hbar^2}{2}\sum_{\alpha=1}\frac{\nabla_\alpha^2}{m_\alpha}-\frac{\hbar^2}{2m}\sum_{i}\nabla_i^2+\sum_\alpha\sum_{\beta >\alpha}\frac{Z_\alpha Z_\beta e^2}{r_{\alpha \beta}}
 $$
@@ -581,7 +583,7 @@ Escribiendo el laplaciano en coordenadas esféricas y llamando $G(R)\equiv RF(R)
 -\frac{\hbar^2}{2\mu}G''(R)+\left[\frac{J(J+1)\hbar^2}{2\mu R^2}+U(R)-E\right]G(R)=0
 \end{equation}
 Para continuar necesitamos una expresión para la energía potencial U(R). Este potencial se encuentra resolviendo la ecuación molecular electrónica de Schrödinger, el cuál es diferente para cada estado electrónico de cada molécula. Nosotros buscamos una aproximación que represente razonablemente bien este potencial para la mayoría de las moléculas diatómicas. Para estados electrónicos enlazados esperamos que el núcleo vibre alrededor de un mínimo de potencial de energía, por tanto, podemos expandir U en una serie de Taylor en torno a la separación internuclear de equilibrio $R_e$. Sabiendo que $U'(R_e)=0$ y obviando las potencias de orden superior a 3 tenemos que
-\begin{equation}
+\begin{equation}\label{aproximacion1}
 U(R) \approx U(R_e)+\frac{1}{2}U''(R_e)(R-R_e)^2
 \end{equation}
 En la figura \ref{potencial} se puede observar en trazado contínuo la curva de potencial típica para moléculas diatómicas y en trazado discontínuo la aproximación de segundo orden a la curva. Vemos como esta aproximación sólamente es válida para desplazamientos pequeños respecto a la posición de equilibrio.
@@ -604,11 +606,11 @@ U \approx U(R_e)+\frac{1}{2}k_eq^2
 \end{equation}
 y la ecuación de Schrödinger
 \begin{equation}
--\frac{\hbar^2}{2\mu}G''(q)+\left[\frac{J(J+1)\hbar^2}{2\mu (q+R)^2}+U(R_e)+\frac{1}{2}k_eq^2-E\right]G(q)=0
+-\frac{\hbar^2}{2\mu}G''(q)+\left[\frac{J(J+1)\hbar^2}{2\mu (q+R_e)^2}+U(R_e)+\frac{1}{2}k_eq^2-E\right]G(q)=0
 \end{equation}
 Escribimos ahora
-\begin{equation}
-\frac{J(J+1)\hbar^2}{2\mu (q+R)^2}=\frac{J(J+1)\hbar^2}{2\mu R_e^2}\left[1-2\frac{q}{R_e}+3\frac{q^2}{R_e^2}-...\right]
+\begin{equation}\label{aproximacion2}
+\frac{J(J+1)\hbar^2}{2\mu (q+R_e)^2}=\frac{J(J+1)\hbar^2}{2\mu R_e^2}\left[1-2\frac{q}{R_e}+3\frac{q^2}{R_e^2}-...\right]
 \end{equation}
 Para valores próximos a $R_e$ podemos despreciar los términos con $q$ en el corchete, por lo que llamando
 \begin{equation}
@@ -622,6 +624,11 @@ que es la ecuación de Schrödinger para un oscilador armónico en una dimensió
 \begin{equation}
 W=\left(v+\frac{1}{2}\right)h\nu_e
 \end{equation}
+Y 
+\begin{equation}
+G_v(q)=\left(\frac{\alpha}{\pi}\right)^{1/4}\frac{1}{(2^vv!)^{1/2}}H_v(\alpha ^{1/2}q)e^{-\alpha q^2/2})
+\end{equation}
+Luego
 \begin{equation}
 E=U(R_e)+\left(v+\frac{1}{2}\right)h\nu_e+J(J+1)hB_e
 \end{equation}
@@ -645,20 +652,38 @@ La aproximación de Born-Oppenheimer permite separar la función de onda molecul
 \psi=\psi_{el}\psi_{vib}\psi_{rot}\psi_{trans}
 \end{equation}
 
-Mientras que para moléculas diatómicas la interacción vibración-rotación añade sólamente pequeñas correcciones a la energía, para muchas moléculas poliatómicas la interacción vibración-rotación trae correcciones relativamente grandes. Estos nuevos términos son los llamados términos de anarmonicidad y, en moléculas diatómicas, se pueden añadir perturbativamente para ser más precisos en la descripción.\\
+\section{Correciones a la energía}
+Mientras que para moléculas diatómicas la interacción vibración-rotación añade sólamente pequeñas correcciones a la energía, para muchas moléculas poliatómicas la interacción vibración-rotación trae correcciones relativamente grandes. Estos nuevos términos son los llamados términos de anarmonicidad y, en moléculas diatómicas, se pueden añadir perturbativamente para ser más precisos en la descripción. Considerando los dos primeros términos despreciados en las aproximaciones de {\ref{aproximacion1} y \ref{aproximacion2} tenemos la perturbación
+\begin{equation}
+\hat H'=-\frac{2J(J+1)hB_e}{R_e}q +\frac{3J(J+1)hB_e}{R^2_e}q^2+\frac{1}{6}U'''(R_e)q^3+\frac{1}{24}U^{iv}(R_e)q^4
+\end{equation}
+que aplicado a las funciones de onda $\psi_{vJM}^{(0)}=\frac{G_v(q)}{R}Y_J^M(\theta_N,\phi_N)$ nos da la energía:
+$$
+E=U(R_e)+\left(v+\frac{1}{2}\right)h\nu_e+h\left[B_e-\alpha_e\left(v+\frac{1}{2}\right)\right]J(J+1)
+$$
+\begin{equation}
+-hv_ex_e\left(v+\frac{1}{2}\right)^2-hD_eJ^2(J+1)^2 +hY_{00}
+\end{equation}
+$v_ex_e$ se define como la constante de anarmonicidad, que reduce la energía vibracional. $\alpha_e$ es la constante de acoplamiento de vibración-rotación. Podemos definir una nueva constante, la constante rotacional media: 
+\begin{equation}
+B_v=B_e-\alpha_e\left(v+\frac{1}{2}\right)
+\end{equation} 
+El acoplamiento de vibración-rotación se puede entender desde el punto de vista de la física clásica. Debido a la anarmonicidad de la curva de energía potencial, al aumentar el número cuántico vibracional, la distancia media internuclear $\braket{R}$ aumenta, por lo que disminuye $B_v$ y por tanto, disminuye la energía rotacional. Esto se traduce en que el espaciado entre las líneas del espectro rotacional disminuye ligeramente al aumentar el número vibracional.\\
 
+$D_e$ es la constante de distorsión centrífuga. Su valor es $\ll 1$ por lo que apenas tiene efecto sobre los valores de la energía rotacional. Por último $Y_{00}$ es una constante debido a la anarmonicidad de U y afecta muy poco a los niveles vibracionales.\\
+ 
 Otra mejora en la descripción de nuestro sistema es el uso de otras energías potenciales para $U(R)$. Previamente hemos expandido la energía potencial $U(R)$ en series en torno a $R_e$. Esta aproximación es buena para regiones cerca del equilibrio. Sin embargo, para valores grandes de $R$, la serie de Taylor en torno a $R_e$ es divergente. Una opción es tomar energías potenciales empíricas. Estos potenciales son específicos para cada estado molecular y para cada molécula. Uno de los potenciales que mejor resultados da es la función de morse, la cual tiene la forma:
 \begin{equation}
 U=D_e \left[ 1- e^{-a(R-R_e)} \right]^2
 \end{equation}
-Donde los parámetros $D_e$, $a$ y $R_e$ se obtienen experimentalmente.\\
+Donde los parámetros $D_e$, $a$ y $R_e$ se obtienen experimentalmente. En la figura (\ref{transiciones}) se observan las líneas típicas para un potencial de morse.\\
 
-El acoplamiento de los movimientos rotacional y vibracional en una molécula se puede entender en términos de física clásica. Sin embargo, podemos ignorar este acoplamiento y considerar la excitación de una molécula diatómica en la primera aproximación como simplemente la suma de la excitación del oscilador armónico y del rotor rígido. En ese caso obtenemos los niveles energéticos:
+Finalmente, comentar que, aunque como hemos comentado previamente, en una primera aproximación, los niveles energéticos para el espectro vibracional-rotacional de una molécula diatómica se pueden escribir como
 \begin{equation}
 E(v,J)=\hbar\nu(v+\frac{1}{2})+ BhJ(J+1)
 \end{equation}
-Donde  las transiciones púramente rotacionales $(\Delta v = 0, \,\ \Delta J = \pm 1)$ están permitidas, pero las transiciones púramente vibracionales $(\Delta v = \pm 1, \,\ \Delta J = 0)$ no lo están. Esto se puede entender desde un punto de vista clásico. Como los movimientos vibracionales son mucho más rápidos que los movimientos rotacionales, el rotor ve una distancia internuclear $\braket{R}$, la cual es la distancia media entre los átomos. En el caso del oscilador anarmónico la distancia internuclear media $\braket{R}$ aumenta al aumentar sus números cuántico, lo que conlleva un cambio en la velocidad de rotación. La regla de selección $\Delta J=0$ solo es válida cuando el momento angular de la molécula es paralelo al eje de su cilindro.
-En la figura (\ref{transiciones}) se observan las líneas típicas para un potencial de morse.
+las transiciones púramente rotacionales $(\Delta v = 0, \,\ \Delta J = \pm 1)$ están permitidas, pero las transiciones púramente vibracionales $(\Delta v = \pm 1, \,\ \Delta J = 0)$ no lo están. Esto se puede entender desde un punto de vista clásico. Como los movimientos vibracionales son mucho más rápidos que los movimientos rotacionales, el rotor ve una distancia internuclear $\braket{R}$, la cual es la distancia media entre los átomos. En el caso del oscilador anarmónico la distancia internuclear media $\braket{R}$ aumenta al aumentar sus números cuántico, lo que conlleva un cambio en la velocidad de rotación. La regla de selección $\Delta J=0$ solo es válida cuando el momento angular de la molécula es paralelo al eje de su cilindro.
+
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{niv_rot_vib_elect.png}
 \caption{Niveles vibracionales-rotacionales en el estado electrónico fundamental y en un estado electrónico excitado. Las transiciones entre niveles en el estado electrónico fundamental dan lugar al espectro vibracional-rotacional. Las transiciones entre estados electrónicos diferentes contribuyen al espectro de la banda electrónica}
