@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.18)  13 JAN 2019 13:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.18)  13 JAN 2019 17:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -810,151 +810,164 @@ LaTeX Info: Redefining \% on input line 2.
 \openout5 = `Trabajo_atómica.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-<Angulos_Euler.png, id=16, 579.16376pt x 482.80376pt>
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
+
+ []
+
+<Angulos_Euler.png, id=22, 579.16376pt x 482.80376pt>
 File: Angulos_Euler.png Graphic file (type png)
 <use Angulos_Euler.png>
-Package pdftex.def Info: Angulos_Euler.png  used on input line 61.
+Package pdftex.def Info: Angulos_Euler.png  used on input line 72.
 (pdftex.def)             Requested size: 276.00105pt x 230.07823pt.
-[3] [4 <./Angulos_Euler.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 140--145
+[4 <./Angulos_Euler.png>] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 151--156
 
  []
 
-[5] [6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--262
+[6] [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--272
+Underfull \hbox (badness 10000) in paragraph at lines 271--273
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 282--284
+Underfull \hbox (badness 10000) in paragraph at lines 281--283
 
  []
 
-<niveles1.png, id=46, 368.37625pt x 537.00626pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--295
+
+ []
+
+<niveles1.png, id=45, 368.37625pt x 537.00626pt>
 File: niveles1.png Graphic file (type png)
 <use niveles1.png>
-Package pdftex.def Info: niveles1.png  used on input line 295.
+Package pdftex.def Info: niveles1.png  used on input line 306.
 (pdftex.def)             Requested size: 207.0021pt x 301.7539pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--300
+Underfull \hbox (badness 10000) in paragraph at lines 303--311
 
  []
 
-<intensidad.png, id=47, 626.34pt x 200.75pt>
+<intensidad.png, id=46, 626.34pt x 200.75pt>
 File: intensidad.png Graphic file (type png)
 <use intensidad.png>
-Package pdftex.def Info: intensidad.png  used on input line 307.
+Package pdftex.def Info: intensidad.png  used on input line 318.
 (pdftex.def)             Requested size: 276.00105pt x 88.46504pt.
-<hidrogeno.png, id=48, 791.95876pt x 512.91624pt>
+[10] [11 <./niveles1.png> <./intensidad.png>]
+<hidrogeno.png, id=54, 791.95876pt x 512.91624pt>
 File: hidrogeno.png Graphic file (type png)
 <use hidrogeno.png>
-Package pdftex.def Info: hidrogeno.png  used on input line 321.
+Package pdftex.def Info: hidrogeno.png  used on input line 332.
 (pdftex.def)             Requested size: 103.50105pt x 67.02582pt.
-[10] [11 <./niveles1.png> <./intensidad.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 323--327
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--338
 
  []
 
 <monoxido.png, id=56, 801.99625pt x 433.62pt>
 File: monoxido.png Graphic file (type png)
 <use monoxido.png>
-Package pdftex.def Info: monoxido.png  used on input line 334.
+Package pdftex.def Info: monoxido.png  used on input line 345.
 (pdftex.def)             Requested size: 103.50105pt x 55.95573pt.
-<agua.png, id=57, 341.275pt x 148.555pt>
+[12 <./hidrogeno.png> <./monoxido.png>]
+<agua.png, id=63, 341.275pt x 148.555pt>
 File: agua.png Graphic file (type png)
 <use agua.png>
-Package pdftex.def Info: agua.png  used on input line 346.
+Package pdftex.def Info: agua.png  used on input line 357.
 (pdftex.def)             Requested size: 137.9979pt x 60.06923pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--351
+Underfull \hbox (badness 10000) in paragraph at lines 357--362
 
  []
 
-[12 <./hidrogeno.png> <./monoxido.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 352--355
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--366
 
  []
 
 <metano.png, id=64, 1104.125pt x 790.955pt>
 File: metano.png Graphic file (type png)
 <use metano.png>
-Package pdftex.def Info: metano.png  used on input line 374.
+Package pdftex.def Info: metano.png  used on input line 385.
 (pdftex.def)             Requested size: 137.9979pt x 98.85706pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--381
+Underfull \hbox (badness 10000) in paragraph at lines 385--392
 
  []
 
-[13 <./agua.png> <./metano.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 382--385
+[13 <./agua.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 393--396
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+Underfull \hbox (badness 10000) in paragraph at lines 418--419
 
  []
 
-[14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 509--512
+[14 <./metano.png>] [15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
 
  []
 
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 520--522
+
+Underfull \hbox (badness 10000) in paragraph at lines 531--533
 
  []
 
 [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 573--575
+Underfull \hbox (badness 10000) in paragraph at lines 584--586
 
  []
 
-<curva_potencial.png, id=87, 451.6875pt x 398.48875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 595--596
+
+ []
+
+[19]
+<curva_potencial.png, id=91, 451.6875pt x 398.48875pt>
 File: curva_potencial.png Graphic file (type png)
 <use curva_potencial.png>
-Package pdftex.def Info: curva_potencial.png  used on input line 591.
+Package pdftex.def Info: curva_potencial.png  used on input line 603.
 (pdftex.def)             Requested size: 276.00105pt x 243.50949pt.
-[19] [20 <./curva_potencial.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 647--649
+ [20 <./curva_potencial.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 659--661
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 670--672
+Underfull \hbox (badness 10000) in paragraph at lines 682--684
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 673--674
+Underfull \hbox (badness 10000) in paragraph at lines 685--686
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 678--680
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 690--692
 
  []
 
-<niv_rot_vib_elect.png, id=98, 563.10374pt x 499.8675pt>
+<niv_rot_vib_elect.png, id=101, 563.10374pt x 499.8675pt>
 File: niv_rot_vib_elect.png Graphic file (type png)
 <use niv_rot_vib_elect.png>
-Package pdftex.def Info: niv_rot_vib_elect.png  used on input line 688.
+Package pdftex.def Info: niv_rot_vib_elect.png  used on input line 700.
 (pdftex.def)             Requested size: 276.00105pt x 245.00586pt.
-[22] [23 <./niv_rot_vib_elect.png>] [24] (./Trabajo_atómica.aux
+[23] [24 <./niv_rot_vib_elect.png>] [25] (./Trabajo_atómica.aux
 LaTeX Info: Redefining \sptext on input line 10.
 LaTeX Info: Redefining \. on input line 10.
 LaTeX Info: Redefining \% on input line 10.
@@ -968,16 +981,16 @@ Package logreq Info: Writing requests to 'Trabajo_atómica.run.xml'.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 656 ({)
+### simple group (level 1) entered at line 668 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 10473 strings out of 492982
- 173362 string characters out of 6134895
- 599753 words of memory out of 5000000
- 13903 multiletter control sequences out of 15000+600000
+ 10474 strings out of 492982
+ 173370 string characters out of 6134895
+ 599743 words of memory out of 5000000
+ 13904 multiletter control sequences out of 15000+600000
  11818 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,45p,963b,1697s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,45p,827b,1697s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
@@ -995,10 +1008,10 @@ cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Trabajo_atómica.pdf (24 pages, 439178 bytes).
+Output written on Trabajo_atómica.pdf (25 pages, 440905 bytes).
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
+ 171 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

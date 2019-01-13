@@ -16,8 +16,19 @@
 \newpage
 \tableofcontents
 \newpage
+\nocite{haken2013}
+\nocite{levine1980}
+\nocite{marion2013}
+\nocite{wilson1980}
+
+
+\section{Introducción}
+El objetivo de la física molecular es entender la estructura, el enlace químico y las propiedades físicas de las moléculas. Las moléculas tienen grados de libertad internos debido al movimiento de los núcleos que las componen, dando lugar a rotaciones y vibraciones. La espectroscopía es uno de los métodos más importantes para elucidar la estructura molecular. En un intento de encajar los espectros observados para las distintas molćulas reales, se utilizan modelos simplificados sobre el comportamiento y la estructura de las moléculas, y con ellos se comprueba si los espectros observados concuerdan con los predichos por estos modelos.\\
+
+En este trabajo consideraremos que las moléculas se hayan formadas por átomos cuya masa se haya concentrada en un punto y que mantienen unas distancias internucleares relativamente fijas debido a una combinación de fuerzas atractivas y repulsivas.
+
 \section{La molécula como un sólido rígido}
-Un sólido rígido se define como una colección de partículas, cuyas distancias relativas se mantienen fijas \cite{marion2013}. Dado que la distancia es fija, la energía potencial no varía con la rotación del rotor, luego $V=0$. El momento de inercia $I_i$ de un sólido rígido con $n$ partículas sobre un eje $i$ se define como:
+En una primera aproximación, consideraremos que las moléculas se comportan como un sólido rígido. Un sólido rígido se define como una colección de partículas, cuyas distancias relativas se mantienen fijas. Dado que la distancia es fija, la energía potencial no varía con la rotación del rotor, luego $V=0$. El momento de inercia $I_i$ de un sólido rígido con $n$ partículas sobre un eje $i$ se define como:
 \begin{equation}
 I_i= \sum_{j=1}^n=m_jr_j^2
 \end{equation}
@@ -34,7 +45,7 @@ Clásicamente, la energía cinética rotacional del sistema se obtiene como:
 \begin{equation}
 T_{rot}=\frac{1}{2}\sum_{i,j}I_{i,j}\omega_i\omega_j
 \end{equation}
-Una clara simplificación se encuentra si diagonalizamos el tensor de inercia. Los vectores que diagonalizan la matriz de inercia son los denominados ejes principales de inercia. La energía cinética rotacional clásica del sistema queda por tanto \cite{marion2013}:
+Una clara simplificación se encuentra si diagonalizamos el tensor de inercia. Los vectores que diagonalizan la matriz de inercia son los denominados ejes principales de inercia. La energía cinética rotacional clásica del sistema queda por tanto:
 \begin{equation}
 T_{rot}=\frac{1}{2}\left(I_a\omega^2_a + I_b\omega^2_b + I_c\omega^2_c\right) 
 \end{equation}
@@ -252,13 +263,13 @@ obtenemos que:
 \begin{equation}
 E/h=BJ(J+1)
 \end{equation}
-La energía está $2l+1$ veces degenerada debido a que para un $l$ fijo, distintos valores de $m$ tienen la misma energía.
+La energía está $2l+1$ veces degenerada debido a que para un $l$ fijo, distintos valores de $M$ tienen la misma energía.
 
 \section{Estructura del espectro rotacional.}
-El espectro rotacional de las moléculas se observa casi exclusívamente como espectro de absorción, ya que la emisión espontánea es muy poco probable dada las bajas energías de transición. El espectro rotacional cae en la región de las microondas, por lo que se requieren espectrómetros del infrarojo lejano o espectrómetros de microondas para observarlos.\cite{haken2013}\\
+El espectro rotacional de las moléculas se observa casi exclusívamente como espectro de absorción, ya que la emisión espontánea es muy poco probable dada las bajas energías de transición. El espectro rotacional cae en la región de las microondas, por lo que se requieren espectrómetros del infrarojo lejano o espectrómetros de microondas para observarlos.\\
 
 Las reglas de selección para las transiciones electromagnéticas en la molécula provienen de las simetrías de las funciones de onda al aplicar la teoría de perturbaciones dependiente del tiempo producidas por un campo electromagnético periódico.
-Sólo las moléculas con momento dipolar eléctrico permanente permiten la observación de su espectro rotacional.  Esto es debido a que este tipo de moléculas, cuando está rotando, parece tener un momento dipolar dependiente del tiempo para un observador estacionario. La rotación de este tipo de moléculas lleva absorción de radiación electromagnética cuando las frecuencia electromagnética irradiada encaja con la frecuencia de rotación del dipolo. Por tanto, moléculas homonucleares diatómicas como el $H_2$, el $N_2$ o el $O_2$ no presentan espectro rotacional. Lo mismo ocurre con moléculas más grandes como el $CCl_4$, a menos que la rotación induzca un momento dipolar o la molécula presente algún tipo de vibración asimétrica que le induzca un momento. Y por supuesto las moléculas con simetría esférica tampoco presentan espectro de microondas\cite{haken2013}.\\
+Sólo las moléculas con momento dipolar eléctrico permanente permiten la observación de su espectro rotacional. La rotación de este tipo de moléculas lleva absorción de radiación electromagnética cuando las frecuencia electromagnética irradiada encaja con la frecuencia de rotación del dipolo. Por tanto, moléculas homonucleares diatómicas como el $H_2$, el $N_2$ o el $O_2$ no presentan espectro rotacional. Lo mismo ocurre con moléculas más grandes como el $CCl_4$, a menos que la rotación induzca un momento dipolar o la molécula presente algún tipo de vibración asimétrica que le induzca un momento. Y por supuesto las moléculas con simetría esférica tampoco presentan espectro de microondas.\\
  
 Para saber si la transición entre dos estados está permitida debemos resolver la integral:
 \begin{equation}
@@ -298,7 +309,7 @@ De esta ecuación podemos observar que moléculas más pesadas, las cuales tendr
 \end{figure}
 \\
 
-Finalmente, para poder entender la intensidad de la distribución del espectro, es necesario conocer que estados iniciales de absorción están ocupados a la temperatura T de las medidas. La probabilidad de ocupación $N_J$ de un nivel con un número rotacional cuántico $J$  para una molécula diatómica está dada por la expresión:
+Finalmente, para poder entender la intensidad de la distribución del espectro, es necesario conocer que estados iniciales de absorción están ocupados a la temperatura T de las medidas. La probabilidad de ocupación de un nivel con un número rotacional cuántico $J$, $N_J$, para una molécula diatómica está dada por la expresión:
 \begin{equation}
 \frac{N_J}{N_0}=(2J+1)e^{-BhJ(J+1)/kT}
 \end{equation}
@@ -489,7 +500,7 @@ Con lo que el Hamiltoniano queda:
 \begin{equation}
 \hat H= -\frac{\hbar^2}{2}\sum_{k=1}^{3N-6} \frac{\partial^2}{\partial Q^2_k} + \frac{1}{2} \sum_{k=1}^{3N-6} \lambda_k \hat Q_k^2 + U_e
 \end{equation}
-La energía electrónica $U_e$ es una constante, por lo que no afecta a las autofunciones, simplemente disminuye en $U_e$ los autovalores del Hamiltoniano y podemos eliminarlo de la ecuación. Podemos separar el Hamiltoniano vibracional en $3N-6$ Hamiltonianos monoparticulares de la forma:
+La energía electrónica $U_e$ es una constante, por lo que no afecta a las autofunciones, simplemente disminuye en $U_e$ los autovalores del Hamiltoniano y podemos eliminarlo de la ecuación. Podemos separar el Hamiltoniano vibracional en $3N-6$ ($3N-5$) Hamiltonianos monoparticulares de la forma:
 \begin{equation}
 \hat H_k = -\frac{\hbar^2}{2}\frac{\partial^2}{\partial Q^2}+\frac{1}{2}\lambda_kQ_k^2
 \end{equation}
@@ -507,8 +518,8 @@ Y finalmente, la energía vibracional de la molécula es
 \begin{equation}
 E_{vib}=\sum_{k=1}^{3N-6}\left(v_k+\frac{1}{2}\right)h\nu_k
 \end{equation}
-En el caso de que la molécula sea lineal, los términos $3N-6$ han de ser sustituidos por $3N-5$ puesto que las moléculas lineales tienen un grado de libertad adicional.
-En el desarrollo que hemos realizado no nos hemos molestado en encontrar las posibles relaciones que existen entre las distintas $q's$ puesto que al diagonalizar la matriz de potencial $\tilde U$ nos saldrán 6 o 5 autovales $\lambda = 0$, los cuales corresponden a los grados de libertad traslacionales y rotacionales \cite{wilson1980}\cite{levine1980}.\\
+
+En el desarrollo que hemos realizado no nos hemos molestado en encontrar las posibles relaciones que existen entre las distintas $q's$ puesto que al diagonalizar la matriz de potencial $\tilde U$ nos saldrán 6 o 5 autovales $\lambda_k = 0$, los cuales corresponden a los grados de libertad traslacionales y rotacionales. En este trabajo no nos pararemos a demostrar este resultado, que queda demostrado en \cite[pp 22-25]{wilson1980} \\
 
 Un modo normal de vibración se describe mediante vectores desplazamiento que indican la dirección y la amplitud relativa de la vibración de cada núcleo. Si se realiza una operación de simetría $\hat R$ sobre una molécula obtenemos una configuración nuclear que es indistinguible de la original, por lo que la función energía potencial $U$ permanece invariante cuando se le aplica el operador correspondiente $\hat O_R$ a U
 \begin{equation}
@@ -556,7 +567,7 @@ Una vez tenemos las energías y las funciones de onda eléctricas podemos resolv
 \begin{equation}
 \hat H_N=-\frac{\hbar^2}{2}\sum_\alpha \frac{\nabla^2_\alpha}{m_\alpha}+U(q_\alpha)
 \end{equation}
-Con $E$ la energía total del sistema, puesto que la energía electrónica va incluida dentro del potencial $U$. Cada estado electrónico tendrá una energía $U(q_\alpha)$ diferente y portanto, deberemos resolver la ecuación diferencial nuclear de Schrödinger para cada estado electrónico de la molécula.
+Con $E$ la energía total del sistema, puesto que la energía electrónica va incluida dentro del potencial $U$. Cada estado electrónico tendrá una energía $U(q_\alpha)$ diferente y por tanto, deberemos resolver la ecuación diferencial nuclear de Schrödinger para cada estado electrónico de la molécula.
 La función de onda molecular completa será:
 \begin{equation}
 \psi(q_i,q_\alpha )=\psi_{el}(q_i;q_\alpha )\psi_N(q_\alpha )
@@ -581,7 +592,8 @@ Donde $Y^M_J$ es un armónico esférico y F es una función de R.
 Escribiendo el laplaciano en coordenadas esféricas y llamando $G(R)\equiv RF(R)$ tenemos que:
 \begin{equation}
 -\frac{\hbar^2}{2\mu}G''(R)+\left[\frac{J(J+1)\hbar^2}{2\mu R^2}+U(R)-E\right]G(R)=0
-\end{equation}
+\end{equation}\\
+
 Para continuar necesitamos una expresión para la energía potencial U(R). Este potencial se encuentra resolviendo la ecuación molecular electrónica de Schrödinger, el cuál es diferente para cada estado electrónico de cada molécula. Nosotros buscamos una aproximación que represente razonablemente bien este potencial para la mayoría de las moléculas diatómicas. Para estados electrónicos enlazados esperamos que el núcleo vibre alrededor de un mínimo de potencial de energía, por tanto, podemos expandir U en una serie de Taylor en torno a la separación internuclear de equilibrio $R_e$. Sabiendo que $U'(R_e)=0$ y obviando las potencias de orden superior a 3 tenemos que
 \begin{equation}\label{aproximacion1}
 U(R) \approx U(R_e)+\frac{1}{2}U''(R_e)(R-R_e)^2
