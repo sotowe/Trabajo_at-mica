@@ -1,0 +1,14 @@
+[0] Config.pm:302> INFO - This is Biber 2.9
+[0] Config.pm:305> INFO - Logfile is 'presentaciÃ³n.blg'
+[23] biber:313> INFO - === lun ene 14, 2019, 16:55:38
+[129] Biber.pm:371> INFO - Reading './presentación.bcf'
+[181] Biber.pm:857> INFO - Found 5 citekeys in bib section 0
+[220] Biber.pm:3981> INFO - Processing section 0
+[264] Biber.pm:4154> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
+[265] bibtex.pm:1468> INFO - LaTeX decoding ...
+[270] bibtex.pm:1294> INFO - Found BibTeX data source 'bibliografia.bib'
+[303] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[303] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[303] Biber.pm:3809> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'es-ES'
+[308] bbl.pm:617> INFO - Writing 'presentaciÃ³n.bbl' with encoding 'UTF-8'
+[309] bbl.pm:720> INFO - Output to presentaciÃ³n.bbl

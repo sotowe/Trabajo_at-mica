@@ -1,14 +1,14 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [0] Config.pm:305> INFO - Logfile is 'Trabajo_atÃ³mica.blg'
-[23] biber:313> INFO - === sáb ene 12, 2019, 09:58:45
-[123] Biber.pm:371> INFO - Reading './Trabajo_atómica.bcf'
-[172] Biber.pm:857> INFO - Found 4 citekeys in bib section 0
-[182] Biber.pm:3981> INFO - Processing section 0
-[191] Biber.pm:4154> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
-[191] bibtex.pm:1468> INFO - LaTeX decoding ...
-[195] bibtex.pm:1294> INFO - Found BibTeX data source 'bibliografia.bib'
-[225] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[225] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[225] Biber.pm:3809> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'es-ES'
-[229] bbl.pm:617> INFO - Writing 'Trabajo_atÃ³mica.bbl' with encoding 'UTF-8'
-[231] bbl.pm:720> INFO - Output to Trabajo_atÃ³mica.bbl
+[22] biber:313> INFO - === dom ene 13, 2019, 17:49:30
+[129] Biber.pm:371> INFO - Reading './Trabajo_atómica.bcf'
+[180] Biber.pm:857> INFO - Found 5 citekeys in bib section 0
+[191] Biber.pm:3981> INFO - Processing section 0
+[200] Biber.pm:4154> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
+[201] bibtex.pm:1468> INFO - LaTeX decoding ...
+[206] bibtex.pm:1294> INFO - Found BibTeX data source 'bibliografia.bib'
+[239] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[239] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[239] Biber.pm:3809> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'es-ES'
+[244] bbl.pm:617> INFO - Writing 'Trabajo_atÃ³mica.bbl' with encoding 'UTF-8'
+[245] bbl.pm:720> INFO - Output to Trabajo_atÃ³mica.bbl

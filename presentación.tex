@@ -8,7 +8,12 @@
 \usepackage{braket}
 \usepackage{amsmath}
 \usepackage{pifont}
-
+\addbibresource{bibliografia.bib}
+\nocite{haken2013}
+\nocite{levine1980}
+\nocite{marion2013}
+\nocite{wilson1980}
+\nocite{buendia}
 \title{Modos rotacionales y vibracionales en moléculas}
 \author{José Soto García}
 \begin{document}
@@ -16,26 +21,29 @@
 %DIAPOSITIVA 1
 \begin{frame}{La molécula como un sólido rígido}
 \begin{itemize}
-\item Suponemos la molécula como un sólido rígido.
+\item Suponemos que la distancia interatómica se mantiene fija.
+
 \item La vibración ocurre en una escala temporal mucho menor que las rotaciones.
-\item En una rotación los átomos vibran tantas veces que podemos considerar que estan quietos en su posición de equilibrio.
+
 \item Consideramos la distancia interatómica como la distancia media $\braket{R}$.	
 \end{itemize}
 \end{frame}
 %DIAPOSITIVA 2
 \begin{frame}{La molécula como un sólido rígido}
 \framesubtitle{Un poco de mecánica clásica}
-  Para un sólido poliatómico se define el tensor de inercia $\tilde I$ como:
+\begin{itemize}
+ \item Para un sólido poliatómico se define el tensor de inercia $\tilde I$ como:
+ \end{itemize}
   \[\small{
 \tilde{I}=\begin{pmatrix}
 \displaystyle\sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,2}+x^2_{\alpha,3}\right) & -\displaystyle\sum_{\alpha}m_{\alpha}x_{\alpha,1}x_{\alpha,2} & -\displaystyle\sum_{\alpha}m_{\alpha}x_{\alpha,1}x_{\alpha,3} \\\\
 -\displaystyle\sum_{\alpha}m_{\alpha}x_{\alpha,2}x_{\alpha,1} & \displaystyle\sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,1}+x^2_{\alpha,3}\right) &-\displaystyle\sum_{\alpha}m_{\alpha}x_{\alpha,2}x_{\alpha,3} \\\\
 -\displaystyle\sum_{\alpha}m_{\alpha}x_{\alpha,3}x_{\alpha,1} & -\displaystyle\sum_{\alpha}m_{\alpha}x_{\alpha,3}x_{\alpha,2} & \displaystyle\sum_{\alpha}m_{\alpha}\left(x^2_{\alpha,1}+x^2_{\alpha,2}\right) \end{pmatrix}}
 \]
-
-La energía cinética rotacional del sistema se obtiene como
+\begin{itemize}
+\item La energía cinética rotacional del sistema se obtiene como
 $$T_{rot}=\frac{1}{2}\sum_{i,j}I_{ij}\omega_i\omega_j$$
-
+\end{itemize}
 \end{frame}
 
 %DIAPOSITIVA 3
@@ -59,14 +67,17 @@ $$T_{rot}=\frac{1}{2}\left(I_a\omega^2_a + I_b\omega^2_b + I_c\omega^2_c\right)$
 \hat H_{rot}=\frac{\hat P_a^2}{2I_a}+\frac{\hat P_b^2}{2I_b}+\frac{\hat P_c^2}{2I_c}
 \end{equation*}
 \framesubtitle{Pasamos a la cuántica}
+\begin{itemize}
+\item Cualquier orientación en el sistema centro de masas se puede escribir a partir de los ángulos de Euler
 \begin{figure}
 \includegraphics[width=0.4\textwidth]{Angulos_Euler.png}
-\caption{Ángulos de Euler. }
 \label{euler}
 \end{figure}
+\item De los Ángulos de Euler obtenemos los momentos:
 $$
 \hat P_{\phi}=-i\hbar\frac{\partial}{\partial \phi},\,\ \hat P_{N}=-i\hbar\frac{\partial}{\partial N},\,\ \hat P_{\chi}=-i\hbar\frac{\partial}{\partial \chi}
 $$
+\end{itemize}
 \end{frame}
 
 %DIAPOSITIVA 5
@@ -106,103 +117,117 @@ O también:
 \left[H_{rot}, \hat P^2 \right] = 0
 \end{equation*}
 \begin{equation*}
-\left[H_{rot}, \hat P_J \right] = 0
+\left[H_{rot}, \hat P_Z \right] = 0
 \end{equation*}
 \begin{equation*}
 \left[H_{rot}, \hat P_c \right] = i\hbar \left(\frac{1}{2I_a}-\frac{1}{2I_b}\right)\left(\hat{P_a}\hat{P_b}+\hat{P_b}\hat{P_a}\right)
 \end{equation*}
 \end{itemize}
 Lo que nos da 
-\begin{equation}
+\begin{equation*}
 \hat H\psi = E\psi
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 \hat P^2\psi = J(J+1)\hbar \psi, \qquad J=0,1,2...
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 \hat P_Z\psi = M\hbar\psi, \qquad M = 0,\pm 1,...,\pm J
-\end{equation}
+\end{equation*}
 \end{frame}
 
 %DIAPOSITIVA 7
 \begin{frame}{Rotor rígido cuántico: Estados propios y autovalores}
-\framesubtitle{El rotor esférico $I_a=I_b=I_c= I$}
+\framesubtitle{Clasificación de los rotores rígidos}
+Por convenio: $I_a \leq I_b \leq I_c$
+\begin{itemize}
+\item Trompo esférico  $I_a=I_b=I_c= I$
+\item Trompo simétrico
+\begin{itemize}
+\item Achatado  $I_a=I_b\neq I_c$
+\item Alargado $I_a\neq I_b=I_c$
+\end{itemize}
+\item Trompo asimétrico $I_a \neq I_b\neq I_c$
+\end{itemize}
+\end{frame}
+
+%DIAPOSITIVA 7
+\begin{frame}{Rotor rígido cuántico: Estados propios y autovalores}
+\framesubtitle{El trompo esférico $I_a=I_b=I_c= I$}
 La ecuación de Schödinger es:
 \begin{equation*}
 \frac{\hat P^2}{2I} \psi = E\psi
 \end{equation*}
 Resolviendo la ecuación obtenemos que:$$\frac{1}{2I}J(J+1)\hbar^2\psi=E\psi$$
-\begin{equation}
+\begin{equation*}
 E=\frac{J(J+1)\hbar^2}{2I}, \qquad J=0,1,2...
-\end{equation}
+\end{equation*}
 En este caso, tenemos además que
-\begin{equation}
+\begin{equation*}
 \left[\hat H,\hat P_c \right]=0
-\end{equation}
+\end{equation*}
 con $$\hat P_c \psi = K\hbar\psi, \qquad K = 0, \pm 1,..., \pm J$$
 Luego la energía está $(2J+1)^2$ veces degenerada.
 \end{frame}
 
+
+
 %DIAPOSITIVA 8
 \begin{frame}{Rotor rígido cuántico: Estados propios y autovalores}
-\framesubtitle {El rotor simétrico: $I_a=I_b\neq I_c$ (caso achatado) o $I_a\neq I_b=I_c$ (caso alargado)}
+\framesubtitle {El trompo simétrico: $I_a=I_b\neq I_c$ (caso achatado) o $I_a\neq I_b=I_c$ (caso alargado)}
 La ecuación de Schrödinger es
 \begin{equation*}
 \frac{\hat P^2- \hat P_c^2}{2I_b}+\frac{\hat P_c^2}{2I_c}\psi=E\psi
 \end{equation*}
 En este caso también tenemos que:
-\begin{equation}
+\begin{equation*}
 \left[\hat H,\hat P_c \right]=0
-\end{equation}
+\end{equation*}
 Luego llamando:
- \begin{equation}
+ \begin{equation*}
  A \equiv \frac{h}{8\pi^2I_a}\geq B\equiv \frac{h}{8\pi^2I_b}\geq C\equiv \frac{h}{8\pi^2I_c}
- \end{equation}
+ \end{equation*}
  Llegamos a que:
- \begin{equation}
+ \begin{equation*}
  E/h=BJ\left(J+1\right)+\left(C-B\right)K^2 \qquad (achatado)
- \end{equation}
- \begin{equation}
+ \end{equation*}
+ \begin{equation*}
  E/h=BJ\left(J+1\right)+\left(A-B\right)K^2 \qquad (alargado)
- \end{equation}
+ \end{equation*}
  Y la energía está $4j+2$ veces degenerada
 \end{frame}
 
 %DIAPOSITIVA 9
 \begin{frame}{Rotor rígido cuántico: Estados propios y autovalores}
-\framesubtitle {El rotor asimétrico: $I_a \neq I_b\neq I_c$ }
+\framesubtitle {El trompo asimétrico: $I_a \neq I_b\neq I_c$ }
 En este caso
-\begin{equation}
+\begin{equation*}
 \left[\hat H,\hat P_c \right] \neq 0
-\end{equation}
+\end{equation*}
 Y el hamiltoniano no es separable.
 Podemos resolver la ecuación del hamiltoniano usando  las autofunciones del rotor simétrico
-\begin{equation}
+\begin{equation*}
 \psi_i = \sum_{K'=-J}^Jc_{i,JMK'}\phi_{JMK'}
-\end{equation}
+\end{equation*}
+Luego no tenemos mas que resolver la ecuación de autovalores:
+\begin{equation*}
+det(H_{KK'}-E_i\delta_{KK'})=0
+\end{equation*}
 con
-\begin{equation}
+\begin{equation*}
 H_{K'K''}\equiv\int\phi^*_{JMK'}\hat H\phi_{JMK''}d\tau
-\end{equation}
-Y sus autofunciones son de la forma
-\begin{equation}
-\psi_i = \sum_{K'=-J}^Jc_{i,JMK'}\phi_{JMK'}
-\end{equation}
+\end{equation*}
 \end{frame}
 
 %DIAPOSITIVA 10
 \begin{frame}{Estructura del espectro rotacional}
 \begin{itemize}
 \item Región de microondas
+\item A mayor tamaño menor distancia entre los niveles energéticos
 \item Sólo moléculas con momento dipolar eléctrico permanente
-\item Acoplamiento frecuencia magnética irradiada con frecuencia del dipolo
-\item Reglas de selección: $\bra{\psi_{JMK}}\hat D \ket{\psi_{J'K'M'}}$
+\item Acoplamiento frecuencia electromagnética irradiada con frecuencia del dipolo
+\item Reglas de selección: $\bra{\psi_{JMK}}\hat D \ket{\psi_{J'M'K'}}$
 \begin{equation*}
 \Delta J = 0,\pm 1 \qquad\Delta K =0 \qquad \Delta M = 0, \pm 1
-\end{equation*}
-\item Intensidad absorción $\propto$ probabilidad ocupación de los niveles
-\begin{equation*}
-\frac{N_J}{N_0}=(2J+1)e^{-BhJ(J+1)/kT}
 \end{equation*}
 \end{itemize}
 \begin{figure}
@@ -247,6 +272,7 @@ $$I=\frac{1}{2}mR^2$$
 
 %DIAPOSITIVA 13
 \begin{frame}{Algunos ejemplos}
+\framesubtitle{$CH_4$}
  A partir de estos datos construimos el tensor de inercia
  $$ \tilde I =
  \begin{pmatrix}
@@ -269,17 +295,17 @@ Su energía rotacional es
 \begin{itemize}
 \item Suponemos N masas puntuales (los núcleos) cada uno de los cuales vibra en torno a una posición de equilibrio.
 \item La energía cinética clásica de vibración en torno a la posición de equilibrio es:
-\begin{equation}
+\begin{equation*}
 T= \frac{1}{2}\sum_{\alpha = 1}^Nm_\alpha\left[\left(\frac{dx_\alpha}{dt}\right)^2+\left(\frac{dy_\alpha}{dt}\right)^2+\left(\frac{dz_\alpha}{dt}\right)^2\right]
-\end{equation}
+\end{equation*}
 en coordenadas ponderadas
-\begin{equation}
+\begin{equation*}
 T=\frac{1}{2}\sum_{i=1}^{3N}\dot q_i^2
-\end{equation}
+\end{equation*}
 \item La energía potencial en torno al equilibrio es:
-\begin{equation}
+\begin{equation*}
 U = U_e + \frac{1}{2}\sum_{i=1}^{3N}\sum_{k=1}^{3N}\left(\frac{\partial^2U}{\partial q_i \partial q_k}\right)_eq_iq_k
-\end{equation}
+\end{equation*}
 \end{itemize}
 \end{frame}
 
@@ -287,67 +313,64 @@ U = U_e + \frac{1}{2}\sum_{i=1}^{3N}\sum_{k=1}^{3N}\left(\frac{\partial^2U}{\par
 \begin{frame}
 \begin{itemize}
 \item En forma matricial
-\begin{equation}
+\begin{equation*}
 T=\frac{1}{2}\boldsymbol {\dot q}^t\boldsymbol {\dot q}
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 U=U_e+\frac{1}{2}\boldsymbol q^t\tilde U\boldsymbol q
-\end{equation}
+\end{equation*}
 \item Diagonalizamos $\tilde U$.
-\begin{equation}
+\begin{equation*}
 \tilde L^t\tilde U\tilde L = \tilde \Lambda
-\end{equation}
+\end{equation*}
 \item Definimos las coordenadas normales $Q_i$ como:
-\begin{equation}
+\begin{equation*}
 \boldsymbol Q = \tilde L^t\boldsymbol q \Rightarrow \boldsymbol q = \tilde L\boldsymbol Q
-\end{equation}
+\end{equation*}
 \item Nos queda
-\begin{equation}
-U-U_e=\frac{1}{2}\boldsymbol q^t\tilde U \boldsymbol q = \frac{1}{2}\boldsymbol Q^t (\tilde L^t\tilde U \tilde L) \boldsymbol Q =  \frac{1}{2}\boldsymbol Q^t\tilde \Lambda \boldsymbol Q
-\end{equation}
-\begin{equation}
-T=\frac{1}{2}\boldsymbol{\dot q^t \dot q}=\frac{1}{2}\boldsymbol{\dot Q}\tilde L^t\tilde L\boldsymbol{\dot Q}= \frac{1}{2}\dot{\boldsymbol Q^t}\dot{\boldsymbol Q}
-\end{equation}
+\begin{equation*}
+U-U_e=\frac{1}{2}\boldsymbol q^t\tilde U \boldsymbol q = \boxed{ \frac{1}{2}\boldsymbol Q^t\tilde \Lambda \boldsymbol Q}
+\end{equation*}
+\begin{equation*}
+T=\frac{1}{2}\boldsymbol{\dot q^t \dot q}= \boxed{\frac{1}{2}\dot{\boldsymbol Q^t}\dot{\boldsymbol Q}}
+\end{equation*}
 \end{itemize}
 \end{frame}
 
 %DIAPOSITIVA 16
 \begin{frame}
 \begin{itemize}
-\item El hamiltoniano queda:
-\begin{equation}
-\hat H= \frac{1}{2}\sum_{k=1}^{3N-6} \hat{\dot Q}_k^2 + \frac{1}{2} \sum_{k=1}^{3N-6} \lambda_k \hat Q_k^2 + U_e
-\end{equation}
+\item Tomando $U_e$ = 0 el hamiltoniano queda:
+\begin{equation*}
+\hat H= \frac{1}{2}\sum_{k=1}^{3N-6} \hat{\dot Q}_k^2 + \frac{1}{2} \sum_{k=1}^{3N-6} \lambda_k \hat Q_k^2 
+\end{equation*}
 {\tiny Con $\lambda_k$ los autovalores de $\tilde \Lambda$}
 \item $\lambda_{N-5}=...=\lambda_N=0$ corresponden a los grados de libertad traslacionales y rotacionales.
-\item Teniendo en cuenta que $p_x=m\dot x$ nos queda 
-\begin{equation}
+\item Teniendo en cuenta que $p_x=m\dot x$ podemos escribir los operadores $\hat{\dot{Q_k}}$ como
+\begin{equation*}
 \hat{\dot{Q_k}}=\frac{\hbar}{i}\frac{\partial}{\partial Q_k}
-\end{equation}
-\item Luego tomando $U_e=0$ el hamiltoniano final es
-\begin{equation}
-\hat H= -\frac{\hbar^2}{2}\sum_{k=1}^{3N-6} \frac{\partial^2}{\partial Q^2_k} + \frac{1}{2} \sum_{k=1}^{3N-6} \lambda_k \hat Q_k^2
-\end{equation}
+\end{equation*}
+
 \end{itemize}
 \end{frame}
 
 %DIAPOSITIVA 17
 \begin{frame}
 \begin{itemize}
-\item El hamiltoniano es separable: $\hat H=\displaystyle\sum_{k=1}^{2N-6} \hat H_k$ con
-\begin{equation}
+\item El hamiltoniano es final es separable: $\hat H=\displaystyle\sum_{k=1}^{3N-6} \hat H_k$ con
+\begin{equation*}
 \hat H_k = -\frac{\hbar^2}{2}\frac{\partial^2}{\partial Q^2}+\frac{1}{2}\lambda_kQ_k^2
-\end{equation}
+\end{equation*}
 que tiene la estructura del oscilador armónico, cuyas soluciones ya conocemos:
-\begin{equation}
+\begin{equation*}
 \psi_k(Q_k)\frac{1}{\left(2^{v_k}v_k!\right)^{1/2}}\left(\frac{\alpha_k}{\pi}\right)^{1/4}e^{-\alpha_kQ^2_k/2}H_{v_k}(\alpha_k^{1/2}Q_k)
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 E_k=\left(v_k+\frac{1}{2}\right)h\nu_k,	\qquad v_k=0,1,2,...
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 \alpha_k=\frac{2\pi\nu_k}{\hbar}=\frac{\lambda_k^{1/2}}{\hbar} \qquad \nu_k=\lambda_k^{1/2}
-\end{equation}
+\end{equation*}
 \end{itemize}
 \end{frame}
 
@@ -363,13 +386,13 @@ E_k=\left(v_k+\frac{1}{2}\right)h\nu_k,	\qquad v_k=0,1,2,...
 $$
 \hat H = -\frac{\hbar^2}{2}\sum_{\alpha=1}\frac{\nabla_\alpha^2}{m_\alpha}-\frac{\hbar^2}{2m}\sum_{i}\nabla_i^2+\sum_\alpha\sum_{\beta >\alpha}\frac{Z_\alpha Z_\beta e^2}{r_{\alpha \beta}}
 $$
-\begin{equation}
+\begin{equation*}
 -\sum_\alpha\sum_i\frac{Z_\alpha e^2}{r_{i\alpha}}+\sum_j\sum_{i>j}\frac{e^2}{r_{ij}}
-\end{equation}
+\end{equation*}
 \item Aproximación de Born-Oppenheimer. Separamos el movimiento electrónico del movimiento de los núcleos
-\begin{equation}
+\begin{equation*}
 \hat H_{el} = -\frac{\hbar^2}{2m}\sum_{i}\nabla_i^2-\sum_\alpha\sum_i\frac{Z_\alpha e^2}{r_{i\alpha}}+\sum_j\sum_{i>j}\frac{e^2}{r_{ij}}
-\end{equation}
+\end{equation*}
 \end{itemize}
 \end{frame}
 
@@ -377,17 +400,17 @@ $$
 \begin{frame}{Obtención de los autoestados y autovalores en general}
 \begin{itemize}
 \item Una vez obtenida la energía  electrónica $E_{el}$ podemos escribir el hamiltoniano nuclear
-\begin{equation}
+\begin{equation*}
 \hat H_N=-\frac{\hbar^2}{2}\sum_\alpha \frac{\nabla^2_\alpha}{m_\alpha}+V_{NN}+E_{el}
-\end{equation}
+\end{equation*}
 \item Para una molécula diatómica, llamando $U(q_\alpha)\equiv E_{el}+V_{NN}$, escribiendo la ecuación en coordenadas del centro de masas y excluyendo la energía translacional nos queda:
-\begin{equation}
+\begin{equation*}
 \left[-\frac{\hbar^2}{2\mu}\nabla^2+U(R)\right]\psi_N=E\psi_N
-\end{equation}
+\end{equation*}
 \item Tenemos un problema de fuerzas centrales
-\begin{equation}
+\begin{equation*}
 \psi_N=F(R)Y^M_J(\theta_N,\phi_N)
-\end{equation}
+\end{equation*}
 \end{itemize}
 \end{frame}
 
@@ -419,27 +442,93 @@ U(R) \approx U(R_e)+\frac{1}{2}U''(R_e)(R-R_e)^2
 W \equiv	E-U(R_e)-\frac{J(J+1)\hbar^2}{2\mu R_e^2}
 \end{equation*}
 \item Llegamos al oscilador armónico
-\begin{equation}
+\begin{equation*}
 -\frac{\hbar^2}{2\mu}G''(q)\left[\frac{1}{2}k_eq^2-W\right] G(q)=0
-\end{equation}
+\end{equation*}
 Y la energía final es
-\begin{equation}
+\begin{equation*}
 E=U(R_e)+\left(v+\frac{1}{2}\right)h\nu_e+J(J+1)hB_e
-\end{equation}
+\end{equation*}
 \end{itemize}
 \end{frame}
 
-%DIAPOSITIVA 22
-\begin{frame}{Obtención de los autoestados y autovalores en general}
+
+%DIAPOSITIVA 23
+\begin{frame}{Correcciones a la energía}
 \begin{itemize}
-\item Por tanto:
-\begin{equation}
-E_{tot} = U_e+E_{vib}+E_{rot}+E_{trans}
-\end{equation}
-\begin{equation}
-\psi=\psi_{el}\psi_{vib}\psi_{rot}\psi_{trans}
-\end{equation}
+\item En una primera aproximación hemos llegado a que la energía se puede separar como:
+\begin{equation*}
+E_N = E_{vib}+E_{rot}
+\end{equation*}
+\begin{equation*}
+\psi=\psi_{vib}\psi_{rot}
+\end{equation*}
+\item Podemos corregir esta energía añadiendo perturbativamente algunos términos despreciados en las aproximaciones anteriores
+\begin{equation*}
+\hat H'=-\frac{2J(J+1)hB_e}{R_e}q +\frac{3J(J+1)hB_e}{R^2_e}q^2+
+\end{equation*}
+\begin{equation*}
+\frac{1}{6}U'''(R_e)q^3+\frac{1}{24}U^{iv}(R_e)q^4
+\end{equation*}
+\end{itemize}
+\end{frame}
+
+%DIAPOSITIVA 24
+\begin{frame}
+\begin{itemize}
+{\small
+\item Aplicando perturvaciones, usando como función de onda en aproximación de orden 0: $$\psi^{(0)}_{vJM}=\frac{G_v(q)}{R}Y^M_J(\theta_N,\phi_N)$$
+Tenemos que la energía en aproximación de segundo orden es:
+$$
+E=U(R_e)+\left(v+\frac{1}{2}\right)h\nu_e+h\left[B_e-\alpha_e\left(v+\frac{1}{2}\right)\right]J(J+1)
+$$
+\begin{equation*}
+-h\nu_ex_e\left(v+\frac{1}{2}\right)^2-hD_eJ^2(J+1)^2 +hY_{00}
+\end{equation*}
+}
+\begin{itemize}
+{\tiny
+\item $\nu_ex_e$ es la constante de anarmonicidad. Disminuye el espaciado entre los niveles vibracionales a medida que aumenta v.
+\item $\alpha_e$ es la constante de acoplamiento de vibración-rotación. Si definimos la constante rotacional media $B_v$
+\begin{equation*}
+B_v=B_e-\alpha_e\left(v+\frac{1}{2}\right)
+\end{equation*}
+vemos que disminuye a medida que aumenta el nivel vibracional $v$ 
+\item $D_e$ es la constante de distorsión centrífuga. Apenas tiene efecto sobre el espectro rotacional.}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+%DIAPOSITIVA 25
+\begin{frame}
+\begin{itemize}
+\item También podemos usar otro tipo de potenciales que se adapten mejor a los datos experimentales. Por ejemplo el potencial de Morse:
+\begin{equation*}
+U=D_e \left[ 1- e^{-a(R-R_e)} \right]^2
+\end{equation*}
+Donde $D_e$, $\alpha$ y $R_e$ se obtienen experimentalmente
+\end{itemize}
+{\tiny
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{niv_rot_vib_elect.png}
+\caption{Niveles vibracionales-rotacionales en el estado electrónico fundamental y en un estado electrónico excitado.}
+\end{figure}
+}
+\end{frame}
+
+%DIAPOSITIVA 26
+\begin{frame}{En conclusión}
+\begin{itemize}
+\item Es posible separar los modos rotacionales y vibracionales en moléculas diatómicas
+\item Se puede ser más precisos en la descripción añadiendo términos perturbativos que incluyen la anarmonicidad y el acoplamiento vibración-rotación
+\item Usar otros potenciales que casen mejor con los datos experimentales
+\item Para moléculas poliatómicas el tratamiento es más complejo y los acoplamientos vibración-rotación cobran mayor importancia 
 \end{itemize}
 
+\end{frame}
+
+%BIBLIOGRAFÍA
+\begin{frame}{Bibliografía}
+\printbibliography
 \end{frame}
 \end{document}

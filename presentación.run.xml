@@ -78,5 +78,8 @@
     <requires type="dynamic">
       <file>presentación.bcf</file>
     </requires>
+    <requires type="editable">
+      <file>bibliografia.bib</file>
+    </requires>
   </external>
 </requests>

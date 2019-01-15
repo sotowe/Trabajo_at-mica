@@ -21,4 +21,17 @@
   author    = {Marion, Jerry B},
 }
 
+@Book{wilson1980,
+  title     = {Molecular vibrations: the theory of infrared and Raman vibrational spectra},
+  publisher = {Courier Corporation},
+  year      = {1980},
+  author    = {Wilson, Edgar Bright and Decius, John Courtney and Cross, Paul C},
+}
+
+@Book{buendia,
+  title  = {Física Atómica y Molecular},
+  author = {Enrique Buendía Ávila},
+  editor = {UGR},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
